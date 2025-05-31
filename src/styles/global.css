@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@theme{
+    --color-yellow: #fbde9c;
+    --color-blue: #3372b9;
+    --color-beige: #f0e9e1;
+    --color-white: #ffffff;
+    --color-black: #1f262c;
+    --color-teal: #549e91;
+    --color-pink: #ea9daf;
+}
+
+@layer base {
+  @font-face {
