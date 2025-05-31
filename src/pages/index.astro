@@ -1,0 +1,44 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Document</title>
+	</head>
+	<body class="p-6">
+		<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-gray-500">
+
+		</section>
+		<section id="about">
+			<h1>Build projects then change the world with them</h1>
+			<p>Lorem ipsum text blurb wow look here theres stuff</p>
+		</section>
+		<section id="steps" class="flex flex-wrap">
+			<img src="" alt="" class="w-60 h-60 bg-gray-300">
+			<div>
+				<h3>Are you a highschool student or younger?</h3>
+				<ol>
+					<li>Sign up</li>
+					<li>Build projects with funding</li>
+					<li>Watch your project change the world</li>
+				</ol>
+			</div>
+		</section>
+		<section>
+			<h1>Ongoing Projects</h1>
+			<div class="w-2 h-2 bg-red-500 rounded-xl"></div>
+			<div class="grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid bg-blue-100 gap-10 min-h-50 w-full">
+				<div class="w-full h-full bg-blue-600 rounded-lg"></div>
+				<div class="w-full h-full bg-blue-600 rounded-lg"></div>
+
+		</section>
+	</body>
+</html>
