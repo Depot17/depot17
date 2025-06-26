@@ -9,5 +9,31 @@
     --color-pink: #ea9daf;
 }
 
-@layer base {
-  @font-face {
+body{
+
+}
+
+h1{
+    font-size:clamp(12%, 6.5vw, 3em);
+    font-weight:bold;
+    line-height:1.25em;
+    /* font-size:5vw; */
+}
+
+h2{
+    font-size:2.25em;
+}
+p, li {
+    /* font-size:1.5em; */
+        font-size:clamp(8%, 4vw, 1.5rem);
+        font-weight:400;
+
+
+}
+.padding{
+    padding: 2vw 6vw;
+}
+@layer{
+}
+
+@media ()

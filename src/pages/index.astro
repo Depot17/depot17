@@ -9,39 +9,126 @@ import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
 		<meta name="generator" content={Astro.generator} />
-		<title>Document</title>
+		<title>Depot</title>
 	</head>
-	<body class="p-6">
+	<body>				
 		<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-gray-500">
+			<header class="">
+			<nav class="flex hide justify-between px-10 py-4 text-lg">
+				<a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+					<div class="bg-blue px-6 py-2 rounded-10 text-2xl">LOGO</div>
+					<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+				</a>
+				<div class="hidden w-full md:block md:w-auto" id="navbar-default">
+					<ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0  ">
+						<li>
+							<a href="#" class="block py-2 px-3 text-white bg-blue-700 
+							rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white 
+							md:dark:text-blue-500 " aria-current="page">Home</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-3 text-gray-900 
+							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
+							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
+							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">About</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-3 text-gray-900 
+							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
+							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
+							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Projects</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-3 text-gray-900 
+							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
+							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
+							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Community</a>
+						</li>
+						<li class="bg-white rounded-full px-4 py-2 flex items-center justify-center">
+							<a href="#" class="block py-2 px-3 text-gray-900 
+							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
+							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
+							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Donate</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+		</header>
+		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 ">
+				<span class="text-[8vh] font-bold">Insert sick text here</span>
+				<p>Wow so at this NGO we are going to do something super epic</p>
+				<span class="bg-white mt-2 rounded-full py-3 px-4">
+					Join us today
+				</span>
 
+			</div>
 		</section>
-		<section id="about">
+		<div class="px-8 md:px-10 lg:px-34 pb-10">
+		<section id="about" class="py-8">
 			<h1>Build projects then change the world with them</h1>
-			<p>Lorem ipsum text blurb wow look here theres stuff</p>
+			<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
 		</section>
-		<section id="steps" class="flex flex-wrap">
-			<img src="" alt="" class="w-60 h-60 bg-gray-300">
+		<!-- <section id="steps" class="flex flex-wrap my-8 justify-center w-full gap-8">
+			<img src="" alt="" class="w-90 h-60 bg-gray-300">
 			<div>
-				<h3>Are you a highschool student or younger?</h3>
+				<h2>Are you a highschool student or younger?</h2>
 				<ol>
 					<li>Sign up</li>
 					<li>Build projects with funding</li>
 					<li>Watch your project change the world</li>
 				</ol>
 			</div>
-		</section>
+		</section> -->
 		<section>
-			<div class="inline-flex items-center">
+			<div class="inline-flex items-center gap-4">
 				<h1>Ongoing Projects</h1>
-			<div class="w-4 h-4 bg-red-500 rounded-xl"></div>
+				<div class="w-10 h-10 bg-red-500 rounded-[50%]"></div>
 			</div>
-	<div>
-			<div class="grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid bg-blue-100 gap-10 min-h-50 w-full">
-				<div class="w-full h-full bg-blue-600 rounded-lg"></div>
-				<div class="w-full h-full bg-blue-600 rounded-lg"></div>
-
+			<div>
+			<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-12 gap-y-6 min-h-100 w-full">
+				<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
+					<div class="text-white bottom-0">
+						<span class="sm:text-[4vh] font-bold">Project</span>
+						<p>this is the description of a super dope project</p>
+					</div>
+				</div>
+				<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
+					<div class="text-white bottom-0">
+						<span class="sm:text-[4vh] font-bold">Project</span>
+						<p>this is the description of a super dope project</p>
+					</div>
+				</div>
+			</div>
 		</section>
+		<!-- <section class="bg-beige">
+			<form action="/tk sheets" method="post">
+				<p>
+					<label for="fname">First name</label>
+					<input type="text" id="fname" name="fname" value="First name">
+				</p>
+				<p>
+					<label for="lname">Last name</label>
+					<input type="text" id="lname" name="lname" value="Last name">
+				</p>
+				<p>
+    				<label for="msg">Message:</label>
+    				<textarea id="msg" name="user_message"></textarea>
+				</p>
+				<p>
+					<label for="buildn">Yes</label>
+					<input type="radio" id="buildy">
+					<label for="buildn">No</label>
+					<input type="radio" id="buildn"> 
+				</p>
+				<button type="submit" class="w-50 h-10 bg-blue">Submit</button>
+			</form>
+		</section> -->
+		<!-- <footer class="min-h-50 bg-beige w-full mt-8">
+
+		</footer> -->
+		
 	</body>
 </html>
