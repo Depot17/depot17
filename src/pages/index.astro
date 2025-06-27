@@ -1,7 +1,8 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -15,62 +16,21 @@ import '../styles/global.css';
 	</head>
 	<body>				
 		<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-gray-500">
-			<header class="">
-			<nav class="flex hide justify-between px-10 py-4 text-lg">
-				<a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-					<div class="bg-blue px-6 py-2 rounded-10 text-2xl">LOGO</div>
-					<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-				</a>
-				<div class="hidden w-full md:block md:w-auto" id="navbar-default">
-					<ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0  ">
-						<li>
-							<a href="#" class="block py-2 px-3 text-white bg-blue-700 
-							rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white 
-							md:dark:text-blue-500 " aria-current="page">Home</a>
-						</li>
-						<li>
-							<a href="#" class="block py-2 px-3 text-gray-900 
-							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
-							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">About</a>
-						</li>
-						<li>
-							<a href="#" class="block py-2 px-3 text-gray-900 
-							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
-							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Projects</a>
-						</li>
-						<li>
-							<a href="#" class="block py-2 px-3 text-gray-900 
-							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
-							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Community</a>
-						</li>
-						<li class="bg-white rounded-full px-4 py-2 flex items-center justify-center">
-							<a href="#" class="block py-2 px-3 text-gray-900 
-							rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-							md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 
-							dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Donate</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			
-		</header>
-		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 ">
-				<span class="text-[8vh] font-bold">Insert sick text here</span>
-				<p>Wow so at this NGO we are going to do something super epic</p>
-				<span class="bg-white mt-2 rounded-full py-3 px-4">
-					Join us today
-				</span>
-
-			</div>
+		<Header />
+		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center">
+			<span class="text-[8vh] font-bold">Insert sick text here</span>
+			<p>Wow so at this NGO we are going to do something super epic</p>
+			<span class="bg-white mt-2 rounded-full py-3 px-4 hover:scale-110 transition-all ease-in-out shadow-xl text-xl">
+				Join us today
+			</span>
+		</div>
 		</section>
 		<div class="px-8 md:px-10 lg:px-34 pb-10">
-		<section id="about" class="py-8">
-			<h1>Build projects then change the world with them</h1>
-			<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
-		</section>
+			<section id="about" class="py-8">
+				<h1>Build projects then change the world with them</h1>
+				<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
+			</section>
+		
 		<!-- <section id="steps" class="flex flex-wrap my-8 justify-center w-full gap-8">
 			<img src="" alt="" class="w-90 h-60 bg-gray-300">
 			<div>
@@ -82,27 +42,28 @@ import '../styles/global.css';
 				</ol>
 			</div>
 		</section> -->
-		<section>
-			<div class="inline-flex items-center gap-4">
-				<h1>Ongoing Projects</h1>
-				<div class="w-10 h-10 bg-red-500 rounded-[50%]"></div>
-			</div>
-			<div>
-			<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-12 gap-y-6 min-h-100 w-full">
-				<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
-					<div class="text-white bottom-0">
-						<span class="sm:text-[4vh] font-bold">Project</span>
-						<p>this is the description of a super dope project</p>
+			<section>
+				<div class="inline-flex items-center gap-4">
+					<h1>Ongoing Projects</h1>
+					<div class="w-10 h-10 bg-red-500 rounded-[50%]"></div>
+				</div>
+				<div>
+				<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-12 gap-y-6 min-h-100 w-full">
+					<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
+						<div class="text-white bottom-0">
+							<span class="sm:text-[4vh] font-bold">Project</span>
+							<p>this is the description of a super dope project</p>
+						</div>
+					</div>
+					<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
+						<div class="text-white bottom-0">
+							<span class="sm:text-[4vh] font-bold">Project</span>
+							<p>this is the description of a super dope project</p>
+						</div>
 					</div>
 				</div>
-				<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
-					<div class="text-white bottom-0">
-						<span class="sm:text-[4vh] font-bold">Project</span>
-						<p>this is the description of a super dope project</p>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<!-- <section class="bg-beige">
 			<form action="/tk sheets" method="post">
 				<p>
@@ -126,9 +87,7 @@ import '../styles/global.css';
 				<button type="submit" class="w-50 h-10 bg-blue">Submit</button>
 			</form>
 		</section> -->
-		<!-- <footer class="min-h-50 bg-beige w-full mt-8">
-
-		</footer> -->
+		<Footer />
 		
 	</body>
 </html>
