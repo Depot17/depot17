@@ -4,31 +4,32 @@
     --color-blue: #1a3852;
     --color-lblue: #45779a;
     --color-tblue: #324c64;
-    --color-beige: #f0e9e1;
     --color-white: #ffffff;
     --color-black: #1f262c;
     --color-teal: #549e91;
     --color-pink: #ea9daf;
+    --color-gray: #efefef;
 }
 
 body{
-
+    font-family:Inter;
+    color:black;
+    background-color:#03496A;
 }
 
-h1{
-    font-size:clamp(12%, 6.5vw, 3em);
+/* h1{
+    font-size:clamp(12%, 6.5vw, 2em);
     font-weight:bold;
     line-height:1.25em;
-    /* font-size:5vw; */
-}
+} */
 
 h2{
     font-size:2.25em;
 }
 p, li {
-    /* font-size:1.5em; */
-        font-size:clamp(8%, 4vw, 1.5rem);
-        font-weight:400;
+    font-size:1em;
+    /* font-size:clamp(8%, 4vw, 1.5rem);
+    font-weight:400; */
 
 
 }

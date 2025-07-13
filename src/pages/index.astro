@@ -13,21 +13,45 @@ import Footer from '../components/footer.astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
 		<meta name="generator" content={Astro.generator} />
 		<title>Depot</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		
+
+
+
+
 	</head>
 	<body>				
-		<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue">
-		<Header />
-		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
-			<span class="text-[8vh] font-bold text-white">Insert sick text here</span>
-			<p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Wow so at this NGO we are going to do something super epic</p>
-			<button type="button" class="text-white bg-tblue border border-2 border-white font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
-				Join us today
-			</button>
-		</div>
+		<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue" style="background: #03496A;
+			background: linear-gradient(180deg, rgba(3, 73, 106, 1) 0%, rgba(255, 255, 255, 1) 100%);">
+			<Header />
+			<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
+				<span class="text-[8vh] font-bold text-white">Insert sick text here</span>
+
+				<p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48">
+					Wow so at this NGO we are going to do something super epic
+				</p>
+				
+				<button type="button" class="border border-2 border-white font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
+					Join us today
+				</button>
+  				<span class="absolute left-30 rotate-8 aspect-[5/6] w-50 bg-gray-200 ml-0 mb-0 bottom-20 shadow-md text-left py-4 px-6
+				hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all" 
+				style="font-family: Gloria Hallelujah;">
+					<p class="font-semibold pb-5">Lorem Ipsum</p> 
+					<p>Here is some interesting text that is super useful. <br><br> - Hello World</p>
+				</span>
+				<span class="absolute right-30 -rotate-8 aspect-[2/1] w-40 bg-gray-200 mr-0 mt-0 top-30 shadow-md text-left py-4 px-6
+				hover:scale-105 hover:-rotate-10 hover:shadow-lg transition-all" 
+				style="font-family: Gloria Hallelujah;">
+					<p><b>Lorem Ipsum</b> <br><br> - Hello World</p>
+				</span>			
+			</div>
 		</section>
-		<div class="px-8 md:px-10 lg:px-34 pb-10">
+		<div class="px-8 md:px-10 lg:px-34 pb-10 bg-white">
 			<section id="about" class="py-8">
-				<h1>Build projects then change the world with them</h1>
+				<h1 class="text-[5vh] font-semibold">Build projects then change the world with them</h1>
 				<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
 			</section>
 		
@@ -35,33 +59,67 @@ import Footer from '../components/footer.astro';
 			<img src="" alt="" class="w-90 h-60 bg-gray-300">
 			<div>
 				<h2>Are you a highschool student or younger?</h2>
-				<ol>
-					<li>Sign up</li>
-					<li>Build projects with funding</li>
-					<li>Watch your project change the world</li>
-				</ol>
+				<ul>
+					<li>
+						<span class="num">1</span>
+						<p>Sign up</p>
+					</li>
+					<li>
+						<span class="num">2</span>
+						<p>Build projects with funding</p>
+					</li>
+					<li>
+						<span class="num">3</span>
+						<p>Watch your project change the world</p>
+					</li>
+				</ul>
 			</div>
 		</section> -->
 			<section>
 				<div class="inline-flex items-center gap-4">
-					<h1>Ongoing Projects</h1>
+				<h1 class="text-[5vh] font-semibold">Ongoing Projects</h1>
 					<div class="w-10 h-10 bg-red-500 rounded-[50%]"></div>
 				</div>
 				<div>
-				<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-12 gap-y-6 min-h-100 w-full">
-					<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
-						<div class="text-white bottom-0">
+				<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-6 gap-y-6 min-h-100 w-full">
+					<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+						<div class="  bottom-0">
 							<span class="sm:text-[4vh] font-bold">Project</span>
 							<p>this is the description of a super dope project</p>
 						</div>
 					</div>
-					<div class="w-full h-full bg-blue rounded-lg border-4 border-black p-6">
-						<div class="text-white bottom-0">
+					<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+						<div class="  bottom-0">
+							<span class="sm:text-[4vh] font-bold">Project</span>
+							<p>this is the description of a super dope project</p>
+						</div>
+					</div>
+					<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+						<div class="  bottom-0">
 							<span class="sm:text-[4vh] font-bold">Project</span>
 							<p>this is the description of a super dope project</p>
 						</div>
 					</div>
 				</div>
+			</section>
+			<section class="py-6">
+				<h1 class="text-center text-[6vh] font-semibold">Ongoing Projects</h1>
+				<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
+				<div class="space-y-6">
+					<div class="w-full h-100 bg-gray rounded-2xl p-6 border-2 border-black">
+						<div class="  bottom-0">
+							<span class="sm:text-[4vh] font-bold">Project</span>
+							<p>this is the description of a super dope project</p>
+						</div>
+					</div>
+					<div class="w-full h-100 bg-gray rounded-2xl p-6 border-2 border-black">
+						<div class="  bottom-0">
+							<span class="sm:text-[4vh] font-bold">Project</span>
+							<p>this is the description of a super dope project</p>
+						</div>
+					</div>
+				</div>
+				
 			</section>
 		</div>
 		<!-- <section class="bg-beige">
