@@ -14,7 +14,6 @@
 body{
     font-family:Inter;
     color:black;
-    background-color:#03496A;
 }
 
 /* h1{
@@ -34,6 +33,16 @@ p, li {
 
 }
 
+.flash {
+    animation: flash 2s infinite;
+    transition: none;
+}
+
+@keyframes flash {
+  0%, 40% { opacity: 1; }
+  50%, 90% { opacity: 0; }
+
+}
 @layer{
 }
 

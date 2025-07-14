@@ -1,7 +1,16 @@
-<footer class="px-8 md:px-10 lg:px-34 pb-10 bg-white">
-    <div class="w-full h-100 bg-gray rounded-2xl p-6 border-2 border-black">
-		<a href="https://github.com/builders-depot/builders-depot" target="_blank" class="text-center">
+---
+const platform = "github"
+const username = "buildersdepot";
+import Social from './socials.astro';
+---
+
+<footer>
+    <div class="w-full h-100 relative ">
+      <Social platform = "instagram" username = "bobby" />
+      <Social platform = "github" username = "bobby" />
+
+		<a href="https://github.com/builders-depot/builders-depot" target="_blank" class=" underline">
             <p class="">Github</p>
-        </a>
+    </a>
 	</div>
 </footer>
