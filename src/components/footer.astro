@@ -4,13 +4,12 @@ const username = "buildersdepot";
 import Social from './socials.astro';
 ---
 
-<footer>
-    <div class="w-full h-100 relative ">
-      <Social platform = "instagram" username = "bobby" />
-      <Social platform = "github" username = "bobby" />
-
-		<a href="https://github.com/builders-depot/builders-depot" target="_blank" class=" underline">
-            <p class="">Github</p>
-    </a>
-	</div>
+<footer class= "w-full h-50 bg-white flex items-center justify-center text-center gap-1 relative -mt-10" >
+  <div class="lg:w-90">
+ <Social platform = "instagram" username = "bobby" />
+    <Social platform = "github" username = "bobby" />
+    <p>View our <a href="https://github.com/builders-depot/builders-depot" target="_blank">source code</a> and finances. Inquiries? Contact us at sophiaduan@buildersdepot.org</p>
+  </div>
+   
 </footer>
+

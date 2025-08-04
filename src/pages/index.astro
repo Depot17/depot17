@@ -13,6 +13,7 @@ const title = "Depot";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
 		<meta name="generator" content={Astro.generator} />
+		<script type="module" src="/src/app.js" defer></script>
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +27,7 @@ const title = "Depot";
 			<span class="text-[8vh] font-bold text-white">Insert sick text here</span>
 
 			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
-				Wow so at this NGO we are going to do something super epic
-			</span>
+				Wow so at this NGO we are going to do something super epic</span>
 			<button type="button"  class="border border-2 border-white font-medium rounded-full text-md text-white px-5 py-2.5 text-center me-2 mb-2">
 				Join us today
 			</button>
@@ -45,11 +45,11 @@ const title = "Depot";
 		</div>
 	</section>
 	<div class="px-8 md:px-10 lg:px-40 pb-10 bg-white">
-		<section id="about" class="py-8">
-			<h1 class="text-[5vh] font-semibold">Build projects and change the world with them</h1>
+		<section id="about" class="py-8 pb-18">
+			<h1 class="text-[5vh] font-semibold">Build real sustainable solutions and change the world with them</h1>
 			<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
 		</section>
-	
+		<hr>
 	<!-- <section id="steps" class="flex flex-wrap my-8 justify-center w-full gap-8">
 		<img src="" alt="" class="w-90 h-60 bg-gray-300">
 		<div>
@@ -70,10 +70,26 @@ const title = "Depot";
 			</ul>
 		</div>
 	</section> -->
+		<section class="w-full h-auto flex justify-between py-10">
+			<div>
+<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
+			<ul class="space-y-6 text-xl">
+				<li>Identify an ongoing issue within a community, big or small.</li>
+				<li>Work with locals, form a team and design a sustainable solution</li>
+				<li>Receive funding & mentorship to bring your projects to communities</li>
+				<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
+					<p>Start today</p>	
+				</button>
+				
+			</ul>
+			</div>
+			<div class="w-100 h-80 rounded-lg bg-gray">
+			</div>
+		</section>
 		<section>
 			<div class="inline-flex items-center gap-4">
 			<h1 class="text-[5vh] font-semibold">Recent Updates</h1>
-				<div class="w-10 h-10 bg-red-500 rounded-[50%] flash"></div>
+				<div class="box w-10 h-10 bg-red-500 rounded-[50%] flash"></div>
 			</div>
 			<div>
 			<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-6 gap-y-6 min-h-100 w-full">
@@ -99,14 +115,15 @@ const title = "Depot";
 				</div>
 			</div>
 		</section>
+
 		<section class="py-6">
 			<h1 class="text-center text-[6vh] font-semibold">Ongoing Projects</h1>
 			<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
 			<div class="space-y-10">
 				<a href="proj1.astro" target="_self" class="block">
 					<div class="block relative w-full h-100 bg-gray rounded-2xl p-6 border-2 border-black hover:scale-102 duration-300 transition-all">
-					<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10">
-					Support this
+					<button type="button" class=" flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
+					<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
 					</button>
 					<div class="absolute bottom-0 mb-10">
 						<h1 class="text-[5vh] font-semibold">Project No. 1</h1>
@@ -133,9 +150,10 @@ const title = "Depot";
 			</div>
 			
 		</section>
-		<Footer />
 
 	</div>
+			<Footer />
+
 	<!-- <section class="bg-beige">
 		<form action="/tk sheets" method="post">
 			<p>
