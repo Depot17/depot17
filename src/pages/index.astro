@@ -1,28 +1,11 @@
 ---
-import '../styles/global.css';
-import Header from '../components/header.astro';
-import Footer from '../components/footer.astro';
+import BaseLayout from '../BaseLayout.astro';
 const title = "Depot";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<html lang="en">
-<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
-		<meta name="generator" content={Astro.generator} />
-		<script type="module" src="/src/app.js" defer></script>
-		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body style="background-color:#03496A">		
+<BaseLayout>
 	<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue" style="background: #03496A;
 		background: linear-gradient(180deg, rgba(3, 73, 106, 1) 0%, rgba(255, 255, 255, 1) 100%);">
-		<Header />
 		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
 			<span class="text-[8vh] font-bold text-white">Insert sick text here</span>
 
@@ -70,18 +53,18 @@ const title = "Depot";
 			</ul>
 		</div>
 	</section> -->
-		<section class="w-full h-auto flex justify-between py-10">
+		<section class="w-full h-auto flex justify-between py-10 p-20">
 			<div>
-<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
-			<ul class="space-y-6 text-xl">
-				<li>Identify an ongoing issue within a community, big or small.</li>
-				<li>Work with locals, form a team and design a sustainable solution</li>
-				<li>Receive funding & mentorship to bring your projects to communities</li>
-				<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
-					<p>Start today</p>	
-				</button>
-				
-			</ul>
+				<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
+				<ul class="space-y-6 text-xl list-image-none pl-5">
+					<li>Identify an ongoing issue within a community, big or small.</li>
+					<li>Work with locals, form a team and design a sustainable solution</li>
+					<li>Receive funding & mentorship to bring your projects to communities</li>
+					<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
+						<p>Start today</p>	
+					</button>
+					
+				</ul>
 			</div>
 			<div class="w-100 h-80 rounded-lg bg-gray">
 			</div>
@@ -152,7 +135,7 @@ const title = "Depot";
 		</section>
 
 	</div>
-			<Footer />
+
 
 	<!-- <section class="bg-beige">
 		<form action="/tk sheets" method="post">
@@ -177,5 +160,4 @@ const title = "Depot";
 			<button type="submit" class="w-50 h-10 bg-blue">Submit</button>
 		</form>
 	</section> -->
-</body>
-</html>
+</BaseLayout>

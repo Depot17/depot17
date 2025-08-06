@@ -48,7 +48,7 @@ a p{
 }
 
 .effect :hover {
-    displ
+    /* display:block; check */
     background-color: aqua;
 }
 @keyframes 
