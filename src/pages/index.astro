@@ -3,11 +3,16 @@ import BaseLayout from '../BaseLayout.astro';
 const title = "Depot";
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
 	<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue" style="background: #03496A;
 		background: linear-gradient(180deg, rgba(3, 73, 106, 1) 0%, rgba(255, 255, 255, 1) 100%);">
 		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
-			<span class="text-[8vh] font-bold text-white">Insert sick text here</span>
+			<div class=" font-bold text-white flex items-center space-x-4">
+				<span class="text-[14vh]">[</span>
+				<span class="text-[12vh]">BUILDER'S DEPOT</span>
+				<span class="text-[14vh]">]</span>
+
+			</div>
 
 			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
 				Wow so at this NGO we are going to do something super epic</span>
@@ -53,22 +58,23 @@ const title = "Depot";
 			</ul>
 		</div>
 	</section> -->
-		<section class="w-full h-auto flex justify-between py-10 p-20">
-			<div>
-				<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
-				<ul class="space-y-6 text-xl list-image-none pl-5">
-					<li>Identify an ongoing issue within a community, big or small.</li>
-					<li>Work with locals, form a team and design a sustainable solution</li>
-					<li>Receive funding & mentorship to bring your projects to communities</li>
-					<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
-						<p>Start today</p>	
-					</button>
-					
-				</ul>
-			</div>
-			<div class="w-100 h-80 rounded-lg bg-gray">
-			</div>
-		</section>
+	<section class="px-20 py-14">
+		<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
+		<div class="w-full h-auto flex justify-between items-center py-14 p-20  
+		bg-gray-200 shadow-lg hover:scale-105 hover:-rotate-1 hover:shadow-xl transition-all">
+			<ul class="space-y-6 text-xl pl-5">
+				<li>Identify an ongoing issue within a community, big or small.</li>
+				<li>Work with locals, form a team and design a sustainable solution</li>
+				<li>Receive funding & mentorship to bring your projects to communities</li>
+				<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
+					<p>Start today</p>	
+				</button>
+			</ul>
+			<div class="h-100 w-auto aspect-[4/3] rounded-lg bg-white"></div>
+
+		</div>
+
+	</section>
 		<section>
 			<div class="inline-flex items-center gap-4">
 			<h1 class="text-[5vh] font-semibold">Recent Updates</h1>
