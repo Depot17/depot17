@@ -9,13 +9,19 @@
     --color-teal: #549e91;
     --color-pink: #ea9daf;
     --color-gray: #efefef;
+    --color-red: #F34242;
 }
 
 body{
     font-family:Inter;
     color:black;
 }
-
+input:focus {
+  outline: none;
+  border-color: #F34242;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+}
 /* h1{
     font-size:clamp(12%, 6.5vw, 2em);
     font-weight:bold;

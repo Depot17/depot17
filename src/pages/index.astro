@@ -4,21 +4,19 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue" style="background: #03496A;
-		background: linear-gradient(180deg, rgba(3, 73, 106, 1) 0%, rgba(255, 255, 255, 1) 100%);">
+	<section id="landing" class="w-[calc(100vh - 1.5em)] h-screen bg-blue" style="background: #03496A;">
 		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
-			<div class=" font-bold text-white flex items-center space-x-4">
-				<span class="text-[14vh]">[</span>
-				<span class="text-[12vh]">BUILDER'S DEPOT</span>
-				<span class="text-[14vh]">]</span>
-
-			</div>
+			<h1 class="text-white text-[12vh] font-semibold">Build the <span class="text-red">change.</span></h1>
 
 			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
-				Wow so at this NGO we are going to do something super epic</span>
-			<button type="button"  class="border border-2 border-white font-medium rounded-full text-md text-white px-5 py-2.5 text-center me-2 mb-2">
-				Join us today
-			</button>
+				Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</span>
+			<label for="email">Start building today:</label>
+				<div class="border border-2 border-white font-medium rounded-full text-md text-white px-5 py-2 text-center w-140">
+				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
+				<button type="submit" class="bg-red font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+					Submit
+				</button>
+			</div>
 			<span class="absolute left-30 rotate-8 aspect-[5/6] w-50 bg-gray-200 ml-0 mb-0 bottom-20 shadow-md text-left py-4 px-6
 			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all" 
 			style="font-family: Gloria Hallelujah;">
@@ -60,7 +58,7 @@ const title = "Depot";
 	</section> -->
 	<section class="px-20 py-14">
 		<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
-		<div class="w-full h-auto flex justify-between items-center py-14 p-20  
+		<div class="w-full h-auto flex lg:gap-10 items-center py-14 p-20  
 		bg-gray-200 shadow-lg hover:scale-105 hover:-rotate-1 hover:shadow-xl transition-all">
 			<ul class="space-y-6 text-xl pl-5">
 				<li>Identify an ongoing issue within a community, big or small.</li>
@@ -70,7 +68,7 @@ const title = "Depot";
 					<p>Start today</p>	
 				</button>
 			</ul>
-			<div class="h-100 w-auto aspect-[4/3] rounded-lg bg-white"></div>
+			<div class="w-full h-auto aspect-[4/3] rounded-lg bg-white"></div>
 
 		</div>
 
@@ -115,8 +113,8 @@ const title = "Depot";
 					<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
 					</button>
 					<div class="absolute bottom-0 mb-10">
-						<h1 class="text-[5vh] font-semibold">Project No. 1</h1>
-						<p>By: Sia R. & Sophia D.</p>
+						<h1 class="text-[5vh] font-semibold">Depot Pick n' Place</h1>
+						<p>By: Sophia D.</p>
 						<p class="pt-2 lg:pr-100">This is the description of a super dope project. Here is a brief explanation for the viewer. 
 							And also a bit about the idea and or progress.</p>
 					</div>
@@ -139,10 +137,15 @@ const title = "Depot";
 			</div>
 			
 		</section>
-
+		<section>
+		<h2>Get a free custom site! <span> Beta </span></h2>
+		<p>Must be a non-profit organization or a small business to be eligible</p>
+		<span>Apply today</span>
+		<p>Email sophia@buildersdepot.org to join this program as a builder</p>
+	</section>
 	</div>
 
-
+	
 	<!-- <section class="bg-beige">
 		<form action="/tk sheets" method="post">
 			<p>
