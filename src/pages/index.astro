@@ -10,13 +10,13 @@ const title = "Depot";
 
 			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
 				Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</span>
-			<label for="email">Start building today:</label>
-				<div class="border border-2 border-white font-medium rounded-full text-md text-white px-5 py-2 text-center w-140">
+			<form action="" method="POST" name="email-form" class="border border-2 border-white font-medium rounded-full text-md text-white px-5 py-2 text-center w-140">
 				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
-				<button type="submit" class="bg-red font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+				<button type="submit" value="submit" class="bg-red font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 					Submit
 				</button>
-			</div>
+			</form>
+			
 			<span class="absolute left-30 rotate-8 aspect-[5/6] w-50 bg-gray-200 ml-0 mb-0 bottom-20 shadow-md text-left py-4 px-6
 			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all" 
 			style="font-family: Gloria Hallelujah;">
@@ -144,29 +144,5 @@ const title = "Depot";
 		<p>Email sophia@buildersdepot.org to join this program as a builder</p>
 	</section>
 	</div>
-
-	
-	<!-- <section class="bg-beige">
-		<form action="/tk sheets" method="post">
-			<p>
-				<label for="fname">First name</label>
-				<input type="text" id="fname" name="fname" value="First name">
-			</p>
-			<p>
-				<label for="lname">Last name</label>
-				<input type="text" id="lname" name="lname" value="Last name">
-			</p>
-			<p>
-				<label for="msg">Message:</label>
-				<textarea id="msg" name="user_message"></textarea>
-			</p>
-			<p>
-				<label for="buildn">Yes</label>
-				<input type="radio" id="buildy">
-				<label for="buildn">No</label>
-				<input type="radio" id="buildn"> 
-			</p>
-			<button type="submit" class="w-50 h-10 bg-blue">Submit</button>
-		</form>
-	</section> -->
+	<script src="app.js"></script>
 </BaseLayout>
