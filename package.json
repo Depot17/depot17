@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@octokit/core": "^7.0.3",
+    "@octokit/rest": "^22.0.0",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.12.8",
     "gsap": "^3.13.0",

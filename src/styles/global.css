@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme{
     --color-yellow: #E7C358;
     --color-blue: #1a3852;
@@ -70,4 +71,3 @@ flash {
 @layer{
 }
 
-@media ()

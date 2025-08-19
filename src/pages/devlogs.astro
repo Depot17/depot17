@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import { Octokit } from "@octokit/core";
+
+const title = "Depot Devlogs";
+
+
+const octokit = new Octokit({
+  auth: import.meta.env.GITHUB_TOKEN
+});
+
+const { data:repos } = await octokit.request('GET /orgs/{org}/repos', {
+  org: 'BUILDERS-DEPOT',
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+});
+
+
+---
+
+<BaseLayout title={title}>
+    <div id="testing" class="text-black">
+        <p>work</p>
+         <ul>
+      {repos.map(repo => (
+        <li><a href={repo.html_url} target="_blank">{repo.name}</a></li>
+      ))}
+    </ul>
+    </div>
+    
+    <!-- <script src="../devlogs.js"></script> -->
+</BaseLayout>
