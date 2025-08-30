@@ -1,21 +1,27 @@
 @import "tailwindcss";
 
 @theme{
-    --color-yellow: #E7C358;
-    --color-blue: #1a3852;
-    --color-lblue: #45779a;
-    --color-tblue: #324c64;
-    --color-white: #ffffff;
-    --color-black: #1f262c;
-    --color-teal: #549e91;
+    --color-yellow: #F3F09E;
+    --color-blue: #192B46;
+    --color-lblue: #83E1EA;
+    --color-white: #FFFBF6;
+    --color-green: #B6EB6C;
+    --color-black: #2A303A;
+    --color-teal: #8DBDB5;
     --color-pink: #ea9daf;
-    --color-gray: #efefef;
-    --color-red: #F34242;
+    --color-gray: #828C9B;
+    --color-red: #A12F29;
+    --color-dred: #6C1714;
+    --color-orange: #6C1714;
+    --color-brown: #c79126;
+    --color-lbrown: #d9a743;
 }
 
 body{
     font-family:Inter;
     color:black;
+    color:#36251b;
+    
 }
 input:focus {
   outline: none;
