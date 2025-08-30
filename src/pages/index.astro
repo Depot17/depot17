@@ -4,43 +4,50 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<section id="landing" class="h-screen -mt-14 bg-brown -mx-8 md:-mx-10 lg:-mx-40 2xl:-mx-60" >
-		<div class=" w-screen h-[100vh] flex flex-col items-center justify-center gap-2 pb-12 text-center sm:px-20">
-			<h1 class="text-white text-[12vh] font-semibold ">Build a <span class="text-green bg-blue">change</span></h1>
+	<section id="landing" class="w-screen h-screen lg:-mt-20 bg-brown  -mx-8 md:-mx-10 lg:-mx-40 2xl:-mx-60" >
+		<div class="h-screen flex flex-col items-center justify-center gap-2 p-4 lg:pb-12 text-center">
+			<h1 class="text-white text-7xl leading-snug xl:text-[12vh] font-semibold ">Build a <span class="text-green bg-blue">change</span></h1>
 
-			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
-				Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</span>
-			<form action="" method="POST" name="email-form" class="border border-2 border-white flex justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2 text-center w-140">
+			<h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4>
+			<form action="" method="POST" name="email-form" class="border border-2 border-white flex justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2  text-center w-60 lg:w-140">
 				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
-				<button type="submit" value="submit" class="bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+				<button type="submit" value="submit" 
+					class="hidden lg:block bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 					Submit
-				</button>
+			</button>
 			</form>
+			<button type="submit" value="submit" 
+			class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+					Submit
+			</button>
 			
-			<span class="absolute left-30 rotate-8 aspect-[5/6] w-50 ml-0 mb-0 bottom-20 shadow-md text-left py-4 px-6
-			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all bg-yellow" 
+			<!-- <span class=" absolute left-30 rotate-8  w-20 lg:w-50 aspect-[5/6] overflow-hiddden lg:ml-0 lg:mb-0 lg:bottom-20 shadow-md text-left 
+			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all bg-yellow text-sm lg:text-lg" 
 			style="font-family: Gloria Hallelujah;">
 				<p class="font-semibold pb-5">Lorem Ipsum</p> 
 				<p>Here is some interesting text that is super useful. <br><br> - Hello World</p>
-			</span>
-			<span class="absolute right-30 -rotate-8 aspect-[2/1] w-40 bg-yellow mr-0 mt-0 top-30 shadow-md text-left py-4 px-6
+			</span> -->
+			<!-- <span class=" absolute right-30 -rotate-8 aspect-[2/1] w-40 bg-yellow mr-0 mt-0 top-30 shadow-md text-left py-4 px-6
 			hover:scale-105 hover:-rotate-10 hover:shadow-lg transition-all" 
 			style="font-family: Gloria Hallelujah;">
 				<p><b>Lorem Ipsum</b> <br><br> - Hello World</p>
-			</span>			
+			</span>			 -->
 		</div>
 	</section>
 	
-		<section id="about" class="py-8 pb-18">
-			<h1 class="text-[5vh] font-semibold">Build real sustainable solutions and change the world with them</h1>
-			<p>Lorem ipsum text blurb wow look here theres stuff continue reading there is <br>even more stuff would you look at that</p>
-		</section>
-		<hr>
-	<section class="px-20 py-14">
-		<h1 class="text-[5vh] font-semibold pb-6">Have an Idea?</h1>
-		<div class="w-full h-auto flex lg:gap-10 items-center py-14 p-20  
+	<section id="about" class="py-8 pb-18">
+		<h2>Build real sustainable solutions and change the world with them</h2>
+		<p class="pt-2">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
+	</section>
+
+	<hr>
+	
+
+	<section class="lg:px-20 lg:py-6">
+		<h2>Have an Idea?</h2>
+		<div class="flex flex-wrap gap-2 lg:gap-10 items-center p-4 lg:py-14 lg:p-20  
 		bg-gray-200 shadow-lg hover:scale-105 hover:-rotate-1 hover:shadow-xl transition-all">
-			<ul class="space-y-6 text-xl pl-5">
+			<ul class="space-y-6 text-xl lg:pl-5">
 				<li>Identify an ongoing issue within a community, big or small.</li>
 				<li>Work with locals, form a team and design a sustainable solution</li>
 				<li>Receive funding & mentorship to bring your projects to communities</li>
@@ -48,67 +55,69 @@ const title = "Depot";
 					<p>Start today</p>	
 				</button>
 			</ul>
-			<div class="w-full h-auto aspect-[4/3] rounded-lg bg-white"></div>
+			<!-- <div class="max-w-100 w-80 h-auto aspect-[4/3] rounded-lg bg-white"></div> -->
 
 		</div>
-
 	</section>
-		<section>
-			<div class="inline-flex items-center gap-4">
-			<h1 class="text-[5vh] font-semibold">Recent Updates</h1>
-				<div class="box w-10 h-10 bg-red-500 rounded-[50%] flash"></div>
-			</div>
-			<div>
-			<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-6 gap-y-6 min-h-100 w-full">
-				<a href="/updates/post">
-					<div class="w-full h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
-						<div class="  bottom-0">
-							<span class="sm:text-[4vh] font-bold">Project</span>
-							<p>this is the description of a super dope project</p>
-						</div>
-					</div>
-				</a>
-				<div class="w-full h-full bg-pink rounded-2xl p-6 border-2 border-black min-h-60">
+
+	<section>
+		<div class="inline-flex items-center gap-4">
+			<h2>Recent Updates</h2>
+			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
+		</div>
+		
+		<div class=" pt-4 flex flex-col lg:flex-row gap-x-6 gap-y-6 min-h-100 w-full">
+			<a href="/updates/post">
+				<div class="w-full lg:w[33vw] h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
 					</div>
 				</div>
-				<div class="w-full h-full bg-lblue rounded-2xl p-6 border-2 border-black min-h-60">
+			</a>
+			<a href="/updates/post">
+				<div class="w-full lg:w[33vw]  h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<section class="py-6">
-			<h1 class="text-center text-[6vh] font-semibold">Ongoing Projects</h1>
-			<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
-			<div class="space-y-10">
-				<a href="proj1.astro" target="_self" class="block">
-					<div class="block relative w-full h-auto bg-brown rounded-2xl p-4 hover:scale-102 duration-300 transition-all">
-						<div class="rounded-xl w-full h-80 p-6 bg-yellow border-red border-3">
-							<button type="button" class="absolute flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
-						<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
-						</button>
-						</div>
-						
-						<div class="px-2 bottom-0 mb-10">
-							<h1 class="text-[5vh] font-semibold">Depot Pick n' Place</h1>
-							<p>By: Sophia D.</p>
-							<p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
-								And also a bit about the idea and or progress.</p>
-						</div>
+			</a>
+			<a href="/updates/post">
+				<div class="w-full lg:w[33vw]  h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
+					<div class="  bottom-0">
+						<span class="sm:text-[4vh] font-bold">Project</span>
+						<p>this is the description of a super dope project</p>
 					</div>
-				</a>
-
-				
-				
-			</div>
+				</div>
+			</a>
 			
-		</section>
+		</div>
+	</section>
+
+	<section class="py-6">
+		<h1 class="text-center text-[6vh] font-semibold">Ongoing Projects</h1>
+		<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
+		<div class="space-y-10">
+			<a href="proj1.astro" target="_self" class="block">
+				<div class="block relative w-full h-auto bg-brown rounded-2xl p-4 hover:scale-102 duration-300 transition-all">
+					<div class="rounded-xl w-full h-80 p-6 bg-yellow border-red border-3">
+						<button type="button" class="absolute flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
+					<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
+					</button>
+					</div>
+					
+					<div class="px-2 bottom-0 mb-10">
+						<h1 class="text-[5vh] font-semibold">Depot Pick n' Place</h1>
+						<p>By: Sophia D.</p>
+						<p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
+							And also a bit about the idea and or progress.</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		
+	</section>
 	<section>
 		<h2>Get a free custom site! <span> Beta </span></h2>
 		<p>Must be a non-profit organization or a small business to be eligible</p>

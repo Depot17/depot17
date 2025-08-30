@@ -19,6 +19,25 @@
     --color-dbrown: #36251b;
 
 }
+
+h2 {
+    @apply text-2xl lg:text-4xl font-semibold sm:leading-tight lg:leading-normal pt-4 pb-2
+}
+h4 {
+    @apply text-lg lg:text-xl pb-2
+}
+body{
+    font-family:Inter;
+    color:#36251b;
+    
+    
+}
+input:focus {
+  outline: none;
+  border-color: #f34526;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+}
 @keyframes dropIn {
     from{
         transform:translateY(-100px);
@@ -32,78 +51,20 @@
 }
 
 #navbar.scrolled {
-    animation: dropIn 0.1s ease-in forwards;
-    width:1000px;
+    animation: dropIn 0.25s ease-in forwards;
+    width:50vw;
+    max-width:1000px;
     position:sticky;
     top:10px;
 }
 
+#navbar.scrolled a {
+    @apply text-lred;
+}
 #navbar.scrolled nav {
-    @apply bg-brown opacity-90 shadow-md text-black h-14 rounded-full flex ;
+    @apply bg-dbrown opacity-90 shadow-md text-black h-14 rounded-full flex ;
 }
 
 #navbar.scrolled #name {
     display:none;
 }
-
-
-body{
-    font-family:Inter;
-    color:#36251b;
-    
-    
-}
-input:focus {
-  outline: none;
-  border-color: #f34526;
-  transition: ease-in-out;
-  transition-duration: 400ms;
-}
-/* h1{
-    font-size:clamp(12%, 6.5vw, 2em);
-    font-weight:bold;
-    line-height:1.25em;
-} */
-
-h2{
-    font-size:2.25em;
-}
-p, li {
-    font-size:1em;
-    /* font-size:clamp(8%, 4vw, 1.5rem);
-    font-weight:400; */
-
-
-}
-
-/* a p{
-    text-decoration: underline;
-} */
-.flash {
-    animation: flash 2s infinite;
-    transition: none;
-}
-
-.effect {
-    animation:forwards 2s;
-    transition:all;
-    overflow:none;
-}
-
-.effect :hover {
-    /* display:block; check */
-    background-color: aqua;
-}
-@keyframes 
-flash {
-  0%, 40% { opacity: 1; }
-  50%, 90% { opacity: 0; }
-
-}
-
-@keyframes effect {
-    
-}
-@layer{
-}
-
