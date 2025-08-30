@@ -4,7 +4,7 @@ const username = "buildersdepot";
 import Social from './socials.astro';
 ---
 
-<footer class= "w-full h-50 text-center grid grid-cols-1 place-items-center">
+<footer class= "w-full h-fit bg-white text-center grid grid-cols-1 place-items-center">
 
   <div class="bg-brown p-6 w-90 relative ml-20 border-2 border-black pt-8">
     <div class="absolute bg-lbrown w-[50px] h-10 left-1/2 -translate-x-1/2 top-0"></div>
@@ -17,9 +17,10 @@ import Social from './socials.astro';
       
       <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
         <img src="../../assets/black_up_arrow.png" alt="TK" width="40px" class="absolute left-2 bottom-0 hover:scale-110 transition ease-in-out">
+        <!-- make it so the longer you hold the button determines how high up you'll go -->
       </button>
-
   </div>
+
   <div class="bg-brown p-6 w-90 relative border-2 border-black mr-10">
     <div class="absolute bg-lbrown w-[50px] h-6 left-1/2 -translate-x-1/2 top-0"></div>
 
@@ -30,10 +31,12 @@ import Social from './socials.astro';
     <p>View our <a href="https://github.com/builders-depot/builders-depot" target="_blank">source code</a> and finances. Inquiries? Contact us at sophiaduan@buildersdepot.org</p>
 
   </div>
-  <div class="bg-brown p-6 w-120 h-10 relative border-2 border-black flex items-center justify-center">
 
+  <div class="bg-brown p-6 w-120 h-10 relative border-2 border-black flex items-center justify-center">
+    <div class="absolute bg-lbrown w-[70px] h-3 left-1/2 -translate-x-1/2 top-0"></div>
     <p>© 2025 [Builder's Depot]. All rights reserved</p>
   </div>
+  
   <div class="w-full bg-black h-8"></div>
 </footer>
 

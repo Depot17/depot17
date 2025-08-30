@@ -6,26 +6,56 @@
     --color-lblue: #83E1EA;
     --color-white: #FFFBF6;
     --color-green: #B6EB6C;
-    --color-black: #2A303A;
+    --color-black: #36251b;
     --color-teal: #8DBDB5;
     --color-pink: #ea9daf;
     --color-gray: #828C9B;
+    --color-lred: #f34526;
     --color-red: #A12F29;
     --color-dred: #6C1714;
     --color-orange: #6C1714;
-    --color-brown: #c79126;
+    --color-brown: #CD7F1F;
     --color-lbrown: #d9a743;
+    --color-dbrown: #36251b;
+
 }
+@keyframes dropIn {
+    from{
+        transform:translateY(-100px);
+        opacity:0;
+
+    }
+    to {
+        transform:translateY(0);
+        opacity:100%;
+    }
+}
+
+#navbar.scrolled {
+    animation: dropIn 0.1s ease-in forwards;
+    width:1000px;
+    position:sticky;
+    top:10px;
+}
+
+#navbar.scrolled nav {
+    @apply bg-brown opacity-90 shadow-md text-black h-14 rounded-full flex ;
+}
+
+#navbar.scrolled #name {
+    display:none;
+}
+
 
 body{
     font-family:Inter;
-    color:black;
     color:#36251b;
+    
     
 }
 input:focus {
   outline: none;
-  border-color: #F34242;
+  border-color: #f34526;
   transition: ease-in-out;
   transition-duration: 400ms;
 }
@@ -46,9 +76,9 @@ p, li {
 
 }
 
-a p{
+/* a p{
     text-decoration: underline;
-}
+} */
 .flash {
     animation: flash 2s infinite;
     transition: none;

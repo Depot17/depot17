@@ -1,35 +1,39 @@
-<header class="">
-    <nav class="relative flex justify-between hide px-10 py-4 text-lg z-10">
+---
+const currentPath = Astro.url.pathname;
+---
+<header id="navbar" class="w-full z-1000 flex relative top-0 justify-center">
+    <nav class="bg-brown w-full flex justify-between px-10 py-4 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
-            <div class="bg-blue px-4 py-2 rounded-10 text-2xl">LOGO</div>
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Depot</span>
+            <div class="bg-dbrown px-4 py-2 rounded-10 text-2xl">LOGO</div>
+            <span id="name" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Builder's Depot</span>
         </a>
         <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 text-white">
+            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-6 rtl:space-x-reverse md:mt-0 text-white">
                 <li>
-                    <a href="" target="_self" class="block py-2 px-3 text-white bg-blue-700 
-                    rounded-sm md:bg-transparent md:p-0 dark:text-white 
-                    md:dark:text-blue-500 " aria-current="page">Home</a>
-                </li>
-                <!-- <li>
-                    <a href="/about" target="_self" class="block py-2 px-3
-                    rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-                    md:border-0 md:hover:text-yellow md:p-0 dark:text-white md:dark:hover:text-blue-500 
-                    dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">About</a>
-                </li> -->
-                <li>
-                    <a href="/projects" class="block py-2 px-3
-                    rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-                    md:border-0 md:hover:text-yellow md:p-0 dark:text-white md:dark:hover:text-blue-500 
-                    dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Projects</a>
+                    <a href="/" target="_self" class={`block py-2 px-3 ${
+                        currentPath === "/" 
+                        ? "text-red font-semibold"   
+                        : "text-white"}`}>Home</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3
-                    rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-                    md:border-0 md:hover:text-yellow md:p-0 dark:text-white md:dark:hover:text-blue-500 
-                    dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all">Community</a>
+                    <a href="/about" target="_self" class={`block py-2 px-3 ${
+                        currentPath === "/about" 
+                        ? "text-red font-semibold"   
+                        : "text-white"}`}>About</a>
                 </li>
-                
+                <li>
+                    <a href="/projects" target="_self" class={`block py-2 px-3 ${
+                        currentPath === "/projects" 
+                        ? "text-red font-semibold"   
+                        : "text-white"}`}>Projects</a>
+                </li>
+                <li>
+                    <a href="/community" target="_self" class={`block py-2 px-3 ${
+                        currentPath === "/community" 
+                        ? "text-red font-semibold"   
+                        : "text-white"}`}>Community</a>
+                </li>
+
             </ul>
         </div>
         <div class="z-10 md:flex hidden bg-transparent border border-2 border-white rounded-full px-6 py-2 flex items-center justify-center">
@@ -44,3 +48,10 @@
         <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button>
     </nav>
 </header>
+<script>
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 1000);
+  });
+</script>
+<!-- redo the above with gsap TK -->

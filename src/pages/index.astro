@@ -4,15 +4,15 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<section id="landing" class="h-screen bg-brown -mx-8 md:-mx-10 lg:-mx-40" >
-		<div class=" w-screen h-[100vh] -mt-21 flex flex-col items-center justify-center gap-2 text-center sm:px-20">
-			<h1 class="text-white text-[12vh] font-semibold">Build the <span class="text-red">change.</span></h1>
+	<section id="landing" class="h-screen -mt-14 bg-brown -mx-8 md:-mx-10 lg:-mx-40 2xl:-mx-60" >
+		<div class=" w-screen h-[100vh] flex flex-col items-center justify-center gap-2 pb-12 text-center sm:px-20">
+			<h1 class="text-white text-[12vh] font-semibold ">Build a <span class="text-green bg-blue">change</span></h1>
 
 			<span class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 ">
 				Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</span>
-			<form action="" method="POST" name="email-form" class="border border-2 border-white flex justify-between font-medium rounded-full text-md text-white px-5 py-2 text-center w-140">
+			<form action="" method="POST" name="email-form" class="border border-2 border-white flex justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2 text-center w-140">
 				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
-				<button type="submit" value="submit" class="bg-green font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+				<button type="submit" value="submit" class="bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 					Submit
 				</button>
 			</form>
@@ -61,20 +61,20 @@ const title = "Depot";
 			<div>
 			<div class=" pt-4 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] grid gap-x-6 gap-y-6 min-h-100 w-full">
 				<a href="/updates/post">
-					<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+					<div class="w-full h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 						<div class="  bottom-0">
 							<span class="sm:text-[4vh] font-bold">Project</span>
 							<p>this is the description of a super dope project</p>
 						</div>
 					</div>
 				</a>
-				<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+				<div class="w-full h-full bg-pink rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
 					</div>
 				</div>
-				<div class="w-full h-full bg-gray rounded-2xl p-6 border-2 border-black min-h-60">
+				<div class="w-full h-full bg-lblue rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
@@ -88,8 +88,8 @@ const title = "Depot";
 			<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
 			<div class="space-y-10">
 				<a href="proj1.astro" target="_self" class="block">
-					<div class="block relative w-full h-110 bg-yellow rounded-2xl p-4 border-4 border-teal hover:scale-102 duration-300 transition-all">
-						<div class="rounded-xl w-full h-[70%] p-6 bg-white border-red border-3">
+					<div class="block relative w-full h-auto bg-brown rounded-2xl p-4 hover:scale-102 duration-300 transition-all">
+						<div class="rounded-xl w-full h-80 p-6 bg-yellow border-red border-3">
 							<button type="button" class="absolute flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
 						<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
 						</button>
@@ -103,19 +103,8 @@ const title = "Depot";
 						</div>
 					</div>
 				</a>
-				<a href="proj2.astro" target="_self" class="block">
-					<div class="relative w-full h-100 bg-gray rounded-2xl p-6 border-2 border-black hover:scale-102 duration-300 transition-all">
-					<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10">
-					Support this
-					</button>
-					<div class="absolute bottom-0 mb-10">
-						<h1 class="text-[5vh] font-semibold">Project No. 2</h1>
-						<p>By: Sia R. & Sophia D.</p>
-						<p class="pt-2 lg:pr-100">This is the description of a super dope project. Here is a brief explanation for the viewer. 
-							And also a bit about the idea and or progress.</p>
-					</div>
-				</div>
-				</a>
+
+				
 				
 			</div>
 			
