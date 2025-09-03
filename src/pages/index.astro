@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
+import ProjectsSlot from '../components/projects_slot.astro';
 const title = "Depot";
 ---
 
@@ -41,9 +42,9 @@ const title = "Depot";
 	</section>
 
 	<hr class="py-4">
+		<!-- <h1 class="text-center text-[8vh] font-semibold py-2">Start <span class="bg-blue px-2 text-green">Today</span></h1> -->
 
 	<!-- <section id="intro" class="px-1  w-full h-[80vh] py-4 flex items-center">
-		<!-- <h1 class="text-center text-[8vh] font-semibold py-2">Start <span class="bg-blue px-2 text-green">Today</span></h1> -->
 		<div class="group transition duration-300 ease-in-out w-full p-8 h-120 bg-gray-200 rounded-2xl">
 			<div class="flex items-center gap-4 ">
 				<p>1/3</p>
@@ -126,24 +127,7 @@ const title = "Depot";
 	<section class="py-6">
 		<h1 class="text-center text-[6vh] font-semibold">Ongoing Projects</h1>
 		<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
-		<div class="space-y-10">
-			<a href="proj1.astro" target="_self" class="block">
-				<div class="block relative w-full h-auto bg-brown rounded-2xl p-4 hover:scale-102 hover:shadow-xl duration-300 transition-all">
-					<div class="rounded-xl w-full h-80 p-6 bg-yellow border-red border-3">
-						<button type="button" class="absolute flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
-					<span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
-					</button>
-					</div>
-					
-					<div class="px-2 bottom-0 mb-10">
-						<h1 class="text-[5vh] font-semibold">Depot Pick n' Place</h1>
-						<p>By: Sophia D.</p>
-						<p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
-							And also a bit about the idea and or progress.</p>
-					</div>
-				</div>
-			</a>
-		</div>
+		<ProjectsSlot />
 		
 	</section>
 	<section>
