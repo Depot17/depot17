@@ -1,8 +1,10 @@
 ---
 const currentPath = Astro.url.pathname;
+const homepage = Astro.url.pathname =="/";
+
 ---
 <header id="navbar" class="hidden lg:block w-full z-1000 flex relative top-0 justify-center">
-    <nav class="bg-brown w-full flex justify-between items-center px-10 py-4 text-lg">
+    <nav class="bg-transpatent w-full flex justify-between items-center px-10 py-3 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
             <div class="bg-dbrown px-4 py-2 rounded-10 text-2xl">LOGO</div>
             <span id="name" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Builder's Depot</span>
@@ -13,25 +15,34 @@ const currentPath = Astro.url.pathname;
                     <a href="/" target="_self" class={`block py-2 px-3 ${
                         currentPath === "/" 
                         ? "text-dred font-semibold"   
-                        : "text-white"}`}>Home</a>
+                        : "text-black"}`}>Home</a>
                 </li>
                 <li>
                     <a href="/about" target="_self" class={`block py-2 px-3 ${
                         currentPath === "/about" 
                         ? "text-red font-semibold"   
-                        : "text-white"}`}>About</a>
+                        : currentPath === "/" 
+                        
+                        ? "text-white"
+                        : "text-black"}`}>About</a>
                 </li>
                 <li>
                     <a href="/projects" target="_self" class={`block py-2 px-3 ${
                         currentPath === "/projects" 
                         ? "text-red font-semibold"   
-                        : "text-white"}`}>Projects</a>
+                        : currentPath === "/" 
+                    
+                        ? "text-white"
+                        : "text-black"}`}>Projects</a>
                 </li>
                 <li>
-                    <a href="/community" target="_self" class={`block py-2 px-3 ${
-                        currentPath === "/community" 
+                    <a href="/resources" target="_self" class={`block py-2 px-3 ${
+                        currentPath === "/resources" 
                         ? "text-red font-semibold"   
-                        : "text-white"}`}>Community</a>
+                        : currentPath === "/" 
+                    
+                        ? "text-white"
+                        : "text-black"}`}>Resources</a>
                 </li>
 
             </ul>
