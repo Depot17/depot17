@@ -7,7 +7,7 @@
     --color-white: #FFFBF6;
     --color-green: #B6EB6C;
     --color-black: #36251b;
-    --color-teal: #6AC2B2;
+    --color-teal: #61CBB8;
     --color-pink: #ea9daf;
     --color-gray: #828C9B;
     --color-lred: #f34526;
@@ -49,20 +49,31 @@ input:focus {
         opacity:100%;
     }
 }
+.nav-item {
+   @apply hover:text-teal transition-all ease-in-out duration-200
+
+}
+
 
 #navbar.scrolled {
-    animation: dropIn 0.25s ease-in forwards;
+    animation: dropIn 0.25s ease-in-out forwards;
     width:50vw;
     max-width:1000px;
     position:sticky;
     top:10px;
 }
 
-#navbar.scrolled a {
-    @apply text-lred;
+#navbar.scrolled nav {
+    li, a {
+    @apply text-lred bg-transparent
+
+    }
+
+    
 }
 #navbar.scrolled nav {
-    @apply bg-dbrown opacity-90 shadow-md text-black h-14 rounded-full flex ;
+    @apply bg-dbrown opacity-95 shadow-md h-14 rounded-full flex px-1.5;
+
 }
 
 #navbar.scrolled #name {

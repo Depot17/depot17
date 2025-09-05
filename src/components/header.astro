@@ -4,41 +4,48 @@ const homepage = Astro.url.pathname =="/";
 
 ---
 <header id="navbar" class="hidden lg:block w-full z-1000 flex relative top-0 justify-center">
-    <nav class="bg-transpatent w-full flex justify-between items-center px-10 py-3 text-lg">
+    <nav class="bg-transparent w-full flex justify-between items-center px-10 py-3 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
-            <div class="bg-dbrown px-4 py-2 rounded-10 text-2xl">LOGO</div>
-            <span id="name" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Builder's Depot</span>
+            <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
+            <span id="name" class={`nav-item hover:opacity-70 self-center text-2xl font-semibold whitespace-nowrap 
+            ${ currentPath === "/"
+             ? 'text-white'
+             : 'text-black'}`}>
+                Builder's Depot</span>
         </a>
         <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-white">
                 <li>
-                    <a href="/" target="_self" class={`block py-2 px-3 ${
+                    <a href="/" target="_self" class={`nav-item block px-3 ${
                         currentPath === "/" 
-                        ? "text-dred font-semibold"   
+                        ? "font-semibold"   
                         : "text-black"}`}>Home</a>
                 </li>
-                <li>
-                    <a href="/about" target="_self" class={`block py-2 px-3 ${
+                <!-- <li>/</li> -->
+                <!-- <li>
+                    <a href="/about" target="_self" class={`nav-item block px-3 ${
                         currentPath === "/about" 
-                        ? "text-red font-semibold"   
+                        ? "text-green bg-blue font-semibold"   
                         : currentPath === "/" 
                         
                         ? "text-white"
                         : "text-black"}`}>About</a>
-                </li>
+                </li> -->
+                <li>/</li>
                 <li>
-                    <a href="/projects" target="_self" class={`block py-2 px-3 ${
+                    <a href="/projects" target="_self" class={`nav-item block px-3 ${
                         currentPath === "/projects" 
-                        ? "text-red font-semibold"   
+                        ? "text-green bg-blue font-semibold"   
                         : currentPath === "/" 
                     
                         ? "text-white"
                         : "text-black"}`}>Projects</a>
                 </li>
+                <li><p>/</p></li>
                 <li>
-                    <a href="/resources" target="_self" class={`block py-2 px-3 ${
+                    <a href="/resources" target="_self" class={`nav-item block px-3 ${
                         currentPath === "/resources" 
-                        ? "text-red font-semibold"   
+                        ? "text-green bg-blue font-semibold"   
                         : currentPath === "/" 
                     
                         ? "text-white"
@@ -47,13 +54,20 @@ const homepage = Astro.url.pathname =="/";
 
             </ul>
         </div>
-        <div class="z-10 md:flex hide bg-lbrown border border-2 border-p rounded-full px-6 py-2 min-h-10 flex items-center justify-center">
-            <a href="#" class="text-white">
-            Donate
-            </a>
-        </div>
+        <a href="#" class="hide bg-dbrown 
+         rounded-full 
+        min-h-10 flex items-center justify-center border-none">
+            <span onclick="this.classList.toggle('-translate-y-1')" class="bg-lbrown rounded-full block box-border 
+            transform -translate-y-1.5 transition-all ease duration-100 px-6 py-2
+            hover:-translate-y-0.75">
+                <p class="text-white">
+                Donate</p>
+            </span>
+
+        </a>
         <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button>
     </nav>
+    <hr class={`${ homepage ? 'hidden' : 'border-2 border-dashed border-gray-300'}`}>
 </header>
 <script>
   const navbar = document.getElementById("navbar");
