@@ -5,12 +5,15 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<section id="landing" class="w-screen h-screen lg:-mt-24 bg-brown  " >
-		<div class="h-screen flex flex-col items-center justify-center gap-2 p-4 lg:pb-12 text-center">
-			<h1 class="text-white text-7xl leading-snug xl:text-[12vh] font-semibold ">Build a <span class="text-green bg-blue">change</span></h1>
+	<section id="landing" class="w-screen h-screen lg:-mt-18 bg-brown relative " >
+		<div class="grid w-full h-120 place-items-center ">
+		<div class="w-full h-[65%] bg-dyellow absolute top-1/2 -translate-y-1/2"></div>
+		<div class="col-start-1 row-start-1  h-screen flex flex-col items-center justify-center gap-2 p-4 lg:pb-12 text-center">
+			<h1 class="text-white z-1000 text-shadow-4xl text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">Build a <span class="text-green bg-blue text-shadow-none">change</span></h1>
+						<p class="text-white z-1000 w-180 text-xl"> Doloremque voluptas, illo alias corporis consectetur qui libero nostrum, fuga nihil dolore labore velit! Numquam excepturi tempora soluta porro aut eos et?</p>
 
-			<h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4>
-			<form action="" method="POST" name="email-form" class="border border-2 border-white flex justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2  text-center w-60 lg:w-140">
+			<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
+			<form action="" method="POST" name="email-form" class="border border-2 border-white flex z-2000 justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2  text-center w-60 lg:w-140">
 				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
 				<button type="submit" value="submit" 
 					class="hidden lg:block bg-red  font-medium rounded-full 
@@ -28,8 +31,8 @@ const title = "Depot";
 					Submit
 			</button>
 			
-			
-			<span class=" absolute left-30 rotate-8  w-20 lg:w-50 aspect-[5/6] overflow-hiddden lg:ml-0 lg:mb-0 lg:bottom-20 shadow-md text-left 
+			</div>
+			<!-- <span class=" absolute left-30 rotate-8  w-20 lg:w-50 aspect-[5/6] overflow-hiddden lg:ml-0 lg:mb-0 lg:bottom-20 shadow-md text-left 
 			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all bg-yellow text-sm lg:text-lg p-4" 
 			style="font-family: Gloria Hallelujah;">
 				<p class="font-semibold pb-5">Lorem Ipsum</p> 
@@ -39,7 +42,7 @@ const title = "Depot";
 			hover:scale-105 hover:-rotate-10 hover:shadow-lg transition-all" 
 			style="font-family: Gloria Hallelujah;">
 				<p><b>Lorem Ipsum</b> <br><br> - Hello World</p>
-			</span>			
+			</span>			 -->
 		</div>
 			<!-- <div class="h-8 w-[110vw]  bg-black absolute rotate-2">
 				<p>Hello world</p>
@@ -47,9 +50,9 @@ const title = "Depot";
 			<div class="h-8 w-[110vw]  bg-black absolute -rotate-2">
 				<p>Hello world</p>
 			</div> -->
-
+		<p class="barcode text-[14vh] absolute right-10 -bottom-8 ">TODAY</p>
 	</section>
-	<div class="px-8 md:px-10 lg:px-40 2xl:px-60 pb-10 pt-3">
+	<div class="px-8 md:px-10 lg:px-40 2xl:px-60  pb-10 pt-3">
 	<section id="about" class="py-8 ">
 		<h2>Build real sustainable solutions and change the world with them</h2>
 		<p class="pt-2">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
@@ -109,9 +112,9 @@ const title = "Depot";
 			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
 		</div>
 		
-		<div class=" pt-4 flex flex-col lg:flex-row gap-x-6 gap-y-6 min-h-100 w-full">
+		<div class=" pt-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  min-h-100 gap-4">
 			<a href="/updates/post">
-				<div class="w-full lg:w[33vw] h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60 hover:inset-ring-2">
+				<div class="h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
@@ -119,7 +122,7 @@ const title = "Depot";
 				</div>
 			</a>
 			<a href="/updates/post">
-				<div class="w-full lg:w[33vw]  h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
+				<div class="h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>
@@ -127,7 +130,7 @@ const title = "Depot";
 				</div>
 			</a>
 			<a href="/updates/post">
-				<div class="w-full lg:w[33vw]  h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
+				<div class="h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
 						<span class="sm:text-[4vh] font-bold">Project</span>
 						<p>this is the description of a super dope project</p>

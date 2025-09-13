@@ -14,10 +14,17 @@
     --color-red: #A12F29;
     --color-dred: #6C1714;
     --color-orange: #6C1714;
-    --color-brown: #CD7F1F;
+    --color-dyellow: #CD7F1F;
+    --color-brown:#B16528;
     --color-lbrown: #d9a743;
     --color-dbrown: #36251b;
 
+}
+
+.barcode {
+  font-family: "Libre Barcode 128", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h2 {
@@ -65,14 +72,16 @@ input:focus {
 
 #navbar.scrolled nav {
     li, a {
-    @apply text-lred bg-transparent
+    @apply text-dbrown
 
     }
 
     
 }
 #navbar.scrolled nav {
-    @apply bg-dbrown opacity-95 shadow-md h-14 rounded-full flex px-1.5;
+    background-color:rgba(255, 255, 255, 0.658);
+    backdrop-filter: blur(10px);
+    @apply shadow-md h-14 rounded-xl flex px-1.5;
 
 }
 

@@ -3,8 +3,8 @@ const currentPath = Astro.url.pathname;
 const homepage = Astro.url.pathname =="/";
 
 ---
-<header id="navbar" class="hidden lg:block w-full z-1000 flex relative top-0 justify-center">
-    <nav class={` w-full flex justify-between items-center px-10 py-3 text-lg ${ homepage ? 'bg-brown'
+<header id="navbar" class="bg-opacity-20  hidden lg:block w-full z-1000 flex relative top-0 justify-center ">
+    <nav class={` w-full flex bg-opacity-20 justify-between items-center px-10 py-3 text-lg ${ homepage ? 'bg-brown'
         : 'bg-white'}`}>
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
             <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
@@ -57,14 +57,9 @@ const homepage = Astro.url.pathname =="/";
         </div>
         <a href="#" class="hide bg-dbrown 
          rounded-full 
-        min-h-10 flex items-center justify-center border-none">
-            <span onclick="this.classList.toggle('-translate-y-1')" class="bg-lbrown rounded-full block box-border 
-            transform -translate-y-1.5 transition-all ease duration-100 px-6 py-2
-            hover:-translate-y-0.75">
-                <p class="text-white">
-                Donate</p>
-            </span>
-
+        min-h-10 flex items-center justify-center px-8">
+            <p class="text-white">
+            Donate</p>
         </a>
         <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button>
     </nav>
