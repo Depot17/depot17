@@ -55,13 +55,22 @@ const homepage = Astro.url.pathname =="/";
 
             </ul>
         </div>
-        <a href="#" class="hide bg-dbrown 
-         rounded-full 
-        min-h-10 flex items-center justify-center px-8">
-            <p class="text-white">
-            Donate</p>
-        </a>
-        <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button>
+        <div class="flex">
+            <a href="#" class="w-auto hide bg-dbrown 
+            rounded-full 
+            min-h-10 px-6 py-2">
+                <p class="text-lred">
+                Shop</p>
+            </a>
+            <a href="#" class="hide bg-dbrown 
+            rounded-full 
+            min-h-10 px-6 py-2 -ml-2.5">
+                <p class="text-lred">
+                Donate</p>
+            </a>
+        </div>
+        <!-- <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button> -->
+        
     </nav>
     <hr class={`${ homepage ? 'hidden' : 'border-2 border-dashed border-gray-300'}`}>
 </header>

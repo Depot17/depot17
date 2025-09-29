@@ -5,33 +5,32 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<section id="landing" class="w-screen h-screen lg:-mt-18 bg-brown relative " >
-		<div class="grid w-full h-120 place-items-center ">
-		<div class="w-full h-[65%] bg-dyellow absolute top-1/2 -translate-y-1/2"></div>
-		<div class="col-start-1 row-start-1  h-screen flex flex-col items-center justify-center gap-2 p-4 lg:pb-12 text-center">
-			<h1 class="text-white z-1000 text-shadow-4xl text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">Build a <span class="text-green bg-blue text-shadow-none">change</span></h1>
-						<p class="text-white z-1000 w-180 text-xl"> Doloremque voluptas, illo alias corporis consectetur qui libero nostrum, fuga nihil dolore labore velit! Numquam excepturi tempora soluta porro aut eos et?</p>
+	<section id="landing" class="w-screen h-screen lg:-mt-18 bg-brown  grid  place-items-center " >
+			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center">
 
-			<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
-			<form action="" method="POST" name="email-form" class="border border-2 border-white flex z-2000 justify-between font-medium rounded-full text-md text-white pr-2 pl-4 py-2  text-center w-60 lg:w-140">
-				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com"> 
-				<button type="submit" value="submit" 
-					class="hidden lg:block bg-red  font-medium rounded-full 
-					text-md text-white text-center">
-					<span onclick="this.classList.toggle('-translate-y-1')" class="bg-lred rounded-full block box-border 
-					transform -translate-y-1.5 transition-all ease duration-100 px-5 py-1.5 border-2 border-pink
-					hover:-translate-y-0.75">
-            		<p class="text-white">
-						Submit</p>
-					</span>
-			</button>
-			</form>
-			<button type="submit" value="submit" 
-			class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
-					Submit
-			</button>
-			
-			</div>
+				<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
+					Build a change</h1>
+				<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
+				<form action="" method="POST" name="email-form" class="bg-white flex z-2000 justify-between font-medium rounded-full 
+				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
+					<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="outline-none flex-1"> 
+					<button type="submit" value="submit" 
+						class="hidden lg:block bg-red  font-medium rounded-full 
+						text-md text-white text-center ">
+						<span onclick="this.classList.toggle('text-blue')" class="bg-lred rounded-full block box-border 
+						transition-all ease duration-100 w-10 aspect-[1/1] border-2 border-pink
+						hover:-translate-y-1 flex items-center justify-center focus:border-black">
+						<p class="text-white">
+						--> </p>
+						</span>
+				</button>
+				</form>
+				<!-- <button type="submit" value="submit" 
+				class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
+						Submit
+				</button> -->
+				
+				</div>
 			<!-- <span class=" absolute left-30 rotate-8  w-20 lg:w-50 aspect-[5/6] overflow-hiddden lg:ml-0 lg:mb-0 lg:bottom-20 shadow-md text-left 
 			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all bg-yellow text-sm lg:text-lg p-4" 
 			style="font-family: Gloria Hallelujah;">
@@ -43,7 +42,6 @@ const title = "Depot";
 			style="font-family: Gloria Hallelujah;">
 				<p><b>Lorem Ipsum</b> <br><br> - Hello World</p>
 			</span>			 -->
-		</div>
 			<!-- <div class="h-8 w-[110vw]  bg-black absolute rotate-2">
 				<p>Hello world</p>
 			</div>
@@ -142,15 +140,14 @@ const title = "Depot";
 	</section>
 
 	<section class="py-6">
-		<div class="grid grid-cols-3 w-full px-8 place-items-center">
+		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center">
 			<div></div>
 			<h1 class="text-[6vh] font-semibold ">Ongoing&nbsp;Projects</h1>
-			<div class="ml-auto">
+			<div class="lg:ml-auto">
 				<a href="projects" target="_self" class="flex items-center gap-2">
 					<p>View all projects</p>
 					<img src="/assets/open_link.svg" width="25px"> 
 				</a>
-				
 			</div>
 		</div>
 		
