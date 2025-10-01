@@ -1,19 +1,33 @@
 
-// import React from 'react';
-import { Canvas } from '@react-three/fiber';
-// import { createRoot } from 'react-dom/client';
-// import { OrbitControls } from '@react-three/drei';
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
+import { DDSLoader } from "three-stdlib";
+import { Suspense } from "react";
 
-   export default function Test() {
+
+    const Scene = () => {
+        const materials = useLoader(MTLLoader, "/Claw.mtl")
+        const obj = useLoader(OBJLoader, '/Claw.obj', (loader) => {
+            materials.preload();
+            loader.setMaterials(materials);
+        })
+        return <primitive object={obj} scale={14} />
+
+    };
+
+
+    export default function App() {
     return (
-        <Canvas>
-            <mesh>
-                <boxGeometry args={[5,5,5]} />
-                <meshPhongMaterial />
-            </mesh>
-            <ambientLight intensity={0.1} />
-            <directionalLight color="red" position={[0, 0, 5]} />
+        <Canvas style={{ width: "500px", height: "500px",}}>
+      
+            <ambientLight intensity={0.6} />
+            <directionalLight color="red" position={[0, 0, 0]} />
+            <Scene />
+            <OrbitControls  />
         </Canvas>
     );
    }
-// createRoot(document.getElementById('root')).render(<Test />)
