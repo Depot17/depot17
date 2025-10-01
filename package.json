@@ -9,11 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.0",
     "@octokit/core": "^7.0.3",
     "@octokit/rest": "^22.0.0",
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
     "astro": "^5.14.1",
     "gsap": "^3.13.0",
-    "tailwindcss": "^4.1.8"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.8",
+    "three": "^0.180.0"
   }
 }
