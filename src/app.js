@@ -11,9 +11,21 @@ gsap.from(".text-green", {
 			});
 
 
-    gsap.from('.text-dbrown'),{
-        y:40,
+gsap.to('.change', {
+    backgroundColor:"white",
+    duration:1,
+    ease:"power2.out",
+
+    scrollTrigger: {
+        trigger: '.trigger',
+        start: 'top center',
+        toggleActions: 'play none reverse reverse',
+        
+        markers:true
     }
+});
+
+
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {
     e.preventDefault();

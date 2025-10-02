@@ -1,15 +1,20 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
 import ProjectsSlot from '../components/projects_slot.astro';
+import Three from '../components/Three';
+
 const title = "Depot";
 ---
 
-<BaseLayout title={title}>
-	<section id="landing" class="w-screen h-screen lg:-mt-18 bg-brown  grid  place-items-center " >
+<BaseLayout title={title} class="">
+	<section id="landing" class=" w-screen h-screen lg:-mt-18 grid  place-items-center " >
 			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center">
 
-				<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
+				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 top-60 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
 					Build a <br> </h1>
+										    <Three client:only="react" />
+
+					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 bottom-80 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
 				<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
 				<form action="" method="POST" name="email-form" class="bg-white flex z-2000 justify-between font-medium rounded-full 
 				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
@@ -105,7 +110,7 @@ const title = "Depot";
 		</div>
 	</section> -->
 
-	<section>
+	<section class="trigger">
 		<div class="inline-flex items-center gap-4">
 			<h2>Recent Updates</h2>
 			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
