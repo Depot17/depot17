@@ -3,9 +3,8 @@ const currentPath = Astro.url.pathname;
 const homepage = Astro.url.pathname =="/";
 
 ---
-<header id="navbar" class="bg-opacity-20  hidden lg:block w-full z-1000 flex relative top-0 justify-center ">
-    <nav class={` w-full flex bg-opacity-20 justify-between items-center px-10 py-3 text-lg ${ homepage ? 'bg-brown'
-        : 'bg-white'}`}>
+<header id="navbar" class="bg-transparent hidden lg:block w-full z-1000 flex relative top-0 justify-center ">
+    <nav class="w-full flex justify-between items-center px-10 py-3 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
             <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
             <span id="name" class={`nav-item hover:opacity-70 self-center text-2xl font-semibold whitespace-nowrap 

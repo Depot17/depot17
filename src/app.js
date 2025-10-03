@@ -6,21 +6,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scriptURL ="https://script.google.com/macros/s/AKfycbwg3qWCELhFNx4MeGwGhXARYLqD7PRK8KqGVKQTYi-ZoL40rzcNIZw0-wqqDNooSXfIdw/exec";
 
-gsap.from(".text-green", {
+gsap.from(".text-dgreen", {
 			y: 40, 
 			});
 
 
 gsap.to('.change', {
     backgroundColor:"white",
-    duration:1,
+    duration:0.6,
     ease:"power2.out",
 
     scrollTrigger: {
         trigger: '.trigger',
         start: 'top center',
         toggleActions: 'play none reverse reverse',
-        
         markers:true
     }
 });

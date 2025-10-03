@@ -6,15 +6,19 @@ import Three from '../components/Three';
 const title = "Depot";
 ---
 
-<BaseLayout title={title} class="">
+<BaseLayout title={title}>
+	<div class="bg-brown change">
 	<section id="landing" class=" w-screen h-screen lg:-mt-18 grid  place-items-center " >
 			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center">
 
 				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 top-60 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
 					Build a <br> </h1>
-										    <Three client:only="react" />
 
-					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 bottom-80 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
+					<div class="w-[600px] h-[500px]">
+						<Three  client:only="react" />
+					</div>
+
+					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 bottom-80 2xl:bottom-100 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
 				<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
 				<form action="" method="POST" name="email-form" class="bg-white flex z-2000 justify-between font-medium rounded-full 
 				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
@@ -62,7 +66,7 @@ const title = "Depot";
 		<p class="pt-2">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
 	</section>
 
-	<hr class="py-4">
+	<hr class="my-4 border-dashed border-gray border-2">
 		<!-- <h1 class="text-center text-[8vh] font-semibold py-2">Start <span class="bg-blue px-2 text-green">Today</span></h1> -->
 
 	<!-- <section id="intro" class="px-1  w-full h-[80vh] py-4 flex items-center">
@@ -144,7 +148,6 @@ const title = "Depot";
 			
 		</div>
 	</section>
-
 	<section class="py-6">
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center">
 			<div></div>
@@ -169,6 +172,7 @@ const title = "Depot";
 		<h4>If you <b>don't</b> qualify, and are avalible to pay for a site, email sophia@buildersdepot.org</h4>
 		<p>Email sophia@buildersdepot.org to join this program as a builder</p>
 	</section>
+	</div>
 	</div>
 	<script src="../app.js"></script>
 </BaseLayout>

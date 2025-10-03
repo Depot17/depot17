@@ -19,6 +19,7 @@
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "astro": "^5.14.1",
+    "gl-noise": "^1.6.1",
     "gsap": "^3.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

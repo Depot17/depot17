@@ -7,7 +7,8 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { EffectComposer, Outline } from '@react-three/postprocessing';
 import { DDSLoader } from "three-stdlib";
-import { Suspense } from "react";
+// import { Suspense } from "react";
+import { Shader } from "./Shader";
 
 
     const Scene = () => {
@@ -22,29 +23,31 @@ import { Suspense } from "react";
         //     if (child.isMesh) outlineRefs.current.push(child);
         //     });
         // });
-        })
+        // useEffect(() => {
+        //     set({
+        //         fillMix: 1,
+        //         dash: true,
+        //         squeeze: true,
+        //         thickness: 0.14
+        //     })
+        // })
+        });
+
         return <primitive object={obj} scale={8} />
 
     };
 
+    export default function App(){
+        return (
+            <Canvas style={{ width: "600px", height: "500px",}}>
+        
+                <ambientLight intensity={0.8} />
+                <directionalLight color="red" position={[0, 0, 0]} />
+                <Scene />
+                {/* <Shader /> */}
 
-    export default function App() {
-    return (
-        <Canvas style={{ width: "600px", height: "500px",}}>
-      
-            <ambientLight intensity={0.8} />
-            <directionalLight color="red" position={[0, 0, 0]} />
-            <Scene />
-            <OrbitControls enableZoom={false} />
-                {/* <EffectComposer autoClear={false}>
-                    <Outline
-                        selection={[ref0, ref1, ref2, ref3]}
-                        blur={config.blur}
-                        visibleEdgeColor={config.visibleEdgeColor}
-                        hiddenEdgeColor={config.hiddenEdgeColor}
-                        edgeStrength={config.edgeStrength}
-                    />
-                </EffectComposer>         */}
-                </Canvas>
+                <OrbitControls enableZoom={false} />
+        
+            </Canvas>
     );
-   }
+}
