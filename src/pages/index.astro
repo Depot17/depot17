@@ -7,8 +7,7 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<div class="bg-brown change ">
-	<section id="landing" class=" w-screen h-screen lg:-mt-18 grid  place-items-center " >
+	<section id="landing" class=" w-full h-full lg:-mt-18 grid  place-items-center " >
 			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center relative">
 
 				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 3xl:left-110 top-60 3xl:top-90 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
@@ -18,7 +17,6 @@ const title = "Depot";
 						<Three  client:only="react" />
 					</div>
 					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 2xl:bottom-80 3xl:right-110 bottom-80 3xl:bottom-100 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
-				<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
 				<form action="" method="POST" name="email-form" class="bg-white flex z-2000 justify-between font-medium rounded-full 
 				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
 					<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="outline-none flex-1"> 
@@ -29,39 +27,19 @@ const title = "Depot";
 						transition-all ease duration-100 w-10 aspect-[1/1] border-2 border-pink
 						hover:-translate-y-1 flex items-center justify-center focus:border-black">
 						<p class="text-white">
-						--> </p>
+						arrow </p>
 						</span>
 				</button>
 				</form>
 				<p class="text-white pt-4 max-w-130 z-1000">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p>
-				<!-- <button type="submit" value="submit" 
+				<button type="submit" value="submit" 
 				class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 						Submit
-				</button> -->
+				</button>
 				
 				</div>
-			<!-- <span class=" absolute left-30 rotate-8  w-20 lg:w-50 aspect-[5/6] overflow-hiddden lg:ml-0 lg:mb-0 lg:bottom-20 shadow-md text-left 
-			hover:scale-105 hover:rotate-10 hover:shadow-lg transition-all bg-yellow text-sm lg:text-lg p-4" 
-			style="font-family: Gloria Hallelujah;">
-				<p class="font-semibold pb-5">Lorem Ipsum</p> 
-				<p>Here is some interesting text that is super useful. <br><br> - Hello World</p>
-			</span>
-			<span class=" absolute right-30 -rotate-8 aspect-[2/1] w-40 bg-yellow mr-0 mt-0 top-30 shadow-md text-left py-4 px-6
-			hover:scale-105 hover:-rotate-10 hover:shadow-lg transition-all" 
-			style="font-family: Gloria Hallelujah;">
-				<p><b>Lorem Ipsum</b> <br><br> - Hello World</p>
-			</span>			 -->
-			<!-- <div class="h-8 w-[110vw]  bg-black absolute rotate-2">
-				<p>Hello world</p>
-			</div>
-			<div class="h-8 w-[110vw]  bg-black absolute -rotate-2">
-				<p>Hello world</p>
-			</div> -->
-		<!-- <p class="barcode text-[14vh] absolute right-10 -bottom-8 ">TODAY</p> -->
+
 	</section>
-
-	<div class="px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100 pb-10 pt-3">
-
 	<section id="about" class="py-8 trigger w-full">
 					<h2 class="max-w-180 font-medium">Build real sustainable solutions and change&nbsp;the world. <i class="text-green" >Today.</i></h2>
 
@@ -77,20 +55,20 @@ const title = "Depot";
 			<div class=" border-1 border-dbrown bg-dyellow w-full max-w-140 h-120 rounded-xl">
 			</div>
 		</div>
-	
 	</section>
+	
 	<section class="border-1 border-dbrown rounded-2xl w-full p-10 mt-18 space-y-6">
 		<div class="space-y-2 flex justify-between items-center">
 			<div>
 				
 			<h3>Recent Updates</h3>
-			<p class="w-120">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work with them to engineer a solution. Read more.
+			<p class="max-w-120">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work with them to engineer a solution. Read more.
 			</p>
 			<a href="#" class="bg-dbrown rounded-full px-6 py-2 text-lred font-semibold text-lg w-fit my-4 block">
 			Donate
         	</a>
 			</div>
-			<div class="bg-red w-120 h-60">
+			<div class="bg-red max-w-120 h-60">
 				<p class="tracking-widest">[ TRACK ONE ]</p>
 			</div>
 		</div>
@@ -108,15 +86,15 @@ const title = "Depot";
 				<p class="tracking-widest">[ TRACK ONE ]</p>
 			</div>
 		</div>
-	</section>
-	<!-- <hr class="my-4 border-dashed border-gray border-2"> -->
+	</section> -->
+	<hr class="my-4 border-dashed border-gray border-2">
 
-	<section class="my-12">
+	<section class="my-12 w-full">
 		<div class="inline-flex items-center gap-4">
 			<h3>Recent Updates</h3>
 			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
 		</div>			
-		<div class=" pt-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  min-h-100 gap-4">
+		<div class=" pt-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] min-h-100 gap-4">
 			<a href="/updates/post">
 				<div class="h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
 					<div class="  bottom-0">
@@ -168,7 +146,6 @@ const title = "Depot";
 		<h4>If you <b>don't</b> qualify, and are avalible to pay for a site, email sophia@buildersdepot.org</h4>
 		<p>Email sophia@buildersdepot.org to join this program as a builder</p>
 	</section>
-	</div>
-	</div>
+	</div> 
 	<script src="../app.js"></script>
 </BaseLayout>
