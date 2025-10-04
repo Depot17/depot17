@@ -7,9 +7,9 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<div class="bg-brown change">
+	<div class="bg-brown change ">
 	<section id="landing" class=" w-screen h-screen lg:-mt-18 grid  place-items-center " >
-			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center">
+			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center relative">
 
 				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 3xl:left-110 top-60 3xl:top-90 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
 					Build a <br> </h1>
@@ -57,19 +57,29 @@ const title = "Depot";
 			<div class="h-8 w-[110vw]  bg-black absolute -rotate-2">
 				<p>Hello world</p>
 			</div> -->
-		<p class="barcode text-[14vh] absolute right-10 -bottom-8 ">TODAY</p>
+		<!-- <p class="barcode text-[14vh] absolute right-10 -bottom-8 ">TODAY</p> -->
 	</section>
 
 	<div class="px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100 pb-10 pt-3">
 
-	<section id="about" class="py-8 trigger space-y-6">
-		<h2 class="w-[80%] max-w-180 font-medium">Build real sustainable solutions and change the world. <i class="text-green" >Today.</i></h2>
-		<p class="max-w-70 ">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
-		<a href="#" class="bg-dbrown rounded-full px-6 py-2.5 text-lred font-semibold text-xl w-fit">
-			Donate
-        </a>
+	<section id="about" class="py-8 trigger w-full">
+					<h2 class="max-w-180 font-medium">Build real sustainable solutions and change&nbsp;the world. <i class="text-green" >Today.</i></h2>
+
+		<div class=" space-y-6 w-full bg-green flex flex-wrap justify-between ">
+			<div class="bg-red">
+				<p class="max-w-70 ">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff </p>
+				<a href="#" class="block bg-dbrown rounded-full px-6 py-2.5 text-lred font-semibold text-xl w-fit my-4">
+					Donate
+				</a>
+			</div>
+			<div class=" border-1 border-dbrown bg-dyellow w-full max-w-90 h-80 rounded-xl mt-auto">
+			</div>
+			<div class=" border-1 border-dbrown bg-dyellow w-full max-w-140 h-120 rounded-xl">
+			</div>
+		</div>
+	
 	</section>
-	<section class="border-1 border-black rounded-2xl w-full p-10 mt-18 space-y-6">
+	<section class="border-1 border-dbrown rounded-2xl w-full p-10 mt-18 space-y-6">
 		<div class="space-y-2 flex justify-between items-center">
 			<div>
 				
@@ -101,7 +111,7 @@ const title = "Depot";
 	</section>
 	<!-- <hr class="my-4 border-dashed border-gray border-2"> -->
 
-	<section class="">
+	<section class="my-12">
 		<div class="inline-flex items-center gap-4">
 			<h3>Recent Updates</h3>
 			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
@@ -131,10 +141,10 @@ const title = "Depot";
 					</div>
 				</div>
 			</a>
-			
 		</div>
 	</section>
-	<section class="border-1 border-black rounded-2xl w-full p-10 mt-18 space-y-6">
+
+	<section class="rounded-2xl w-full p-10 mt-18 space-y-6 bg-white">
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center">
 			<div></div>
 			<h1 class="text-[6vh] font-semibold ">Ongoing&nbsp;Projects</h1>
