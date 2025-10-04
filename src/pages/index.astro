@@ -11,14 +11,13 @@ const title = "Depot";
 	<section id="landing" class=" w-screen h-screen lg:-mt-18 grid  place-items-center " >
 			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center">
 
-				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 top-60 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
+				<h1 class="text-green z-1000 text-shadow-4xl absolute left-90 3xl:left-110 top-60 3xl:top-90 text-shadow-brown  text-7xl leading-snug xl:text-[12vh] font-semibold ">
 					Build a <br> </h1>
 
-					<div class="w-[600px] h-[500px]">
+					<div class="w-[800px] h-[600px] -mt-20">
 						<Three  client:only="react" />
 					</div>
-
-					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 bottom-80 2xl:bottom-100 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
+					<h1 class="text-green z-1000 text-shadow-4xl text-shadow-brown absolute right-90 2xl:bottom-80 3xl:right-110 bottom-80 3xl:bottom-100 text-7xl leading-snug xl:text-[12vh] font-semibold ">Change.</h1>
 				<!-- <h4 class="text-white ">Wow so at this NGO we are going to do something super epic. <br> But lorem ipsum some information placed here.</h4> -->
 				<form action="" method="POST" name="email-form" class="bg-white flex z-2000 justify-between font-medium rounded-full 
 				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
@@ -34,6 +33,7 @@ const title = "Depot";
 						</span>
 				</button>
 				</form>
+				<p class="text-white pt-4 max-w-130 z-1000">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p>
 				<!-- <button type="submit" value="submit" 
 				class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 						Submit
@@ -60,66 +60,52 @@ const title = "Depot";
 		<p class="barcode text-[14vh] absolute right-10 -bottom-8 ">TODAY</p>
 	</section>
 
-	<div class="px-8 md:px-10 lg:px-40 2xl:px-60  pb-10 pt-3">
-	<section id="about" class="py-8 ">
-		<h2>Build real sustainable solutions and change the world with them</h2>
-		<p class="pt-2">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
+	<div class="px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100 pb-10 pt-3">
+
+	<section id="about" class="py-8 trigger space-y-6">
+		<h2 class="w-[80%] max-w-180 font-medium">Build real sustainable solutions and change the world. <i class="text-green" >Today.</i></h2>
+		<p class="max-w-70 ">Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff would you look at that</p>
+		<a href="#" class="bg-dbrown rounded-full px-6 py-2.5 text-lred font-semibold text-xl w-fit">
+			Donate
+        </a>
 	</section>
-
-	<hr class="my-4 border-dashed border-gray border-2">
-		<!-- <h1 class="text-center text-[8vh] font-semibold py-2">Start <span class="bg-blue px-2 text-green">Today</span></h1> -->
-
-	<!-- <section id="intro" class="px-1  w-full h-[80vh] py-4 flex items-center">
-		<div class="group transition duration-300 ease-in-out w-full p-8 h-120 bg-gray-200 rounded-2xl">
-			<div class="flex items-center gap-4 ">
-				<p>1/3</p>
-				<div class="h-2 w-80 rounded-full bg-teal"></div>
-
+	<section class="border-1 border-black rounded-2xl w-full p-10 mt-18 space-y-6">
+		<div class="space-y-2 flex justify-between items-center">
+			<div>
+				
+			<h3>Recent Updates</h3>
+			<p class="w-120">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work with them to engineer a solution. Read more.
+			</p>
+			<a href="#" class="bg-dbrown rounded-full px-6 py-2 text-lred font-semibold text-lg w-fit my-4 block">
+			Donate
+        	</a>
 			</div>
-			<div class="flex gap-6 items-center justify-center p-4">
-			<div class="pr-8 max-w-180">
-				<h2>Choose a project</h2>
-				<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsa blanditiis enim molestiae officiis maxime cumque natus similique eius odio. Perferendis sint neque doloribus saepe itaque dicta enim minima incidunt?</h3>
+			<div class="bg-red w-120 h-60">
+				<p class="tracking-widest">[ TRACK ONE ]</p>
 			</div>
-			<div class="w-220 h-80 bg-brown rounded-xl"></div>
+		</div>
+		<div class="space-y-2 flex justify-between items-center">
+			<div>
+				
+			<h3>Recent Updates</h3>
+			<p class="w-120">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work with them to engineer a solution. Read more.
+			</p>
+			<a href="#" class="bg-dbrown rounded-full px-6 py-2 text-lred font-semibold text-lg w-fit my-4 block">
+			Donate
+        	</a>
 			</div>
-
-		</div> -->
-
-		
-	<!-- </section>
-			<div class="ml-auto flex gap-4 items-start group transition duration-300 ease-in-out max-w-110 py-6">
-			<span class="text-6xl font-bold  group-hover:-rotate-4">2.</span>
-			<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsa blanditiis enim molestiae officiis maxime cumque natus similique eius odio. Perferendis sint neque doloribus saepe itaque dicta enim minima incidunt?</h3>
+			<div class="bg-red w-120 h-60">
+				<p class="tracking-widest">[ TRACK ONE ]</p>
+			</div>
 		</div>
-		<div class="flex gap-4 items-start group transition duration-300 ease-in-out max-w-110 py-6">
-			<span class="text-6xl font-bold  group-hover:rotate-4">3.</span>
-			<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsa blanditiis enim molestiae officiis maxime cumque natus similique eius odio. Perferendis sint neque doloribus saepe itaque dicta enim minima incidunt?</h3>
-		</div>
+	</section>
+	<!-- <hr class="my-4 border-dashed border-gray border-2"> -->
 
-	<section class="lg:px-20 lg:py-6">
-		<h2>Have an Idea?</h2>
-		<div class="flex flex-wrap gap-2 lg:gap-10 items-center p-4 lg:py-14 lg:p-20  
-		bg-gray-200 shadow-lg hover:scale-105 hover:-rotate-1 hover:shadow-xl transition-all">
-			<ul class="space-y-6 text-xl lg:pl-5">
-				<li>Identify an ongoing issue within a community, big or small.</li>
-				<li>Work with locals, form a team and design a sustainable solution</li>
-				<li>Receive funding & mentorship to bring your projects to communities</li>
-				<button type="button" class="border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
-					<p>Start today</p>	
-				</button>
-			</ul>
-			<div class="max-w-100 w-80 h-auto aspect-[4/3] rounded-lg bg-white"></div>
-
-		</div>
-	</section> -->
-
-	<section class="trigger">
+	<section class="">
 		<div class="inline-flex items-center gap-4">
-			<h2>Recent Updates</h2>
+			<h3>Recent Updates</h3>
 			<div class="box w-10 h-10 bg-red-500 rounded-[50%] "></div>
-		</div>
-		
+		</div>			
 		<div class=" pt-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  min-h-100 gap-4">
 			<a href="/updates/post">
 				<div class="h-full bg-yellow rounded-2xl p-6 border-2 border-black min-h-60">
@@ -148,7 +134,7 @@ const title = "Depot";
 			
 		</div>
 	</section>
-	<section class="py-6">
+	<section class="border-1 border-black rounded-2xl w-full p-10 mt-18 space-y-6">
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center">
 			<div></div>
 			<h1 class="text-[6vh] font-semibold ">Ongoing&nbsp;Projects</h1>
@@ -165,7 +151,7 @@ const title = "Depot";
 		<ProjectsSlot />
 	</section>
 	<section>
-		<h2 class="flex items-center gap-2">Get a free custom website! <span class="text-teal border-2 border-inherit rounded-full py-1 px-2 text-xl"> beta </span></h2>
+		<h3 class="flex items-center gap-2">Get a free custom website! <span class="text-teal border-2 border-inherit rounded-full py-1 px-2 text-xl"> beta </span></h3>
 		<h4>If you're a non-profit or small business you qualify for a free website!</h4>
 		<p>This is a trial run and will end Dec 1st, 2025</p>
 		<a class="btn">Apply today</a>

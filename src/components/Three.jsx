@@ -33,13 +33,13 @@ import { Shader } from "./Shader";
         // })
         });
 
-        return <primitive object={obj} scale={8} />
+        return <primitive object={obj} scale={7.5} />
 
     };
 
     export default function App(){
         return (
-            <Canvas style={{ width: "600px", height: "500px",}}>
+            <Canvas style={{ width: "800px", height: "800px",}}>
         
                 <ambientLight intensity={0.8} />
                 <directionalLight color="red" position={[0, 0, 0]} />

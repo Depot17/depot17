@@ -9,12 +9,12 @@ const homepage = Astro.url.pathname =="/";
             <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
             <span id="name" class={`nav-item hover:opacity-70 self-center text-2xl font-semibold whitespace-nowrap 
             ${ currentPath === "/"
-             ? 'text-white'
+             ? 'text-black' //settle on a color
              : 'text-black'}`}>
                 Builder's Depot</span>
         </a>
         <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-white">
+            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-black">
                 <li>
                     <a href="/" target="_self" class={`nav-item block px-3 ${
                         currentPath === "/" 
@@ -33,23 +33,21 @@ const homepage = Astro.url.pathname =="/";
                 </li> -->
                 <li>/</li>
                 <li>
-                    <a href="/projects" target="_self" class={`nav-item block px-3 ${
+                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
                         currentPath === "/projects" 
                         ? "text-green bg-blue font-semibold"   
                         : currentPath === "/" 
                     
-                        ? "text-white"
-                        : "text-black"}`}>Projects</a>
+                        }`}>Projects</a>
                 </li>
                 <li><p>/</p></li>
                 <li>
-                    <a href="/resources" target="_self" class={`nav-item block px-3 ${
+                    <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
                         currentPath === "/resources" 
                         ? "text-green bg-blue font-semibold"   
                         : currentPath === "/" 
                     
-                        ? "text-white"
-                        : "text-black"}`}>Resources</a>
+                        }`}>Resources</a>
                 </li>
 
             </ul>

@@ -5,8 +5,9 @@
     --color-yellow: #F3F09E;
     --color-blue: #192B46;
     --color-lblue: #83E1EA;
+    --breakpoint-3xl: 120rem;
     /* --color-white: #FFFBF6; */
-    --color-green: #B6EB6C;
+    --color-green: #4FE751;
     --color-dgreen: #2EEA99;
     --color-black: #36251b;
     --color-teal: #61CBB8;
@@ -17,7 +18,7 @@
     --color-dred: #6C1714;
     --color-orange: #6C1714;
     --color-dyellow: #CD7F1F;
-    --color-brown:#B16528;
+    --color-brown:#B66510;
     --color-lbrown: #d9a743;
     --color-dbrown: #36251b;
 
@@ -30,7 +31,11 @@
 }
 
 h2 {
-    @apply text-2xl lg:text-4xl font-semibold sm:leading-tight lg:leading-normal pt-4 pb-2
+    @apply text-2xl lg:text-6xl font-semibold sm:leading-tight lg:leading-14 pt-4 pb-2
+}
+
+h3 {
+    @apply text-2xl lg:text-4xl font-semibold sm:leading-tight lg:leading-14
 }
 h4 {
     @apply text-lg lg:text-xl pb-2
