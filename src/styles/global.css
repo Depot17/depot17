@@ -25,6 +25,7 @@
     --color-brown:#B66510;
     --color-lbrown: #d9a743;
     --color-dbrown: #36251b;
+    --color-transp: #ffffff40;
 
 }
 
@@ -82,7 +83,7 @@ input:focus {
 }
 
 
-#navbar.scrolled {
+/* #navbar.scrolled {
     animation: dropIn 0.25s ease-in-out forwards;
     width:50vw;
     max-width:1000px;
@@ -107,5 +108,5 @@ input:focus {
 
 #navbar.scrolled #name {
     display:none;
-}
+} */
 

@@ -23,6 +23,17 @@ gsap.to('.change', {
         }
 });
 
+gsap.to('.nav', {
+    y: 120,
+        duration:0.6,
+
+
+    scrollTrigger: {
+        trigger: '.trigger',
+        start: 'top top',
+        toggleActions: 'play none reverse reverse'
+    }
+})
 
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {

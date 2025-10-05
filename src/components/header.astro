@@ -3,8 +3,8 @@ const currentPath = Astro.url.pathname;
 const homepage = Astro.url.pathname =="/";
 
 ---
-<header id="navbar" class="bg-transparent hidden lg:block w-full z-1000 flex relative top-0 justify-center w-screen ">
-    <nav class="w-full flex justify-between items-center px-10 py-3 text-lg">
+<header id="navbar" class=" lg:block w-full flex top-0 relative justify-center w-screen ">
+    <nav class="w-full flex bg-transparent justify-between items-center px-10 py-3 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
             <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
             <span id="name" class={`nav-item hover:opacity-70 self-center text-2xl font-semibold whitespace-nowrap 
@@ -20,17 +20,7 @@ const homepage = Astro.url.pathname =="/";
                         currentPath === "/" 
                         ? "font-semibold"   
                         : "text-black"}`}>Home</a>
-                </li>
-                <!-- <li>/</li> -->
-                <!-- <li>
-                    <a href="/about" target="_self" class={`nav-item block px-3 ${
-                        currentPath === "/about" 
-                        ? "text-green bg-blue font-semibold"   
-                        : currentPath === "/" 
-                        
-                        ? "text-white"
-                        : "text-black"}`}>About</a>
-                </li> -->
+     
                 <li>/</li>
                 <li>
                     <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
@@ -40,6 +30,17 @@ const homepage = Astro.url.pathname =="/";
                     
                         }`}>Projects</a>
                 </li>
+                
+                <li><p>/</p></li>
+                <li>
+                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
+                        currentPath === "/projects" 
+                        ? "text-green font-semibold"   
+                        : currentPath === "/" 
+                    
+                        }`}>Get Started</a>
+                </li>
+                
                 <li><p>/</p></li>
                 <li>
                     <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
@@ -66,10 +67,50 @@ const homepage = Astro.url.pathname =="/";
                 Donate</p>
             </a>
         </div>
-        <!-- <button id="menu-toggle" class="z-10 bg-white w-6 h-6 md:hidden"></button> -->
         
     </nav>
     <hr class={`${ homepage ? 'hidden' : 'border-2 border-dashed border-gray-300'}`}>
+
+    <nav class="nav w-full flex z-100 justify-center -mt-40 fixed">
+      
+        <div class="w-fit px-10 rounded-full py-1.5 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
+            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-black">
+                <li>
+                    <a href="/" target="_self" class={`nav-item block px-3 ${
+                        currentPath === "/" 
+                        ? "font-semibold"   
+                        : "text-black"}`}>Home</a>
+                </li>
+                <li>
+                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
+                        currentPath === "/projects" 
+                        ? "text-green font-semibold"   
+                        : currentPath === "/" 
+                    
+                        }`}>Projects</a>
+                </li>
+                
+                <li>
+                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
+                        currentPath === "/tbd" 
+                        ? "text-green font-semibold"   
+                        : currentPath === "/" 
+                    
+                        }`}>Get Started</a>
+                </li>
+                
+                <li>
+                    <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
+                        currentPath === "/resources" 
+                        ? "text-green font-semibold"   
+                        : currentPath === "/" 
+                    
+                        }`}>Resources</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
 </header>
 <script>
   const navbar = document.getElementById("navbar");
