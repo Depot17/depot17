@@ -6,10 +6,10 @@ const homepage = Astro.url.pathname =="/";
     <div class="space-y-10">
         <a href="/projects/pnp" target="_self" class="block">
             <div class=
-            {`block relative group w-full h-auto rounded-2xl xs:p-4  transition-all 
+            {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all 
             ${homepage 
-            ? 'bg-dyellow  border-none hover:scale-102 hover:shadow-xl duration-300' 
-            : 'bg-white lg:border-2 border-dashed border-gray-300'}`}>
+            ? 'bg-dyellow  border-none  hover:shadow-xl duration-300' 
+            : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
 
                     <a type="button" class="absolute 
@@ -25,7 +25,7 @@ const homepage = Astro.url.pathname =="/";
                         <div class="flex items-center gap-2">
                             <h3>Depot Pick n' Place</h3>
 
-                            <div class={`ml-2 w-8 h-8 bg-lred rounded-full ${homepage ? 'hidden' : ''}`}></div>
+                            <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
 
                         </div>
                 
@@ -38,7 +38,7 @@ const homepage = Astro.url.pathname =="/";
 			            </div>
                     </div>
 
-                    <p>By: Sophia D.</p>
+                    <p class="text-left">By: Sophia D.</p>
                     <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
                         And also a bit about the idea and or progress.</p>
                 </div>
@@ -49,14 +49,18 @@ const homepage = Astro.url.pathname =="/";
     <div class="space-y-10">
         <a href="/projects/pnp" target="_self" class="block">
             <div class=
-            {`block relative w-full h-auto rounded-2xl xs:p-4  transition-all 
+            {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all 
             ${homepage 
-            ? 'bg-dyellow  border-none hover:scale-102 hover:shadow-xl duration-300' 
-            : 'bg-white lg:border-2 border-dashed border-gray-300'}`}>
+            ? 'bg-dyellow  border-none  hover:shadow-xl duration-300' 
+            : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
-                    <button type="button" class="absolute flex items-center overflow-hidden transition-all border border-2 border-black font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 absolute right-10 ">
-                <span class="w-full group-hover:text-white transition colors duration-200 ease-in-out ">Support this</span>
-                </button>
+
+                    <a type="button" class="absolute 
+                    outline-2 outline-dbrown text-dbrown bg-yellow 
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-green ">
+                <span>Support this</span>
+                </a>
+
                 </div>
                 
                 <div class="p-4">
@@ -64,7 +68,7 @@ const homepage = Astro.url.pathname =="/";
                         <div class="flex items-center gap-2">
                             <h3>Depot Pick n' Place</h3>
 
-                            <div class={`ml-2 w-8 h-8 bg-lred rounded-full ${homepage ? 'hidden' : ''}`}></div>
+                            <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
 
                         </div>
                 
@@ -77,11 +81,10 @@ const homepage = Astro.url.pathname =="/";
 			            </div>
                     </div>
 
-                    <p>By: Sophia D.</p>
+                    <p class="text-left">By: Sophia D.</p>
                     <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
                         And also a bit about the idea and or progress.</p>
                 </div>
-                
             </div>
         </a>
     </div>
