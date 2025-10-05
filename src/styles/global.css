@@ -7,7 +7,8 @@
     --color-lblue: #83E1EA;
     --breakpoint-3xl: 120rem;
     /* --color-white: #FFFBF6; */
-    --color-beige: #F8F1ED;
+    --color-beige: #faf8f6ff;
+;
     --color-green: #4FE751;
     --color-dgreen: #2EEA99;
     --color-black: #36251b;
@@ -32,7 +33,7 @@
 }
 
 h2 {
-    @apply text-2xl lg:text-6xl font-semibold sm:leading-tight lg:leading-14 pt-4 pb-2
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold sm:leading-tight  lg:leading-14 pt-4 pb-2
 }
 
 h3 {
@@ -47,6 +48,8 @@ body{
     
     
 }
+
+
 input:focus {
   outline: none;
   border-color: #f34526;

@@ -12,7 +12,7 @@ gsap.from(".text-dgreen", {
 
 
 gsap.to('.change', {
-    backgroundColor:"#F8F1ED",
+    backgroundColor:"#faf8f6ff",
     duration:0.6,
     ease:"power2.out",
 
