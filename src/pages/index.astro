@@ -144,10 +144,13 @@ const title = "Depot";
 		</div>
 	</section>
 
-	<section class="rounded-2xl w-full p-10 mt-18 space-y-6 bg-white">
-		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center">
+	<section class=" relative w-full lg:p-10 rounded-2xl sm:bg-white mt-18 py-10 h-fit">
+		
+		<div class="sm:hidden absolute w-screen bg-white min-h-full left-1/2 -translate-x-1/2  "></div>
+
+		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center relative mt-4">
 			<div></div>
-			<h2 class="md:whitespace-nowrap text-center">Ongoing Projects</h2>
+			<h2 class="text-center">Ongoing&nbsp;Projects</h2>
 			<div class="lg:ml-auto">
 				<a href="projects" target="_self" class="flex items-center gap-2">
 					<p>View all projects</p>
@@ -155,12 +158,12 @@ const title = "Depot";
 				</a>
 			</div>
 		</div>
-		
+		<p class="text-center mt-6 relative z-10">Highschool students from around the world are currently building...</p>
 
-		<p class="text-center pb-4">Highschool students from around the world are currently building...</p>
+
 		<ProjectsSlot />
 	</section>
-	<section>
+	<section class="pt-16">
 		<h3 class="flex items-center gap-2">Get a free custom website! <span class="text-teal border-2 border-inherit rounded-full py-1 px-2 text-xl"> beta </span></h3>
 		<h4>If you're a non-profit or small business you qualify for a free website!</h4>
 		<p>This is a trial run and will end Dec 1st, 2025</p>

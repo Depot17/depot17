@@ -21,7 +21,7 @@ const { title } = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap" rel="stylesheet">
     </head>
     <body class={` ${ currentPath === "/" ? 'bg-brown' : 'bg-beige'}`}>
-    <section class={`flex flex-col items-center justify-center max-w-screen min-h-screen  px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100 pb-10 pt-3 ${ currentPath === "/" ? 'bg-brown change' : ''}`}>
+    <section class={`flex flex-col items-center justify-center max-w-screen min-h-screen  px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100  ${ currentPath === "/" ? 'bg-brown change' : ''}`}>
         <Header  />
 
         <slot />

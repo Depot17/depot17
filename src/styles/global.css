@@ -6,6 +6,8 @@
     --color-blue: #192B46;
     --color-lblue: #83E1EA;
     --breakpoint-3xl: 120rem;
+        --breakpoint-xs: 500px;
+
     /* --color-white: #FFFBF6; */
     --color-beige: #faf8f6ff;
 ;

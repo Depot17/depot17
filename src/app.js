@@ -19,9 +19,8 @@ gsap.to('.change', {
     scrollTrigger: {
         trigger: '.trigger',
         start: 'top center',
-        toggleActions: 'play none reverse reverse',
-        markers:true
-    }
+        toggleActions: 'play none reverse reverse'
+        }
 });
 
 
