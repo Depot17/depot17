@@ -12,52 +12,50 @@ const homepage = Astro.url.pathname =="/";
             : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
 
-                    <a type="button" class="absolute 
-                    outline-2 outline-dbrown text-dbrown bg-yellow 
+                    <!-- <a type="button" class="absolute 
+                    border-2 border-dbrown text-dbrown bg-yellow 
                     font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-green ">
                 <span>Support this</span>
-                </a>
+                </a> -->
 
                 </div>
                 
                 <div class="p-4">
                     <div class="flex items-center justify-start">
                         <div class="flex items-center gap-2">
-                            <h3>Depot Pick n' Place</h3>
+                            <h3>Coming Soon</h3>
 
                             <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
 
                         </div>
                 
 
-                        <div class="ml-auto hidden sm:block">
+                        <!-- <div class="ml-auto hidden sm:block">
                             <a href="projects" target="_self" class="flex items-center gap-2">
                                 <p>View devlogs</p>
                                 <img src="/assets/open_link.svg" width="25px"> 
 				            </a>
-			            </div>
+			            </div> -->
                     </div>
 
-                    <p class="text-left">By: Sophia D.</p>
-                    <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
-                        And also a bit about the idea and or progress.</p>
+                    <p class="pt-2"></p>
                 </div>
-                
             </div>
         </a>
     </div>
+    
     <div class="space-y-10">
         <a href="/projects/pnp" target="_self" class="block">
             <div class=
-            {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all 
+            {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all blur-sm
             ${homepage 
             ? 'bg-dyellow  border-none  hover:shadow-xl duration-300' 
             : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
 
                     <a type="button" class="absolute 
-                    outline-2 outline-dbrown text-dbrown bg-yellow 
-                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-green ">
+                    border-2 border-dbrown text-dbrown 
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 bg-green ">
                 <span>Support this</span>
                 </a>
 
@@ -85,6 +83,7 @@ const homepage = Astro.url.pathname =="/";
                     <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
                         And also a bit about the idea and or progress.</p>
                 </div>
+                
             </div>
         </a>
     </div>

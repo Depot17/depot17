@@ -22,7 +22,7 @@ const homepage = Astro.url.pathname =="/";
                         : "text-black"}`}>Home</a>
      
                 <li>/</li>
-                <li>
+                <!-- <li>
                     <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
                         currentPath === "/projects" 
                         ? "text-green font-semibold"   
@@ -31,7 +31,7 @@ const homepage = Astro.url.pathname =="/";
                         }`}>Projects</a>
                 </li>
                 
-                <li><p>/</p></li>
+                <li><p>/</p></li> -->
                 <li>
                     <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
                         currentPath === "/projects" 
@@ -41,7 +41,7 @@ const homepage = Astro.url.pathname =="/";
                         }`}>Get Started</a>
                 </li>
                 
-                <li><p>/</p></li>
+                <!-- <li><p>/</p></li>
                 <li>
                     <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
                         currentPath === "/resources" 
@@ -49,11 +49,11 @@ const homepage = Astro.url.pathname =="/";
                         : currentPath === "/" 
                     
                         }`}>Resources</a>
-                </li>
+                </li> -->
 
             </ul>
         </div>
-        <div class="flex">
+        <!-- <div class="flex">
             <a href="#" class="w-auto hide bg-dbrown 
             rounded-full 
             min-h-10 px-6 py-2">
@@ -62,60 +62,62 @@ const homepage = Astro.url.pathname =="/";
             </a>
             <a href="#" class="hide bg-dbrown 
             rounded-full 
-            min-h-10 px-6 py-2 -ml-2.5">
+            min-h-10 px-6 py-2">
                 <p class="text-lred">
                 Donate</p>
             </a>
-        </div>
+        </div> -->
         
     </nav>
     <hr class={`${ homepage ? 'hidden' : 'border-2 border-dashed border-gray-300'}`}>
 
     <nav class="nav w-full flex z-100 justify-center -mt-40 fixed">
       
-        <div class="w-fit px-10 rounded-full py-1.5 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
-            <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-black">
+        <ul class="w-fit p-0.75 px-1 rounded-3xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
                 <li>
-                    <a href="/" target="_self" class={`nav-item block px-3 ${
+                    <a href="/" target="_self" class={`nav-item block px-3 text-dbrown${
                         currentPath === "/" 
-                        ? "font-semibold"   
-                        : "text-black"}`}>Home</a>
+                        ? "font-medium"   
+                        : "font-bold"}`}>Home</a>
                 </li>
-                <li>
-                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
+                <!-- <li class="flex justify-start group">
+                    <div class="">
+                        <a href="/projects" target="_self" class={`nav-item block px-3 py-1 text-black ${
                         currentPath === "/projects" 
-                        ? "text-green font-semibold"   
+                        ? "rounded-lg text-green px-2 font-semibold"   
                         : currentPath === "/" 
                     
                         }`}>Projects</a>
+
+                        <div class="hidden group-hover:inline-flex mt-2 absolute bg-dbrown px-1 py-1 space-y-1 rounded-xl flex flex-col">
+                            <a href="#" target="_self" class="hover:bg-transp px-2 pr-10 rounded-lg transition-all duration-400 ease-in-out">
+                                <p class="text-lred font-semibold">
+                                PNP</p>
+                            </a>
+                            <a href="#" target="_self" class="hover:bg-transp px-2 pr-10 rounded-lg transition-all duration-400 ease-in-out">
+                                <p class="text-lred font-semibold">
+                                John C.</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </li> -->
+                
+                 <li>
+                    <a href="/" target="_self" class={`nav-item block px-3 text-dbrown${
+                        currentPath === "/projects" 
+                        ? "font-medium"   
+                        : "font-bold"}`}>Get Started</a>
                 </li>
                 
-                <li>
-                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
-                        currentPath === "/tbd" 
-                        ? "text-green font-semibold"   
-                        : currentPath === "/" 
-                    
-                        }`}>Get Started</a>
-                </li>
-                
-                <li>
-                    <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
-                        currentPath === "/resources" 
-                        ? "text-green font-semibold"   
-                        : currentPath === "/" 
-                    
-                        }`}>Resources</a>
-                </li>
+                <!-- <li>
+                    <a href="#" target="_self">
+                        <p class="text-lred bg-dbrown rounded-2xl px-4 py-1">
+                        Donate</p>
+                    </a>
+                        
+                </li> -->
 
             </ul>
-        </div>
     </nav>
 </header>
-<script>
-  const navbar = document.getElementById("navbar");
-  window.addEventListener("scroll", () => {
-    navbar.classList.toggle("scrolled", window.scrollY > 1000);
-  });
-</script>
-<!-- redo the above with gsap TK -->
