@@ -32,13 +32,25 @@ const homepage = Astro.url.pathname =="/";
                 </li>
                 
                 <li><p>/</p></li> -->
-                <li>
-                    <a href="/projects" target="_self" class={`nav-item block px-3 text-black ${
-                        currentPath === "/projects" 
-                        ? "text-green font-semibold"   
-                        : currentPath === "/" 
+                <li class="group">
+
+                    <a href="/get_started" target="_self" class={`nav-item block px-3 py-3 text-black ${
+                    currentPath === "/get_started" 
+                    ? "rounded-lg text-green px-2 font-semibold"   
+                    : currentPath === "/" 
+                
+                    }`}>Get Started</a>
+
+                    <div class="hidden group-hover:block absolute z-[100] bg-dbrown px-1 py-1  space-y-1 rounded-xl ">
+
+                        <a href="#" target="_self" class="block hover:bg-transp px-2 rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
+                            PNP
+                        </a>
+                        <a href="#" target="_self" class="block hover:bg-transp px-2  pr-8  rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
+                            John C.
+                        </a>
+                    </div>
                     
-                        }`}>Get Started</a>
                 </li>
                 
                 <!-- <li><p>/</p></li>
@@ -73,42 +85,40 @@ const homepage = Astro.url.pathname =="/";
 
     <nav class="nav w-full flex z-100 justify-center -mt-40 fixed">
       
-        <ul class="w-fit p-0.75 px-1 rounded-3xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
+        <ul class="w-fit p-0.75 px-1 max-h-[2.5rem] rounded-3xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
                 <li>
                     <a href="/" target="_self" class={`nav-item block px-3 text-dbrown${
                         currentPath === "/" 
                         ? "font-medium"   
                         : "font-bold"}`}>Home</a>
                 </li>
-                <!-- <li class="flex justify-start group">
-                    <div class="">
-                        <a href="/projects" target="_self" class={`nav-item block px-3 py-1 text-black ${
-                        currentPath === "/projects" 
-                        ? "rounded-lg text-green px-2 font-semibold"   
-                        : currentPath === "/" 
-                    
-                        }`}>Projects</a>
+                <li class="group">
 
-                        <div class="hidden group-hover:inline-flex mt-2 absolute bg-dbrown px-1 py-1 space-y-1 rounded-xl flex flex-col">
-                            <a href="#" target="_self" class="hover:bg-transp px-2 pr-10 rounded-lg transition-all duration-400 ease-in-out">
-                                <p class="text-lred font-semibold">
-                                PNP</p>
-                            </a>
-                            <a href="#" target="_self" class="hover:bg-transp px-2 pr-10 rounded-lg transition-all duration-400 ease-in-out">
-                                <p class="text-lred font-semibold">
-                                John C.</p>
-                            </a>
-                        </div>
+                    <a href="/get_started" target="_self" class={`nav-item block px-3 py-3 text-black ${
+                    currentPath === "/get_started" 
+                    ? "rounded-lg text-green px-2 font-semibold"   
+                    : currentPath === "/" 
+                
+                    }`}>Get Started</a>
+
+                    <div class="hidden group-hover:block absolute z-[100] bg-dbrown px-1 py-1  space-y-1 rounded-xl ">
+
+                        <a href="#" target="_self" class="block hover:bg-transp px-2 rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
+                            PNP
+                        </a>
+                        <a href="#" target="_self" class="block hover:bg-transp px-2  pr-8  rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
+                            John C.
+                        </a>
                     </div>
                     
-                </li> -->
+                </li>
                 
-                 <li>
+                 <!-- <li>
                     <a href="/" target="_self" class={`nav-item block px-3 text-dbrown${
                         currentPath === "/projects" 
                         ? "font-medium"   
                         : "font-bold"}`}>Get Started</a>
-                </li>
+                </li> -->
                 
                 <!-- <li>
                     <a href="#" target="_self">

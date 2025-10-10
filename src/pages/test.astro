@@ -3,15 +3,11 @@ import BaseLayout from '../components/BaseLayout.astro';
 ---
 
 <BaseLayout>
-    <div class="h-screen">
-<span class="click fixed top-0 left-0 opacity-0 z-[10000] pointer-events-none select-none bg-dbrown border-2 border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
-    click
-</span>
-    <a href="https://sophiaduan.dev" target="_blank" class="bg-blue">asdf</a>
+    <div class=" flex items-center justify-center min-h-[100vh] w-screen bg-blue">
+        <div id="output" class="rounded-full text-green text-[3vmin] leading-[0.55em] text-rendering-[optimizeSpeed] will-change-[contents] whitespace-pre"></div>
 
-    </div>
     </div>
     
 
-    <script src="../follower.js"></script>
+    <script type="module" src="../globe.js"></script>
 </BaseLayout>
