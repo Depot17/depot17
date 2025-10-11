@@ -23,7 +23,7 @@ const { title } = Astro.props;
     <body class={` ${ currentPath === "/" ? 'bg-brown' : 'bg-beige'}`}>
         <section class={`flex flex-col items-center justify-center max-w-screen min-h-screen  px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100  ${ currentPath === "/" ? 'bg-brown change' : ''}`}>
             <Header  />
-            <div  class="min-h-screen w-full">
+            <div  class="min-h-screen w-full pt-10">
                 <slot />
             </div>
         </section>

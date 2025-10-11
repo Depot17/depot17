@@ -36,7 +36,7 @@
 }
 
 h1 {
-    @apply text-7xl leading-snug xl:text-[12vh] font-semibold
+    @apply text-7xl leading-24 xl:text-[12vh] font-semibold
 }
 
 h2 {

@@ -2,30 +2,32 @@
 import BaseLayout from "../components/BaseLayout.astro"
 ---
 <BaseLayout>
-    <h2 class="text-left bg-green">Overview</h2>
-    <p>Have an idea? The patience to learn? A team?</p>
+    <!-- <h3 class="text-left">Overview</h3> -->
+    <!-- <p>Have an idea? The patience to learn? A team?</p> -->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="grow-1 ">
-            <div>
-                <p class="tracking-widest text-green font-semibold">[ TRACK ONE ]</p>
-                <h3>Recent Updates</h3>
-            </div>
-
-            <p class="">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
-                
-            
+        
+        <div class="grow-1 space-y-2">
+            <a href="projects" target="_self" class="flex items-center gap-2">
+                <h3 class="tracking-widest">[TRACK TWO]</h3>
+				<img src="/assets/open_link.svg" width="40px"> 
+			</a>            <p class="">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
 
             <div class="bg-red h-60"></div>
+            <p class="font-medium">*Be prepared to show a previous project</p>
+
         </div>
 
-        <div class="grow-1">
-            <div>
-                <p class="tracking-widest text-green font-semibold">[ TRACK ONE ]</p>
-                <h3>Recent Updates</h3>
-            </div>
+        <div class="grow-1 space-y-2">
+            <a href="projects" target="_self" class="flex items-center gap-2">
+                <h3 class="tracking-widest">[TRACK TWO]</h3>
+				<img src="/assets/open_link.svg" width="40px"> 
+			</a>
+            
+            <p class="">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
 
-            <p>Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
             <div class="bg-red h-60"></div>
+            <p class="font-medium">*Be prepared to show a previous project</p>
+
         </div>
     </section>
    

@@ -13,7 +13,8 @@ const homepage = Astro.url.pathname =="/";
              : 'text-black'}`}>
                 Builder's Depot</span>
         </a>
-        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden w-full md:block md:w-auto" id="navbar-default">
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-black">
                 <li>
                     <a href="/" target="_self" class={`nav-item block px-3 ${
@@ -62,8 +63,22 @@ const homepage = Astro.url.pathname =="/";
                     
                         }`}>Resources</a>
                 </li> -->
-
+            <div class="flex">
+            <!-- <a href="#" class="w-auto hide bg-dbrown 
+            rounded-full 
+            min-h-10 px-6 py-2">
+                <p class="text-lred">
+                Shop</p>
+            </a> -->
+            <a href="#" class="hide bg-dbrown 
+            rounded-full 
+            min-h-10 px-6 py-2">
+                <p class="text-lred">
+                Donate</p>
+            </a>
+        </div>
             </ul>
+            
         </div>
         <!-- <div class="flex">
             <a href="#" class="w-auto hide bg-dbrown 
@@ -83,9 +98,9 @@ const homepage = Astro.url.pathname =="/";
     </nav>
     <hr class={`${ homepage ? 'hidden' : 'border-2 border-dashed border-gray-300'}`}>
 
-    <nav class="nav w-full flex z-100 justify-center -mt-40 fixed">
-      
-        <ul class="w-fit p-0.75 px-1 max-h-[2.5rem] rounded-3xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
+    <nav class="nav w-full flex z-100  flex justify-between px-10 -mt-40 fixed">
+        <div class="w-20 h-20 bg-yellow"></div>
+        <ul class="w-fit p-0.75 px-1 max-h-[3rem] rounded-xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
                 <li>
                     <a href="/" target="_self" class={`nav-item block px-3 text-dbrown${
                         currentPath === "/" 
