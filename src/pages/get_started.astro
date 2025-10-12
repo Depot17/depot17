@@ -1,15 +1,19 @@
 ---
-import BaseLayout from "../components/BaseLayout.astro"
+import BaseLayout from "../components/BaseLayout.astro";
+import TrackOne from "../components/tracks/trackone.md";
+import TrackTwo from "../components/tracks/tracktwo.md";
+import TrackThree from "../components/tracks/trackthree.md";
+
 ---
 <BaseLayout>
     <!-- <h3 class="text-left">Overview</h3> -->
     <!-- <p>Have an idea? The patience to learn? A team?</p> -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <!-- <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         
         <div class="grow-1 space-y-2">
             <a href="projects" target="_self" class="flex items-center gap-2">
-                <h3 class="tracking-widest">[TRACK TWO]</h3>
-				<img src="/assets/open_link.svg" width="40px"> 
+                <h3 class="tracking-widest">[TRACK ONE]</h3>
+				<img src="../../images/open_link.svg" width="40px"> 
 			</a>            <p class="">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
 
             <div class="bg-red h-60"></div>
@@ -18,9 +22,9 @@ import BaseLayout from "../components/BaseLayout.astro"
         </div>
 
         <div class="grow-1 space-y-2">
-            <a href="projects" target="_self" class="flex items-center gap-2">
+            <a href="projects" target="_self" class="flex items-center gap-2 ">
                 <h3 class="tracking-widest">[TRACK TWO]</h3>
-				<img src="/assets/open_link.svg" width="40px"> 
+				<img src="../../images/open_link.svg" width="40px"> 
 			</a>
             
             <p class="">Find a problem in a community, and then work with them to engineer a solution. Read more.Find a problem in a community, and then work Read more.</p>
@@ -30,7 +34,44 @@ import BaseLayout from "../components/BaseLayout.astro"
 
         </div>
     </section>
-   
+
+    -->
+			<section class="space-y-8">
+	<div class="flex  justify-between items-end" >
+			<div>
+				<p>Start today</p>
+			<h3>Choose Your Track</h3>
+			</div>
+			<p class="max-w-130 text-right">We believe you can do more good than just donating money, but rather your  <span class="underline">passion and drive.</span></p>
+	</div>
+	<div class="flex justify-between items-end">
+		<div class="w-100 h-40 bg-green"></div>
+		<div class=" space-y-2">
+			<div class="clickme w-200 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:-translate-x-10 ease-in-out ">
+				<h2>01</h2>
+				<p class="">Solve local issues. Recommended for: beginners, highschool students and below, school clubs, etc. </p>
+			</div>
+			<div class="clickme w-200 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:-translate-x-10 ease-in-out">
+				<h2>02</h2>
+				<p class="">Solve global issues. Recommended for: experienced makers, highschool students and above. </p>
+			</div>
+			<div class="clickme w-200 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:-translate-x-10 ease-in-out">
+				<h2>03</h2>
+				<p class="">Mentor Track 1 & 2 participants. Recommended for: adults with technical or publicity skills. </p>
+			</div>
+		<!-- <div class="w-full h-30 border-2 border-black rounded-lg"></div>
+		<div class="w-full h-30 border-2 border-black rounded-lg"></div> -->
+		</div>
+		</div>
+
 		
-	
+		</section>
+        <section class="w-full p-10 bg-white rounded-2xl mt-10">
+            <TrackOne />
+        </section>
+        <div class="click fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown border-2 border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
+        <p>click</p>
+    </div>
+        <p>Have another idea? Unique situation? Email us at hello@depot17.com</p>
+	<script src="../follower.js"></script>
 </BaseLayout>

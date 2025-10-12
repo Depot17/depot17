@@ -25,6 +25,7 @@ gsap.from(split.lines, {
     }
 })
 
+
 var tl = gsap.timeline({defaults: {duration: 2, ease: "none"}});
 
 tl.to("#scramble", {duration: 3, scrambleText:{text:"Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff ", chars:"lowerCase", revealDelay:0.5, tweenLength:false}})
