@@ -3,30 +3,21 @@
 
 @theme{
     --color-yellow: #F3F09E;
-    --color-blue: #192B46;
-    --color-lblue: #83E1EA;
+    --color-lblue: #9CD3EA;
+    --color-beige: #FFFAF8;
+    --color-lgreen: #58C55F;
+    --color-green: #008C50;
+    --color-gray:#EAE5E3;
+    --color-dbrown: #352922;
+    --color-brown:#D4800B;
+    --color-red: #FF2222;
+
+     --color-transp: #E8E8E830;
+
     --breakpoint-3xl: 120rem;
-        --breakpoint-xs: 500px;
+    --breakpoint-xs: 500px;
 
-    /* --color-white: #FFFBF6; */
-    --color-beige: #faf8f6ff;
-    --color-lgreen: #74FF74;
-    --color-green: #36E839;
-    --color-dgreen: #2EEA99;
-    --color-black: #36251b;
-    --color-teal: #61CBB8;
-    --color-pink: #ea9daf;
-    --color-gray: #828C9B;
-    --color-lred: #f34526;
-    --color-red: #A12F29;
-    --color-dred: #6C1714;
-    --color-orange: #6C1714;
-    --color-dyellow: #CD7F1F;
-    --color-brown:#C6640A;
-    --color-lbrown: #d9a743;
-    --color-dbrown: #36251b;
-    --color-transp: #E8E8E830;
-
+    --font-pixel: "Bytesized", monospace;
 }
 
 .barcode {
@@ -35,6 +26,10 @@
   font-style: normal;
 }
 
+.pixel {
+    font-family:"Bytesized", monospace;
+
+}
 h1 {
     @apply text-7xl leading-24 xl:text-[12vh] font-semibold
 }
@@ -50,12 +45,15 @@ h4 {
     @apply text-lg lg:text-xl pb-2
 }
 body{
+
     font-family:Inter;
     color:#36251b;
     
-    
 }
 
+section {
+    @apply px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100
+}
 input:focus {
   outline: none;
   border-color: #f34526;

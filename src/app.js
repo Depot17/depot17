@@ -39,13 +39,13 @@ gsap.from(".text-dgreen", {
 
 
 gsap.to('.change', {
-    backgroundColor:"#faf8f6ff",
-    duration:0.6,
+    backgroundColor:"#008C50",
+    duration:0.8,
     ease:"power2.out",
 
     scrollTrigger: {
         trigger: '.trigger',
-        start: 'top bottom',
+        start: 'top top',
         toggleActions: 'play none reverse reverse'
         }
 });

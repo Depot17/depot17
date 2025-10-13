@@ -2,14 +2,14 @@
 const homepage = Astro.url.pathname =="/";
 
 ---
-<section class="space-y-10">
+<div class="space-y-10">
     <div class="space-y-10">
         <a href="/projects/pnp" target="_self" class="block">
             <div class=
             {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all 
             ${homepage 
-            ? 'bg-dyellow  border-none  hover:shadow-xl duration-300' 
-            : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
+            ? 'bg-brown  border-none  hover:shadow-xl duration-300' 
+            : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
 
                     <!-- <a type="button" class="absolute 
@@ -49,8 +49,8 @@ const homepage = Astro.url.pathname =="/";
             <div class=
             {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all blur-sm
             ${homepage 
-            ? 'bg-dyellow  border-none  hover:shadow-xl duration-300' 
-            : 'bg-white lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
+            ? 'bg-brown  border-none  hover:shadow-xl duration-300' 
+            : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
                 <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-red border-3">
 
                     <a type="button" class="absolute 
@@ -88,4 +88,4 @@ const homepage = Astro.url.pathname =="/";
         </a>
     </div>
     
-</section>
+</div>

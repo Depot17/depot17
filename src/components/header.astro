@@ -3,23 +3,26 @@ const currentPath = Astro.url.pathname;
 const homepage = Astro.url.pathname =="/";
 
 ---
-<header id="navbar" class=" lg:block w-full flex top-0 relative justify-center w-screen ">
-    <nav class="w-full flex bg-transparent justify-between items-center px-10 py-3 text-lg">
+<header id="navbar" class={`lg:block bg-beige w-full flex top-0 justify-center w-screen ${
+currentPath === "/"
+? 'absolute'
+: 'relative'}`}>
+    <nav class="w-full flex bg-transparent justify-between items-center px-10 pt-3 text-lg">
         <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
-            <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div>
-            <span id="name" class={`nav-item hover:opacity-70 self-center text-2xl font-semibold whitespace-nowrap 
+            <!-- <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div> -->
+            <span id="name" class={`font-pixel nav-item shover:opacity-70 text-3xl font-bold whitespace-nowrap 
             ${ currentPath === "/"
              ? 'text-black' //settle on a color
              : 'text-black'}`}>
-                Depot 17</span>
+                DEPOT17</span>
         </a>
 
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-inter flex flex-col items-center p-4 md:p-0 mt-4 md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 text-black">
                 <li>
-                    <a href="/" target="_self" class={`nav-item block px-3 ${
+                    <a href="/" target="_self" class={`font-medium nav-item block px-3 ${
                         currentPath === "/" 
-                        ? "font-semibold"   
+                        ? "font-bold"   
                         : "text-black"}`}>Home</a>
      
                 <li>/</li>
@@ -35,9 +38,9 @@ const homepage = Astro.url.pathname =="/";
                 <li><p>/</p></li> -->
                 <li class="group">
 
-                    <a href="/get_started" target="_self" class={`nav-item block px-3 py-3 text-black ${
+                    <a href="/get_started" target="_self" class={`font-medium nav-item block px-3 py-3 text-black ${
                     currentPath === "/get_started" 
-                    ? "rounded-lg text-green px-2 font-semibold"   
+                    ? "rounded-lg font-bold"   
                     : currentPath === "/" 
                 
                     }`}>Get Started</a>
@@ -70,10 +73,10 @@ const homepage = Astro.url.pathname =="/";
                 <p class="text-lred">
                 Shop</p>
             </a> -->
-            <a href="#" class="hide bg-dbrown 
+            <a href="#" class="hide bg-dbrown
             rounded-full 
-            min-h-10 px-6 py-2">
-                <p class="text-lred">
+            min-h-10 px-4 py-2">
+                <p class="text-lblue">
                 Donate</p>
             </a>
         </div>

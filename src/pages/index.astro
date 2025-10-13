@@ -11,53 +11,53 @@ const title = "Depot";
 	border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
     click
 	</span>
-	<section id="landing" class=" w-full h-screen " >
-			<div class="col-start-1 row-start-1 w-full flex flex-col items-center justify-center gap-y-2 text-center ">
-				<p class="bg-yellow px-3 rounded-sm py-1 mb-10 -mt-4 text-lred font-medium z-[1000] hover:bg-beige duration-400">APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
+	<div class="bg-linear-to-t from-gray to-beige space-y-0">
 
+	<section id="landing" class=" w-screen h-screen text-center flex items-center flex-col">
+		<p class="bg-lblue px-3 w-fit mt-14 rounded-sm py-1 font-medium duration-400">APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
+		<div class="absolute h-screen top-8 left-0 w-screen justify-center flex flex-col items-center">
+			<div class="grid grid-cols-3 place-items-center">
+<h1>Build a</h1>
+				<form action="" method="POST" name="email-form" class=" bg-gray flex justify-between font-medium rounded-full 
+				text-md text-dbrown pr-2 pl-4 py-2 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
+				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="pl-3 outline-none flex-1 text-green"> 
+				<button type="submit" value="submit" 
+					class="hidden lg:block bg-red  font-medium rounded-full 
+					text-md text-white text-center ">
+					<span onclick="this.classList.toggle('text-blue')" class="bg-lred rounded-full block box-border 
+					w-10 aspect-[1/1] border-4 border-beige
+					flex items-center justify-center focus:border-black">
+					<p class="text-beige">
+					--> </p>
+					</span>
+				</button>
+			</form>
+			<h1>Change.</h1>
+			</div>
+			
+						<p class="text-dbrown max-w-130 z-[100] text-center">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p>
 
-				<div class="text-green  text-shadow-4xl text-shadow-dbrown max-w-200 w-[80%] relative xl:h-[400px] xs:h-[100px] min-h-80">
-					<h1 class="relative xs:absolute top-0 left-0">
-					Build a</h1>
-					<h1 class="relative xs:absolute bottom-0 right-0">Change.</h1>
-				</div>
-				<!-- <div class="w-[800px] h-[600px] -mt-20">
+		</div>
+
+			<!-- <div class="w-[800px] h-[600px] -mt-20">
 						<Three  client:only="react" />
 					</div> -->
-		<form action="" method="POST" name="email-form" class="trig bg-beige flex z-2000 justify-between font-medium rounded-full 
-				text-md text-dbrown pr-2 pl-4 py-2 mt-3 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
-					<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="outline-none flex-1"> 
-					<button type="submit" value="submit" 
-						class="hidden lg:block bg-red  font-medium rounded-full 
-						text-md text-white text-center ">
-						<span onclick="this.classList.toggle('text-blue')" class="bg-lred rounded-full block box-border 
-						transition-all ease duration-100 w-10 aspect-[1/1] border-2 border-pink
-						hover:-translate-y-1 flex items-center justify-center focus:border-black">
-						<p class="text-white">
-						--> </p>
-						</span>
-				</button>
-				</form>
-				<p class="text-white pt-4 max-w-130 z-[100] font-medium">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p>
-				<button type="submit" value="submit" 
+		
+				<!-- <button type="submit" value="submit" 
 				class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
 						Submit
-				</button>
-				
-				</div>
-
+				</button> -->
 	</section>
-	<hr class="trigger hidden">
-	<section id="about" class="pb-8 pt-18  w-full">
+	<section id="about" class="pb-8  w-full">
 		<h2 class="abc xl:max-w-180 lg:max-w-160 max-w-140 font-medium">
-			Build real sustainable solutions, and change the world. <i class="text-green" >Today.</i></h2>
+			Build real sustainable solutions, and change the world. <i class="text-lgreen" >Today.</i></h2>
 
 		<div class=" w-full flex flex-wrap gap-4">
 			<div class="">
 				<div class="abd text-dbrown max-w-50">
 					<p>Find a problem in a community, and then work with them to engineer a solution. Read more.</p>
 				</div>
-				<a href="#" class="block bg-dbrown rounded-full px-6 py-2.5 text-lred font-semibold text-xl w-fit my-4">
+				<a href="#" class="block bg-dbrown rounded-full px-4 py-2 text-lred font-semibold text-lg w-fit my-4">
 					Get Started
 				</a>
 			</div>
@@ -80,7 +80,8 @@ const title = "Depot";
 				</div>	
 			</div>
 	</section>
-	
+		</div>
+
 	
 	<!-- <hr class="my-4 border-dashed border-gray border-2"> -->
 	 <!-- turn this into a draggable slideshow in future when they're more devlots -->
@@ -116,18 +117,20 @@ const title = "Depot";
 			</a>
 		</div>
 	</section> -->
-	<section class="space-y-8 my-40 text-center">
-	<h1>DEPOT 17 helps the next generation build a communal future.</h1>
-		<h1 class="rotate-90">--></h1>
-		</section>
+	<hr class="trigger hidden">
 
-	<section class=" relative w-full lg:p-10 rounded-2xl sm:bg-white mt-18 py-10 h-fit">
+	<section class="space-y-8 my-60 h-screen flex flex-col justify-center items-center text-lblue text-center  w-screen">
+		<h1> DEPOT 17 helps the next generation build a communal future.</h1>
+		<p class="font-medium">We believe the youth can can change the world, prove us right.</p>
+	</section>
+
+	<section class="w-full lg:p-10 sm:bg-dbrown mt-18 py-10 h-fit">
 		
-		<div class="sm:hidden absolute w-screen bg-white min-h-full left-1/2 -translate-x-1/2  "></div>
+		<div class="sm:hidden absolute w-screen bg-beige min-h-full left-1/2 -translate-x-1/2  "></div>
 
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center relative mt-4">
 			<div></div>
-			<h2 class="text-center">Projects</h2>
+			<h2 class="text-center text-lgreen whitespace-nowrap"> Featured Projects</h2>
 			<!-- <div class="lg:ml-auto">
 				<a href="projects" target="_self" class="flex items-center gap-2">
 					<p>View all projects</p>
@@ -135,7 +138,7 @@ const title = "Depot";
 				</a>
 			</div> -->
 		</div>
-		<p class="text-center my-2 relative z-10">By joining Cohort 1, your project could be featured below!</p>
+		<p class="text-center my-2 relative z-10 text-beige pb-10">By joining Cohort 1, your project could be featured below!</p>
 
 
 		<ProjectsSlot />
@@ -152,7 +155,8 @@ const title = "Depot";
         <p>click</p>
     </div>
 	</div> 
+	</div>
+
 	<script src="../app.js"></script>
 		<script src="../follower.js"></script>
-
 </BaseLayout>

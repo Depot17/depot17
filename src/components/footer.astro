@@ -2,11 +2,15 @@
 const platform = "github"
 const username = "buildersdepot";
 import Social from './socials.astro';
+const currentPath = Astro.url.pathname;
 ---
 
-<footer class= "bg-beige w-full h-fit text-center grid grid-cols-1 place-items-center pt-10">
-  <div class="bg-dyellow p-2 w-70 lg:w-80 relative ml-10 lg:ml-18 border-2 border-black pt-5 h-fit">
-    <div class="absolute bg-lbrown w-[50px] h-4 left-1/2 -translate-x-1/2 top-0"></div>
+<footer class={` w-full h-fit text-center grid grid-cols-1 place-items-center pt-10 ${
+currentPath === "/"
+? 'bg-dbrown'
+: 'bg-beige'}`}>
+  <div class="bg-brown p-2 w-70 lg:w-80 relative ml-10 lg:ml-18 border-2 border-black pt-5 h-fit">
+    <div class="absolute bg-yellow w-[50px] h-4 left-1/2 -translate-x-1/2 top-0"></div>
       <p>This website was made by makers, <br> for makers.</p>
       
       <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
@@ -14,8 +18,8 @@ import Social from './socials.astro';
       </button>
   </div>
 
-  <div class="bg-dyellow p-6 w-60 lg:w-fit relative border-2 border-black mr-6 lg:mr-16">
-    <div class="absolute bg-lbrown w-[50px] h-6 left-1/2 -translate-x-1/2 top-0"></div>
+  <div class="bg-brown p-6 w-60 lg:w-fit relative border-2 border-black mr-6 lg:mr-16">
+    <div class="absolute bg-yellow w-[50px] h-6 left-1/2 -translate-x-1/2 top-0"></div>
 
     <div>
       <!-- <Social platform = "instagram" username = "bobby" /> -->
@@ -24,8 +28,8 @@ import Social from './socials.astro';
     <p>View our <a href="https://github.com/builders-depot/builders-depot" target="_blank">source code</a> and finances. <br> Contact us at hello@buildersdepot.org</p>
 
   </div>
-  <div class="bg-dyellow   p-6 w-[90%] max-w-120 h-20 lg:h-10 relative border-2 border-black flex items-center justify-center">
-    <div class="absolute bg-lbrown w-[70px] h-3 left-1/2 -translate-x-1/2 top-0"></div>
+  <div class="bg-brown   p-6 w-[90%] max-w-120 h-20 lg:h-10 relative border-2 border-black flex items-center justify-center">
+    <div class="absolute bg-yellow w-[70px] h-3 left-1/2 -translate-x-1/2 top-0"></div>
     <p>© 2025 [Builder's Depot]. All rights reserved</p>
   </div>
   
