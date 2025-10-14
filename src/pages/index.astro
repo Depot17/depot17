@@ -11,15 +11,19 @@ const title = "Depot";
 	border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
     click
 	</span>
-	<div class="bg-linear-to-t from-gray to-beige space-y-0">
 
-	<section id="landing" class=" w-screen h-screen text-center flex items-center flex-col">
-		<p class="bg-lblue px-3 w-fit mt-14 rounded-sm py-1 font-medium duration-400">APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
-		<div class="absolute h-screen top-8 left-0 w-screen justify-center flex flex-col items-center">
+	<section id="landing" class="  w-screen h-screen text-center flex items-center flex-col">
+		<p class="bg-lblue px-3 w-fit mt-14 rounded-sm py-1 font-medium duration-400 z-[100]">APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
+		<div class="absolute h-screen top-0 bg-no-repeat bg-size bg-center bg-[url('/images/spotlight.png')] left-0 w-screen justify-center flex flex-col items-center">
 			<div class="grid grid-cols-3 place-items-center">
 <h1>Build a</h1>
-				<form action="" method="POST" name="email-form" class=" bg-gray flex justify-between font-medium rounded-full 
-				text-md text-dbrown pr-2 pl-4 py-2 text-center w-60 lg:w-150 outline-3 outline-transparent transition-all duration-200 focus-within:outline-lbrown outline-3">
+		<div class="absolute h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+				<Three client:load />
+			</div>
+<div class="justify-center flex flex-col items-center space-y-4 z-[100]">
+
+				<form action="" method="POST" name="email-form" class=" bg-white flex justify-between font-medium rounded-full 
+				text-md text-dbrown pr-2 pl-4 py-2 text-center w-60 lg:w-150 outline-3 outline-dbrown transition-all duration-200 focus-within:outline-lbrown outline-3">
 				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="pl-3 outline-none flex-1 text-green"> 
 				<button type="submit" value="submit" 
 					class="hidden lg:block bg-red  font-medium rounded-full 
@@ -32,12 +36,12 @@ const title = "Depot";
 					</span>
 				</button>
 			</form>
+			</div>
 			<h1>Change.</h1>
 			</div>
 			
-						<p class="text-dbrown max-w-130 z-[100] text-center">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p>
+						<!-- <p class="text-dbrown max-w-130 pt-4 z-[100] text-center">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p> -->
 
-		</div>
 
 			<!-- <div class="w-[800px] h-[600px] -mt-20">
 						<Three  client:only="react" />
@@ -63,14 +67,14 @@ const title = "Depot";
 			</div>
 			<div class=" hidden xl:block border-1 border-dbrown  
 			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto overflow-hidden bg-[url('/images/daydream.jpg')] bg-cover bg-center group">
-					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-beige flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">100+ Hackers at Daydream</p>
+					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-yellow flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">100+ Hackers at Daydream</p>
 
 			</div>
 
 			<div class=" border-1 border-dbrown bg-dyellow 
 			grow-1 min-w-80 max-w-100 xl:max-w-180 md:max-w-full h-100 lg:h-120 rounded-xl relative overflow-hidden bg-[url('/images/jpeg.jpg')] bg-cover bg-center group">
 
-					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-beige flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">80+ Girls at JPEG</p>
+					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-yellow flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">80+ Girls at JPEG</p>
 
 
 				<div class="xl:hidden border-1 border-dbrown bg-dyellow w-[60%]  max-w-70 h-60 md:h-70 rounded-xl absolute bottom-0 right-4 md:right-10 -mb-10 ">
@@ -119,12 +123,24 @@ const title = "Depot";
 	</section> -->
 	<hr class="trigger hidden">
 
-	<section class="space-y-8 my-60 h-screen flex flex-col justify-center items-center text-lblue text-center  w-screen">
+	<section class="relative space-y-8 min-h-screen change flex flex-col justify-center items-center text-lblue text-center  w-screen">
+		<div class="absolute inset-30">	
+			<div class="framel">
+				<div class="absolute top-0 left-0 border-lgreen border-t-6 border-l-6 w-20 aspect-[1/1]"></div>
+				<div class="absolute bottom-0 left-0 border-lgreen border-b-6 border-l-6 w-20 aspect-[1/1]"></div>
+
+			</div>
+			<div class=framer>
+				<div class="absolute top-0 right-0 border-lgreen border-t-6 border-r-6 w-20 aspect-[1/1]"></div>
+				<div class="absolute bottom-0 right-0 border-lgreen border-b-6 border-r-6 w-20 aspect-[1/1]"></div>
+			</div>
+		</div>
+
 		<h1> DEPOT 17 helps the next generation build a communal future.</h1>
 		<p class="font-medium">We believe the youth can can change the world, prove us right.</p>
 	</section>
 
-	<section class="w-full lg:p-10 sm:bg-dbrown mt-18 py-10 h-fit">
+	<section class="w-full lg:p-10 sm:bg-dbrown py-10 h-fit">
 		
 		<div class="sm:hidden absolute w-screen bg-beige min-h-full left-1/2 -translate-x-1/2  "></div>
 

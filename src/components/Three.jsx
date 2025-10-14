@@ -33,20 +33,25 @@ import { Shader } from "./Shader";
         // })
         });
 
-        return <primitive object={obj} scale={7.5} />
+        return <primitive object={obj} scale={12} />
 
     };
 
     export default function App(){
         return (
-            <Canvas style={{ width: "800px", height: "800px",}}>
+            <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "900px", height: "900px",}}>
         
-                <ambientLight intensity={0.8} />
+                <ambientLight intensity={0.9} />
                 <directionalLight color="red" position={[0, 0, 0]} />
                 <Scene />
                 {/* <Shader /> */}
 
-                <OrbitControls enableZoom={false} />
+                <OrbitControls 
+                enableZoom={false} 
+                minPolarAngle={Math.PI /3}
+                maxPolarAngle={Math.PI / 1.2}
+  minAzimuthAngle={-Math.PI / 4}
+  maxAzimuthAngle={Math.PI / 4}/>
         
             </Canvas>
     );
