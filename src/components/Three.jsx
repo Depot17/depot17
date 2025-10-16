@@ -1,5 +1,6 @@
 
 import * as THREE from "three";
+import React, { useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
@@ -23,36 +24,35 @@ import { Shader } from "./Shader";
         //     if (child.isMesh) outlineRefs.current.push(child);
         //     });
         // });
-        // useEffect(() => {
-        //     set({
-        //         fillMix: 1,
-        //         dash: true,
-        //         squeeze: true,
-        //         thickness: 0.14
-        //     })
-        // })
-        });
+});
+        useEffect(() => {
+            const box = new THREE.Box3().setFromObject(obj);
+            const center = new THREE.Vector3();
+            box.getCenter(center);
 
-        return <primitive object={obj} scale={12} rotation={[-0.5, 0,0]} />
+            obj.position.x -= center.x;
+            obj.position.y -= center.y;
+            obj.position.z -= center.z;
+            }, [obj]);
+        
 
-    };
+        return <primitive object={obj} scale={12} rotation={[-0.8, 0.5,0.2]} />
+
+    };     
+     
 
     export default function App(){
         return (
             <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "900px"}}>
         
-                <ambientLight intensity={0.9} />
-                <directionalLight color="white" position={[0, 10, 0]} />
+                <ambientLight intensity={0.8} />
+                <directionalLight color="white" position={[0, 18, 4]} intensity={2} />
+                <Suspense fallback={null}>
                 <Scene />
-                {/* <Shader /> */}
 
-                <OrbitControls 
-                enableZoom={false} 
-                minPolarAngle={Math.PI /3}
-                maxPolarAngle={Math.PI / 1.5}
-                minAzimuthAngle={-Math.PI / 4}
-                maxAzimuthAngle={Math.PI / 4}/>
-        
+                </Suspense>
+  
+                <OrbitControls enableZoom={false}></OrbitControls>
             </Canvas>
     );
 }

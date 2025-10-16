@@ -13,12 +13,13 @@ const title = "Depot";
 	</span>
 
 	<section id="landing" class="  w-screen h-screen text-center flex items-center flex-col">
-		<p class="bg-lblue px-3 w-fit mt-14 rounded-sm hover:bg-brown hover:text-yellow py-1 font-medium duration-400 z-[100]">
+		<p class="bg-lblue px-3 w-fit mt-6 rounded-sm hover:bg-brown hover:text-yellow py-1 font-medium duration-400 z-[100]">
 			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
-		<div class="absolute h-screen top-0 bg-no-repeat bg-size bg-[center_top_-2.5rem] bg-[url('/images/spotlight.png')] left-0 w-screen justify-center flex flex-col items-center">
+		<div class="absolute h-screen top-0 bg-no-repeat bg-size bg-[center_top_-2.5rem] bg-[url('/images/spot.webp')]  left-0 w-screen justify-center flex flex-col items-center">
 			<div class="grid grid-cols-3 place-items-center">
 			<h1>Build a</h1>
-		
+			<h1 class=" sm:hidden ">Change.</h1>
+
 			<div class="justify-center flex flex-col items-center space-y-4 z-[100]">
 
 				<form action="" method="POST" name="email-form" class=" bg-white flex justify-between font-medium rounded-full 
@@ -36,9 +37,9 @@ const title = "Depot";
 				</button>
 			</form>
 			</div>
-			<h1>Change.</h1>
+			<h1 class="hidden sm:block ">Change.</h1>
 			</div>
-			<div class="absolute h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+			<div class="dragme hidden sm:block absolute h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
 				<Three client:load />
 			</div>
 						<!-- <p class="text-dbrown max-w-130 pt-4 z-[100] text-center">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p> -->
@@ -55,7 +56,7 @@ const title = "Depot";
 	</section>
 
 	<section id="about" class="pb-8  w-full">
-		<h2 class="abc xl:max-w-180 lg:max-w-160 max-w-140 font-medium">
+		<h2 class="abc xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
 			Build real sustainable solutions, and change the world. <i class="text-lgreen" >Today.</i></h2>
 
 		<div class=" w-full flex flex-wrap gap-4">
@@ -68,26 +69,34 @@ const title = "Depot";
 				</a>
 			</div>
 			<div class=" hidden xl:block border-1 border-dbrown  
-			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto overflow-hidden bg-[url('/images/daydream.jpg')] bg-cover bg-center group">
-					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-yellow flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">100+ Hackers at Daydream</p>
+			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.jpg')] bg-cover bg-center group/daydream">
+				<p class="w-full h-full lg:bg-linear-to-tr bg-linear-to-t from-green/20 to-yellow/30 group-hover/daydream:from-green/100 group-hover/daydream:to-yellow/70 
+					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-beige/0 group-hover/daydream:text-beige/100">
+					100+ Hackers at Daydream 
+				</p>
 
 			</div>
 
 			<div class=" border-1 border-dbrown bg-dyellow 
-			grow-1 min-w-80 max-w-100 xl:max-w-180 md:max-w-full h-100 lg:h-120 rounded-xl relative overflow-hidden bg-[url('/images/jpeg.jpg')] bg-cover bg-center group">
+			grow-1 min-w-80 max-w-100 xl:max-w-180 md:max-w-full 
+			h-100 lg:h-120 rounded-xl relative bg-[url('/images/jpeg.jpg')] bg-cover bg-center group/jpeg">
+				<p class="w-full h-full lg:bg-linear-to-tl bg-linear-to-t from-green/20 to-yellow/30 group-hover/jpeg:from-green/100 group-hover/jpeg:to-yellow/70 
+					rounded-xl transition-all duration-500 ease-in-out flex justify-center top-40 lg:items-center text-center p-6 text-beige/0 group-hover/jpeg:text-beige/100">
+					80+ Girls and non-binary folk at&ThickSpace;<a href="https://jpeg.hackclub.com" target="_blank">JPEG</a> 
+				</p>
 
-					<p class="bg-brown opacity-25  group-hover:opacity-100 group-hover:bg-yellow flex  transition-all duration-400 justify-center items-center w-full h-full bg-beige text-center ">80+ Girls at JPEG</p>
 
-
-				<div class="xl:hidden border-1 border-dbrown bg-dyellow w-[60%]  max-w-70 h-60 md:h-70 rounded-xl absolute bottom-0 right-4 md:right-10 -mb-10 ">
-								<img src="/images/jpeg.jpg" class="w-auto h-full object-cover">
-
-
+				<div class="xl:hidden border-1 border-dbrown bg-dyellow w-[60%]  max-w-70 h-60 md:h-70 
+				bg-[url('/images/daydream.jpg')] bg-cover bg-center rounded-xl absolute group/daydream bottom-0 right-4 md:right-10 -mb-10 ">
+					
+				<p class="w-full h-full bg-linear-to-tl from-green/20 to-yellow/30 group-hover/daydream:from-green/100 group-hover/daydream:to-yellow/70 
+					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-beige/0 group-hover/daydream:text-beige/100">
+					100+ Hackers at Daydream (Game Jam)
+				</p>
 				</div>	
 			</div>
 	</section>
 		</div>
-
 	
 	<!-- <hr class="my-4 border-dashed border-gray border-2"> -->
 	 <!-- turn this into a draggable slideshow in future when they're more devlots -->
@@ -125,8 +134,8 @@ const title = "Depot";
 	</section> -->
 	<hr class="trigger hidden">
 
-	<section class="relative space-y-8 min-h-screen flex flex-col justify-center items-center text-lblue text-center  w-screen">
-		<div class="absolute inset-30">	
+	<section class="my-10 relative space-y-8 min-h-screen flex flex-col justify-center items-center text-lblue text-center  w-screen">
+		<div class="absolute inset-5 sm:inset-30">	
 			<div class="framel">
 				<div class="absolute top-0 left-0 border-lgreen border-t-6 border-l-6 w-20 aspect-[1/1]"></div>
 				<div class="absolute bottom-0 left-0 border-lgreen border-b-6 border-l-6 w-20 aspect-[1/1]"></div>
@@ -138,12 +147,11 @@ const title = "Depot";
 			</div>
 		</div>
 
-		<h1> DEPOT 17 helps the next generation build a communal future.</h1>
+		<h1 class="leading-14"> DEPOT 17 helps the next generation build a communal future.</h1>
 		<p class="font-medium">We believe the youth can can change the world, prove us right.</p>
 	</section>
-	<section class="w-full lg:p-10 sm:bg-dbrown py-10 h-fit">
+	<section class="w-full lg:p-10 bg-dbrown py-10 h-fit">
 		
-		<div class="sm:hidden absolute w-screen bg-beige min-h-full left-1/2 -translate-x-1/2  "></div>
 
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center relative mt-4">
 			<div></div>
@@ -164,7 +172,10 @@ const title = "Depot";
 	<div class="click fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown border-2 border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
         <p>click</p>
     </div>
-
+<div class="drag fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown border-2 border-brown 
+rounded-xl rounded-bl-none text-lgreen font-semibold tracking-wide px-1 py-0.5">
+        <p>drag</p>
+    </div>
 	</div> 
 	</div>
 

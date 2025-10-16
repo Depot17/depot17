@@ -10,9 +10,9 @@
     --color-gray:#EAE5E3;
     --color-dbrown: #352922;
     --color-brown:#D4800B;
-    --color-red: #FF2222;
+    --color-red: #E00000;
 
-     --color-transp: #E8E8E830;
+     --color-transp: #FCFCFC40;
 
     --breakpoint-3xl: 120rem;
     --breakpoint-xs: 500px;
@@ -79,10 +79,8 @@ input:focus {
   animation: blink 1.5s infinite;
 }
 
-.nav-item {
-   @apply font-medium transition-all ease-in-out duration-200
 
-}
+
 
 #output {
     min-height:200px;

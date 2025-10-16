@@ -29,3 +29,31 @@ document.addEventListener('mouseleave', (e) => {
 })
 
 }
+
+if (!isTouchDevice){
+
+    const $el = document.querySelector('.drag');
+
+window.addEventListener('mousemove', (e) => {
+    const { target,x ,y } = e;
+    const dragMe = target.closest('.dragme');
+    // const isClickable = target?.closest('a') || target?.closest('button');
+    
+    gsap.to($el, {
+        x: x + 3,
+        y: y +3,
+        duration:0.7,
+        ease: 'power4',
+        opacity: dragMe ? 1 : 0,
+
+    })
+})
+
+document.addEventListener('mouseleave', (e) => {
+    gsap.to($el, {
+        opacity:0,
+        duration:0.7,
+    })
+})
+
+}

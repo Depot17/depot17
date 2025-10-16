@@ -79,7 +79,7 @@ gsap.to('.nav', {
 // })
 gsap.fromTo(".bg-size",
   { backgroundSize: "10% 100%" },
-  { backgroundSize: "40% 100%", duration: 1.5, ease: "power2.out" }
+  { backgroundSize: "35% 100%", duration: 1.5, ease: "power2.out" }
 );
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {
