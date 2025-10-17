@@ -7,55 +7,65 @@ const title = "Depot";
 ---
 
 <BaseLayout title={title}>
-	<span class="click fixed top-0 left-0 opacity-0 z-[10000] pointer-events-none select-none bg-dbrown border-2 
-	border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
-    click
-	</span>
+	
 
-	<section id="landing" class="  w-screen h-screen text-center flex items-center flex-col">
-		<p class="bg-lblue px-3 w-fit mt-6 rounded-sm hover:bg-brown hover:text-yellow py-1 font-medium duration-400 z-[100]">
-			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW. </p>
-		<div class="absolute h-screen top-0 bg-no-repeat bg-size bg-[center_top_-2.5rem] bg-[url('/images/spot.webp')]  left-0 w-screen justify-center flex flex-col items-center">
-			<div class="grid grid-cols-3 place-items-center">
-			<h1>Build a</h1>
-			<h1 class=" sm:hidden ">Change.</h1>
-
-			<div class="justify-center flex flex-col items-center space-y-4 z-[100]">
-
-				<form action="" method="POST" name="email-form" class=" bg-white flex justify-between font-medium rounded-full 
-				text-md text-dbrown pr-2 pl-4 py-2 text-center w-60 lg:w-150 outline-3 outline-dbrown transition-all duration-200 focus-within:outline-lbrown outline-3">
-				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" class="pl-3 outline-none flex-1 text-green"> 
-				<button type="submit" value="submit" 
-					class="hidden lg:block bg-red  font-medium rounded-full 
-					text-md text-white text-center ">
-					<span onclick="this.classList.toggle('text-blue')" class="bg-lred rounded-full block box-border 
-					w-10 aspect-[1/1] border-4 border-beige
-					flex items-center justify-center focus:border-black">
-					<p class="text-beige">
-					--> </p>
-					</span>
-				</button>
-			</form>
-			</div>
-			<h1 class="hidden sm:block ">Change.</h1>
-			</div>
-			<div class="dragme hidden sm:block absolute h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-				<Three client:load />
-			</div>
-						<!-- <p class="text-dbrown max-w-130 pt-4 z-[100] text-center">Find a problem in a community, and then work with them to engineer a solution. Read more. Insert more info talk about highschool.</p> -->
-
-
-			<!-- <div class="w-[800px] h-[600px] -mt-20">
-						<Three  client:only="react" />
-					</div> -->
+	<section id="landing" class="w-screen h-screen max-h-[90vh] overflow-hidden text-center flex items-center flex-col">
 		
-				<!-- <button type="submit" value="submit" 
-				class="block lg:hidden bg-lred border-2 border-pink font-medium rounded-full text-md text-white px-5 py-1.5 text-center">
-						Submit
-				</button> -->
+		<div class="h-screen w-screen absolute top-0 pt-12 px-8 left-0 bg-no-repeat 
+		spotlight-xs lg:spotlight-lg bg-[center_top_-5rem] bg-[url('/images/spotlight.webp')] 
+		flex flex-col items-center justify-center">
+		<p class="bg-lblue w-fit text-xs sm:text-base px-2 my-3 rounded-sm hover:bg-brown hover:text-yellow py-1 font-medium duration-400 z-[100]">
+			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY&nbsp;BELOW. </p>
+			<div class="lg:hidden w-full relative min-h-20">
+				<h1 class="text-left lg:hidden absolute top-0 left-0">Build a<br>Change</h1>
+			</div>
+			<div class="xl:px-10 w-full h-screen space-y-4 grid grid-cols-1 lg:grid-cols-3 place-items-center">
+				
+				<h1 class="hidden lg:block h-fit">Build a</h1>
+				
+				<div class="h-auto flex flex-col items-center justify-center w-screen lg:w-auto">
+					<img src="/images/claw.png" class="max-w-160 lg:hidden">
+					<p class="hidden lg:block opacity-0 text-dbrown max-w-130 z-[100] text-center">
+						Find a problem in a community, and then work with them to engineer a solution. </p> 
+					<form action="" method="POST" name="email-form" 
+					class="bg-white flex justify-between font-medium rounded-full z-[100]
+					text-md text-dbrown pr-2 pl-4 py-2 min-h-12 w-130 max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
+				
+					text-center outline-3 outline-dbrown transition-all duration-200 ">
+
+					<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" 
+					class="pl-3 outline-none flex-1 text-green"> 
+
+					<button type="submit" value="submit" 
+					class="lg:block bg-red font-medium 
+					rounded-full text-md text-beige text-center">
+						
+						<span onclick="this.classList.toggle('text-blue')" 
+						class="bg-lred rounded-full block box-border 
+						w-12 md:w-10 aspect-[1/1] border-3 border-lgreen
+						flex items-center justify-center focus:border-black ">
+							<p class="text-beige font-bold">--></p>
+						</span>
+
+					</button>
+
+					</form>
+						<p class="text-dbrown max-w-130 mx-8 pt-2 z-[100] text-center">
+				Find a problem in a community, and then work with them to engineer a solution. </p> 
+				</div>
+				<h1 class="hidden lg:block">Change.</h1>
+		
+			</div>
+				<div class="hidden lg:block dragme col-start-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden ">
+						<Three client:load />
+					</div>
+		
+			</div>
+
 	</section>
 
-	<section id="about" class="pb-8  w-full">
+	
+	<section id="about" class="pb-8 pt-20 w-full">
 		<h2 class="abc xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
 			Build real sustainable solutions, and change the world. <i class="text-lgreen" >Today.</i></h2>
 
@@ -135,7 +145,7 @@ const title = "Depot";
 	<hr class="trigger hidden">
 
 	<section class="my-10 relative space-y-8 min-h-screen flex flex-col justify-center items-center text-lblue text-center  w-screen">
-		<div class="absolute inset-5 sm:inset-30">	
+		<div class="absolute inset-5 sm:inset-15 lg:inset-20">	
 			<div class="framel">
 				<div class="absolute top-0 left-0 border-lgreen border-t-6 border-l-6 w-20 aspect-[1/1]"></div>
 				<div class="absolute bottom-0 left-0 border-lgreen border-b-6 border-l-6 w-20 aspect-[1/1]"></div>
@@ -146,9 +156,11 @@ const title = "Depot";
 				<div class="absolute bottom-0 right-0 border-lgreen border-b-6 border-r-6 w-20 aspect-[1/1]"></div>
 			</div>
 		</div>
+		<div class=" space-y-4 mx-4">
+			<span class="text-5xl font-semibold leading-18 lg:text-7xl lg:leading-24"> Depot 17 helps the next generation build a communal future.</span>
+			<p class="font-medium">We believe the youth can can change the world, prove us right.</p>
 
-		<h1 class="leading-14"> DEPOT 17 helps the next generation build a communal future.</h1>
-		<p class="font-medium">We believe the youth can can change the world, prove us right.</p>
+		</div>
 	</section>
 	<section class="w-full lg:p-10 bg-dbrown py-10 h-fit">
 		

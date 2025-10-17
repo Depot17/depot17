@@ -77,10 +77,19 @@ gsap.to('.nav', {
 //     }
     
 // })
-gsap.fromTo(".bg-size",
+
+
+gsap.fromTo(".spotlight-xs",
+  { backgroundSize: "20% 100%" },
+  { backgroundSize: "85% 100%", duration: 1.5, ease: "power2.out" }
+);
+
+gsap.fromTo(".spotlight-lg",
   { backgroundSize: "10% 100%" },
   { backgroundSize: "35% 100%", duration: 1.5, ease: "power2.out" }
 );
+
+
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {
     e.preventDefault();

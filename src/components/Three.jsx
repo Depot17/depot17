@@ -45,8 +45,8 @@ import { Shader } from "./Shader";
         return (
             <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "900px"}}>
         
-                <ambientLight intensity={0.8} />
-                <directionalLight color="white" position={[0, 18, 4]} intensity={2} />
+                <ambientLight intensity={0.7} />
+                <directionalLight color="white" position={[0, 0, 6]} intensity={2} />
                 <Suspense fallback={null}>
                 <Scene />
 

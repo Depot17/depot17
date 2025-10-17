@@ -3,12 +3,12 @@ const currentPath = Astro.url.pathname;
 const homepage = Astro.url.pathname =="/";
 
 ---
-<header id="navbar" class={`lg:block bg-tranparent w-full z-[1000] flex top-0 justify-center w-screen ${
+<header id="navbar" class={`z-[100] lg:block bg-tranparent w-full  flex top-0 justify-center w-screen ${
 currentPath === "/"
-? 'absolute'
-: 'relative'}`}>
-    <nav class="w-full flex bg-transparent justify-between items-center px-10 pt-3 text-lg">
-        <a href="#" class="z-10 flex items-center space-x-2 rtl:space-x-reverse text-white">
+? 'relative lg:absolute'
+: ''}`}>
+    <nav class="w-full flex bg-transparent justify-between items-center pt-3 px-10 text-lg">
+        <a href="#" class="">
             <!-- <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div> -->
             <span id="name" class={`font-pixel hover:opacity-50 transition-all duration-400 ease-in-out text-3xl font-bold whitespace-nowrap 
             ${ currentPath === "/"
