@@ -30,6 +30,71 @@
     font-family:"Bytesized", monospace;
 
 }
+
+
+
+@font-face {
+  font-family: 'Blau';
+  src: url('/fonts/blau7pt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font2 {
+    font-family: 'Blau';
+
+}
+
+
+@font-face {
+  font-family: 's';
+  src: url('/fonts/Pixel Tactical.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font5 {
+    font-family: 's';
+
+}
+@font-face {
+  font-family: 'slap';
+  src: url('/fonts/SlapAndCrumbly.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font6 {
+    font-family: 'slap';
+
+}
+@font-face {
+  font-family: 'so';
+  src: url('/fonts/so_square.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font7 {
+    font-family: 'so';
+
+}
+@font-face {
+  font-family: 'super';
+  src: url('/fonts/Superpix-DONATIONWARE.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font8 {
+    font-family: 'super';
+
+}
 h1 {
     @apply text-7xl  xl:text-[12vh] font-semibold
 }

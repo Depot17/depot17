@@ -34,8 +34,8 @@ tl.to("#scramble", {duration: 3, scrambleText:{text:"Lorem ipsum text blurb wow 
 const scriptURL ="https://script.google.com/macros/s/AKfycbwg3qWCELhFNx4MeGwGhXARYLqD7PRK8KqGVKQTYi-ZoL40rzcNIZw0-wqqDNooSXfIdw/exec";
 
 gsap.from(".text-dgreen", {
-			y: 40, 
-			});
+    y: 40, 
+    });
 
 
 gsap.to('.change', {
@@ -52,17 +52,7 @@ gsap.to('.change', {
 
 
 
-gsap.to('.nav', {
-    y: 120,
-        duration:0.6,
 
-
-    scrollTrigger: {
-        trigger: '.trigger',
-        start: 'top top',
-        toggleActions: 'play none reverse reverse'
-    }
-})
 
 
 // gsap.from('.abc', {
