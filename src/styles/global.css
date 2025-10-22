@@ -11,6 +11,7 @@
     --color-dbrown: #352922;
     --color-brown:#D4800B;
     --color-red: #E00000;
+    --color-orange: #FF5100;
 
      --color-transp: #FCFCFC40;
 
@@ -96,7 +97,7 @@
 
 }
 h1 {
-    @apply text-7xl  xl:text-[12vh] font-semibold
+    @apply text-6xl xs:text-7xl xl:text-[12vh] font-semibold
 }
 
 h2 {

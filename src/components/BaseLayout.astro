@@ -11,6 +11,7 @@ const { title } = Astro.props;
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
 		<meta name="generator" content={Astro.generator} />
+        
 		<script type="module" src="/src/app.js" defer></script>
 		<title>{ title }</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,7 @@ const { title } = Astro.props;
     <body>
         <div class={`relative flex flex-col items-center justify-center max-w-screen min-h-screen  ${ currentPath === "/" ? 'bg-beige change' : ''}`}>
 
-            <Header  />
+            <!-- <Header  /> -->
             <div  class="min-h-screen w-full ">
                 <slot />
             </div>

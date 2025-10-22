@@ -25,8 +25,9 @@ const currentPath = Astro.url.pathname;
             </li>
         </ul>
     </nav> -->
-
-    <nav class="w-full flex bg-transparent justify-between items-center pt-6 px-10 text-lg">
+    
+    <nav class="w-full flex bg-transparent justify-between 
+    items-start md:items-center pt-6 px-4 xs:px-10 text-lg">
         <a href="#" class="">
             <!-- <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div> -->
             <span id="name" class={`font8 hover:opacity-50 transition-all duration-400 ease-in-out text-2xl font-bold whitespace-nowrap 
@@ -35,15 +36,25 @@ const currentPath = Astro.url.pathname;
              : 'text-black'}`}>
                 DEPOT17</span>
         </a>
-
-        <ul class="flex items-center justify-center">
-            <li class="hidden md:inline">
+         
+        <button class="scale-[1.2] z-[100]" type="button">
+            <span class="sr-only"></span>
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="41" height="41" rx="8" fill="#58CE48"/>
+            <rect x="3" y="3" width="35" height="35" rx="13" fill="#008C50"/>
+            <rect x="8" y="23" width="25" height="2" rx="1" fill="#F3F09E"/>
+            <rect x="8" y="16" width="25" height="2" rx="1" fill="#F3F09E"/>
+            </svg>
+        </button>
+        <div id="navbar" class="w-full h-screen absolute top-0 left-0 md:relative md:w-auto bg-lblue md:bg-transparent">
+        <ul class="flex flex-col items-center justify-center gap-y-10 text-2xl md:text-base bg-dbrown text-green h-full md:flex-row">
+            <li>
                 <a href="/" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Home</a>
             </li>
     
             <li class="hidden md:inline">/</li>
 
-            <li class="hidden md:inline">
+            <li>
                 <a href="/get_started" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Get Started</a>
                 <!-- <div class="hidden group-hover:block absolute z-[100] bg-dbrown px-1 py-1  space-y-1 rounded-xl ">
 
@@ -65,17 +76,18 @@ const currentPath = Astro.url.pathname;
                 
                     }`}>Resources</a>
             </li> -->
-            <li class="hidden md:inline">
-                <a href="#" class="bg-dbrown rounded-full min-h-10 px-4 py-2 -mr-2 text-lblue">
+            <li>
+                <a href="#" class="bg-dbrown text-lgreen rounded-full min-h-10 px-4 py-2 -mr-2 md:text-lblue">
                     Shop 
                 </a>
             </li>
             <li>
-                <a href="#" class="bg-dbrown rounded-full min-h-10 px-4 py-2 -mr-2 text-lblue">
+                <a href="#" class="bg-dbrown text-lgreen rounded-full min-h-10 px-4 py-2 -mr-2 md:text-lblue">
                     Donate 
                 </a>
             </li>
         </ul>
+           </div>
     </nav>  
     	<script src="../app.js"></script>
 

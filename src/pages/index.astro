@@ -9,15 +9,17 @@ const title = "Depot";
 <BaseLayout title={title}>
 	
 	<section id="landing" class="w-screen h-screen bg-[url('/images/spotlight.webp')] bg-no-repeat 
-		spotlight-lg bg-[center_top_-4rem] flex flex-col items-center justify-center pt-20 lg:py-10 box-border relative">
+		spotlight-lg bg-[center_top_-4rem] flex flex-col items-center justify-center gap-y-4 pt-[90px] lg:py-20 box-border relative">
+		
 		<div class="hidden lg:block dragme col-start-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden ">
 			<Three client:load />
 		</div>
-		<p class="bg-lblue w-fit text-xs sm:text-base px-2 rounded-sm hover:bg-brown hover:text-yellow py-1 font-medium duration-400 z-[100]">
+
+		<p class="bg-lblue w-fit text-xs sm:text-base px-2 rounded-sm hover:bg-brown hover:text-yellow py-1 text-center font-medium duration-400 z-[100]">
 			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY&nbsp;BELOW.
 		</p>
 
-		<div class="lg:hidden w-full relative min-h-20">
+		<div class="lg:hidden w-full relative min-h-20 ">
 			<h1 class="text-left lg:hidden absolute top-0 left-0">Build a<br>Change</h1>
 		</div>
 
@@ -29,17 +31,19 @@ const title = "Depot";
 				<img src="/images/claw.png" class="max-w-160 lg:hidden">
 				<p class="hidden lg:block opacity-0 text-dbrown max-w-130 z-[100] text-center">
 					Find a problem in a community, and then work with them to engineer a solution. </p> 
+
 				<form action="" method="POST" name="email-form" 
 				class="bg-white flex justify-between font-medium rounded-full z-[100]
+
 				text-md text-dbrown pr-2 pl-4 py-2 min-h-12 w-120 max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
 			
 				text-center outline-3 outline-dbrown transition-all duration-200 ">
 
-				<input type="email" id="email" name="email" placeholder="e.g. name@youremail.com" 
-				class="pl-3 outline-none flex-1 text-green"> 
+				<input type="email" id="email" name="email" placeholder="e.g. email" 
+				class="pl-3 outline-none min-w-4  text-green"> 
 
 				<button type="submit" value="submit" 
-				class="lg:block bg-red font-medium 
+				class="bg-red font-medium 
 				rounded-full text-md text-beige text-center">
 					
 					<span onclick="this.classList.toggle('text-blue')" 
@@ -77,7 +81,7 @@ const title = "Depot";
 					Get Started
 				</a>
 			</div>
-			<div class=" hidden xl:block border-1 border-dbrown  
+			<div class=" hidden grayscale xl:block border-1 border-dbrown  
 			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.jpg')] bg-cover bg-center group/daydream">
 				<p class="w-full h-full lg:bg-linear-to-tr bg-linear-to-t from-green/20 to-yellow/30 group-hover/daydream:from-green/100 group-hover/daydream:to-yellow/70 
 					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-beige/0 group-hover/daydream:text-beige/100">
@@ -86,7 +90,7 @@ const title = "Depot";
 
 			</div>
 
-			<div class="mt-10  border-1 border-dbrown bg-dyellow 
+			<div class="mt-10 grayscale border-1 border-dbrown bg-dyellow 
 			grow-1 w-80 xl:max-w-180 md:max-w-full 
 			h-100 lg:h-120 rounded-xl relative bg-[url('/images/jpeg.jpg')] bg-cover bg-center group/jpeg">
 				<p class="w-full h-full lg:bg-linear-to-tl bg-linear-to-t from-green/20 to-yellow/30 group-hover/jpeg:from-green/100 group-hover/jpeg:to-yellow/70 
@@ -95,7 +99,7 @@ const title = "Depot";
 				</p>
 
 
-				<div class="xl:hidden border-1 border-dbrown bg-dyellow w-[60%]  max-w-70 h-50 md:h-70 
+				<div class="xl:hidden grayscale border-1 border-dbrown bg-dyellow w-[60%]  max-w-70 h-50 md:h-70 
 				bg-[url('/images/daydream.jpg')] bg-cover bg-center rounded-xl absolute group/daydream bottom-0 right-4 md:right-10 -mb-10 ">
 					
 				<p class="w-full h-full bg-linear-to-tl from-green/20 to-yellow/30 group-hover/daydream:from-green/100 group-hover/daydream:to-yellow/70 
