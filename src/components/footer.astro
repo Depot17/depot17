@@ -9,31 +9,60 @@ const currentPath = Astro.url.pathname;
 currentPath === "/"
 ? 'bg-dbrown'
 : 'bg-beige'}`}>
-<div class="grid grid-cols-1 md:grid-cols-3 mx-auto max-w-340 mt-20 bg-brown h-160 px-10 gap-x-10">
 
-  <div class="h-full w-full flex flex-col py-10">
-    <div class="bg-beige mt-20 w-full h-100 p-2 rounded-sm">
-      <div class="w-full h-full border-2 border-dbrown"></div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-auto max-w-340 md:w-[90%] mt-20 bg-brown lg:h-160 px-4 md:px-10 gap-x-2 md:gap-x-6 lg:gap-x-10">
+    <div class="md:hidden bg-yellow/40 w-60 max-w-full h-10 mx-auto"></div>
+
+  <div class="h-full w-full flex flex-col py-6 md:py-10">
+    <p class="md:hidden text-right">[ WEDNESDAY 11:00:21 ]</p>
+    <div class="bg-beige relative mt-6 md:mt-20 w-full h-80 md:h-100 p-2 rounded-sm">
+      <div class=" w-full h-full border-2 border-dbrown">
+               <p class="md:hidden max-w-80 text-left font-medium xl:hidden">Highschool students from around the world are currently building Lorem stuff here wow wowow </p> 
+
+      </div>
+       <div class="md:hidden absolute bottom-10 right-0 -rotate-4 bg-orange outline-2 outline-dbrown lg:py-4 w-fit px-2">
+          <h2 class="whitespace-nowrap">START NOW</h2>
+        </div>
     </div>
-    <p class="mt-auto text-left">2025 Depot 17 | ALL RIGHTS RESERVED</p>
+
+
+
+  <div class="md:hidden pt-2 flex flex-col xs:flex-row xs:items-end justify-between">
+    <p class="text-left">2025 Depot 17 <br> ALL RIGHTS RESERVED</p>
+    <div class="ml-auto xs:ml-none flex items-end gap-x-4">
+      <h2 class="font6">D-17</h2>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="grow max-w-20 md:max-w-50 xl:max-w-70 ">
+        <img src="/images/black_up_arrow.png" alt=""  class="hover:scale-104 transition ease-in-out">
+      </button>
+    </div>
+   
   </div>
-  <div class="h-full w-full space-y-40">
-    <div class="bg-yellow/40 w-80 max-w-full h-24 mx-auto"></div>
-    <p class="max-w-80 text-left font-medium">Highschool students from around the world are currently building Lorem stuff here wow wowow </p>
+</div>
+
+  <div class=" hidden md:block absolute xl:relative absolute h-full w-full space-y-40">
+    <div class="bg-yellow/40 w-80 max-w-full h-12 mx-auto"></div>
+    <p class="max-w-80 text-left font-medium hidden xl:block">Highschool students from around the world are currently building Lorem stuff here wow wowow </p>
 
 </div>
-<div class="py-10 space-y-10 flex flex-col">
+<div class="hidden md:block py-10 space-y-12 flex flex-col items-end">
   <p class="text-right">[ WEDNESDAY 11:00:21 ]</p>
-  <div class="-rotate-4 bg-orange outline-2 outline-dbrown py-4">
+
+  <div class="-rotate-4 hidden md:block bg-orange outline-2 outline-dbrown lg:py-4 w-fit px-2">
       <h2 class="whitespace-nowrap">START NOW</h2>
   </div>
+  
+  <p class="max-w-80 text-left font-medium xl:hidden">Highschool students from around the world are currently building Lorem stuff here wow wowow </p>
+
+
   <div class="flex items-end justify-between mt-auto ">
     <h2 class="font6">D-17</h2>
-     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-        <img src="/images/black_up_arrow.png" alt=""  class="grow max-w-70 hover:scale-104 transition ease-in-out">
+     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="grow max-w-20 md:max-w-50 xl:max-w-70 ">
+        <img src="/images/black_up_arrow.png" alt=""  class="hover:scale-104 transition ease-in-out">
       </button>
+  </div>
+  
 </div>
-</div>
+
 </div>
 <div class="w-screen bg-dbrown h-10"></div>
   <!-- <div class="bg-brown p-2 w-70 lg:w-80 relative ml-10 lg:ml-18 border-2 border-black pt-5 h-fit">
