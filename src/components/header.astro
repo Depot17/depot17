@@ -6,30 +6,33 @@ const currentPath = Astro.url.pathname;
         currentPath === "/"
         ? 'absolute'
         : ''}`}>
-    <!-- <nav class="nav w-full flex justify-end px-10 fixed bg-lblue">
-        <ul class="w-fit py-0.75 px-1 max-h-[3rem] rounded-xl flex items-center gap-1 backdrop-blur-lg bg-transp text-lg border-2 border-dbrown">
-            <li>
-                <a href="/" target="_self" 
-                class={`font-medium transition-all ease-in-out duration-200 py-3 block px-3  ${
-                    currentPath === "/" 
-                    ? "text-lgreen"   
-                    : "text-green"}`}>Home</a>
-            </li>
-            <li>
-                <a href="/get_started" target="_self" 
-                class={`font-medium transition-all ease-in-out duration-200 py-3 block px-3  ${
-                currentPath === "/get_started" 
-                ? "text-lgreen"   
-                : "text-green"}`}>Get Started</a>
-                
-            </li>
-        </ul>
-    </nav> -->
+    <nav class="nav-fixed lg:opacity-0 fixed w-full flex justify-between items-center h-14">
+
+        <a href="#" class="h-full border-r-2 border-b-2 px-4 flex items-center justify-center pt-1 bg-beige/60">
+            <span id="name" class={`font8 hover:opacity-50 transition-all duration-400 ease-in-out text-2xl font-bold whitespace-nowrap 
+            ${ currentPath === "/"
+             ? 'text-black' //settle on a color
+             : 'text-black'}`}>
+                DEPOT17</span>
+        </a>
+
+         <button data-collapse-toggle="navbar-default" type="button" class="aspect-[1/1] bg-beige/60 flex items-center justify-center border-l-2 border-b-2 h-full">
+            <span class="sr-only">Open main menu</span>
+            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="9" width="32" height="4" fill="#352922"/>
+            <rect width="32" height="4" fill="#352922"/>
+            <rect y="18" width="32" height="4" fill="#352922"/>
+            </svg>
+
+
+        </button>
+
+
+    </nav>
     
     <nav class="w-full hidden md:inline-flex flex bg-transparent justify-between 
-    items-start md:items-center pt-6 px-4 xs:px-10 text-lg">
-        <a href="#" class="">
-            <!-- <div class="bg-dbrown px-4 py-2 rounded-lg text-2xl">LOGO</div> -->
+    items-start md:items-center px-4 xs:pr-10 text-lg box-border h-14">
+        <a href="#" class="h-full border-r-2 pr-4 flex items-center justify-center pt-1">
             <span id="name" class={`font8 hover:opacity-50 transition-all duration-400 ease-in-out text-2xl font-bold whitespace-nowrap 
             ${ currentPath === "/"
              ? 'text-black' //settle on a color
@@ -38,7 +41,7 @@ const currentPath = Astro.url.pathname;
         </a>
          
         
-        <ul class="flex items-center justify-center gap-y-10  h-full">
+        <ul class="flex items-center justify-center gap-y-10 h-full border-l-2 px-3 pt-4 pb-3">
             <li>
                 <a href="/" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Home</a>
             </li>
@@ -79,12 +82,17 @@ const currentPath = Astro.url.pathname;
             </li>
         </ul>
     </nav>  
-    <nav class="md:hidden bg-dbrown/80 w-screen h-screen p-6">
-        <div class="w-full h-full bg-beige rounded-xl p-2">
+    <hr>
+
+
+    <nav class="w-screen relative">
+        <div class="fixed top-0 flex justify-end bg-dbrown/80 w-screen h-screen p-1 xs:p-6" id="navbar-default">
+        <div class="w-full h-full lg:max-w-140  bg-beige rounded-xl p-2">
             <div class="border-4 border-dbrown rounded-lg w-full h-full flex flex-col">
                 
                 <div class="h-10 w-full flex justify-end items-center">
-                    <button class="px-3.5 border-l-2 h-full">
+                    <button data-collapse-toggle="navbar-default" type="button" class="px-3.5 border-l-2 h-full">
+                        <span class="sr-only">Open main menu</span>
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2.82812" width="25" height="4" transform="rotate(45 2.82812 0)" fill="#352922"/>
                             <rect y="17.6777" width="25" height="4" transform="rotate(-45 0 17.6777)" fill="#352922"/>
@@ -92,26 +100,40 @@ const currentPath = Astro.url.pathname;
                     </button>
                 </div>
                 <hr class="border-1">
-
-                <ul class="text-[5vh] uppercase font-semibold p-4 mt-6 mb-4 space-y-1">
-                    <li class="w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg">
+            
+                <ul class="text-[4.7vh] whitespace-nowrap uppercase font-semibold p-2 xs:p-4 mt-6 mb-4 space-y-1">
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg
+                    ${ currentPath === "/"
+                    ? 'bg-orange'
+                    : ''}`}>
                         <a href="/" target="_self" class="">Home</a>
                     </li>
             
-                    <li class="hidden md:inline">/</li>
-
-                    <li class="w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg">
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg
+                    ${ currentPath === "/get_started"
+                    ? 'bg-orange'
+                    : ''}`}>
                         <a href="/get_started" target="_self" class="">Get Started</a>
                     </li>
 
-                     <li class="w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg">
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg
+                    ${ currentPath === "/projects"
+                    ? 'bg-orange'
+                    : ''}`}>
                         <a href="/get_started" target="_self" class="">Projects</a>
                     </li>
 
-                    <li class="w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg">
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg
+                    ${ currentPath === "/resources"
+                    ? 'bg-orange'
+                    : ''}`}>                        
                         <a href="/get_started" target="_self" class="">Resources</a>
                     </li>
-                    <li class="w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg">
+
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg
+                    ${ currentPath === "/contact"
+                    ? 'bg-orange'
+                    : ''}`}>                        
                         <a href="/get_started" target="_self" class="">Contact</a>
                     </li>
                 </ul>
@@ -122,12 +144,13 @@ const currentPath = Astro.url.pathname;
 
                 <hr class="border-1">
                 <div class="min-h-10 flex items-center justify-center">
-                    <p>2025 DEPOT 17</p>
+                    <p>©DEPOT 17 2025 </p>
                 </div>
             </div>
         </div>
+        </div>
     </nav>
 
-    	<script src="../app.js"></script>
-
+    <script src="../app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </header>

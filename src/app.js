@@ -52,7 +52,18 @@ gsap.to('.change', {
 
 
 
+gsap.to('.nav-fixed', {
+    opacity:1,
+    duration:0.2,
+    ease:"power2.out",
 
+    scrollTrigger: {
+        trigger: '.fixed-nav-trigger',
+        start: 'top center',
+        toggleActions: 'play none reverse reverse',
+        markers:true
+        }
+});
 
 
 // gsap.from('.abc', {
