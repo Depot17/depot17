@@ -52,8 +52,9 @@ gsap.to('.change', {
 
 
 
-gsap.to('.nav-fixed', {
-    opacity:1,
+
+gsap.to('#spacer', {
+    display:"none",
     duration:0.2,
     ease:"power2.out",
 
@@ -65,6 +66,32 @@ gsap.to('.nav-fixed', {
         }
 });
 
+
+gsap.to('.nav-list', {
+    display:"none",
+    duration:0.2,
+    ease:"power2.out",
+
+    scrollTrigger: {
+        trigger: '.fixed-nav-trigger',
+        start: 'top center',
+        toggleActions: 'play none reverse reverse',
+        markers:true
+        }
+});
+
+gsap.to('.nav-menu', {
+    display:"inline-flex",
+    duration:0.2,
+    ease:"power2.out",
+
+    scrollTrigger: {
+        trigger: '.fixed-nav-trigger',
+        start: 'top center',
+        toggleActions: 'play none reverse reverse',
+        markers:true
+        }
+});
 
 // gsap.from('.abc', {
 //     y:50,
