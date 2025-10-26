@@ -25,12 +25,35 @@ gsap.from(split.lines, {
     }
 })
 
+const navLinks = document.querySelectorAll(".nav-links");
 
-var tl = gsap.timeline({defaults: {duration: 2, ease: "none"}});
+navLinks.forEach(link => {
+    const splitNav = SplitText.create(link, {
+        type: "chars, words, lines"
+    });
 
-tl.to("#scramble", {duration: 3, scrambleText:{text:"Lorem ipsum text blurb wow look here theres stuff continue reading there is even more stuff ", chars:"lowerCase", revealDelay:0.5, tweenLength:false}})
+    const animNav = gsap.from(splitNav.chars, {
+        y:30,
+        rotateY:20,
+        autoAlpha:0,
+        stagger:0.01,
+        duration:0.3,
+        ease:"power2.out",
+    })
 
+    link.addEventListener('mouseenter', () => {
+        animNav.restart();
+    })
 
+    link.addEventListener("mouseleave", () => {
+        gsap.to(splitNav.chars, {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.3,
+            ease: "power1.inOut"
+        });
+    });
+});
 const scriptURL ="https://script.google.com/macros/s/AKfycbwg3qWCELhFNx4MeGwGhXARYLqD7PRK8KqGVKQTYi-ZoL40rzcNIZw0-wqqDNooSXfIdw/exec";
 
 gsap.from(".text-dgreen", {
@@ -80,43 +103,75 @@ gsap.to('.nav-list', {
         }
 });
 
-gsap.to('.nav-menu', {
-    display:"inline-flex",
-    duration:0.2,
-    ease:"power2.out",
+const navButton = document.getElementById('nav-button');
+const nav = document.getElementById('nav');
+const navBg = document.getElementById('nav-bg');
 
-    scrollTrigger: {
-        trigger: '.fixed-nav-trigger',
-        start: 'top center',
-        toggleActions: 'play none reverse reverse',
-        markers:true
-        }
+gsap.set(nav, { x: '400%', opacity: 0, pointerEvents: "none" });
+gsap.set(navBg, { opacity: 0, pointerEvents: "none" });
+
+const hi = gsap.timeline({ paused: true, reversed:true });
+
+hi.to(navBg, {
+  opacity: 1,
+  duration: 0.1,
+  ease: "power2.out",
+})
+.to(nav, {
+    x: 0,
+    opacity: 1,
+    pointerEvents: "auto",
+
+    // stagger: 0.05,
+    duration: 0.2,
+    ease: "power3.out",
+  },
+  "<");
+
+
+navButton.addEventListener("click", () => {
+  console.log("clicked!");
+  hi.reversed() ? hi.play() : hi.reverse();
 });
 
-// gsap.from('.abc', {
-//     y:50,
-//     duration:3,
-//     ease:"power2.out",
 
-//     text: {
-//         value: "Something new",
-//         newClass: "class2",
-//         delimiter: " ",
-//     }
+
+
+gsap.from('.abc', {
+    y:50,
+    duration:3,
+    ease:"power2.out",
+
+    text: {
+        value: "Something new",
+        newClass: "class2",
+        delimiter: " ",
+    }
     
-// })
+})
 
+const lg = window.matchMedia("(min-width:1024px)")
 
-gsap.fromTo(".spotlight-xs",
-  { backgroundSize: "20% 100%" },
-  { backgroundSize: "85% 100%", duration: 1.5, ease: "power2.out" }
-);
-
-gsap.fromTo(".spotlight-lg",
+function spotlightSize(e) {
+    if (e.matches) {
+gsap.fromTo(".spotlight",
   { backgroundSize: "10% 100%" },
   { backgroundSize: "35% 100%", duration: 1.5, ease: "power2.out" }
 );
+    }
 
+else {
+
+gsap.fromTo(".spotlight",
+  { backgroundSize: "20% 100%" },
+  { backgroundSize: "85% 100%", duration: 1.5, ease: "power2.out" }
+);
+}
+
+}
+
+spotlightSize(lg)
+lg.addEventListener("change", spotlightSize);
 
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {
