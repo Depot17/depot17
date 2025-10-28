@@ -8,65 +8,69 @@ const title = "Depot";
 
 <BaseLayout title={title}>
 	
-	<section id="landing" class="w-screen h-screen bg-[url('/images/spotlight.webp')] bg-no-repeat 
-		spotlight bg-[center_top_-4rem] bg-none flex flex-col items-center justify-center gap-y-4 mt-18 lg:mt-0 lg:py-20 box-border relative">
+	<div id="landing" class="min-h-160 h-screen md:bg-[url('/images/spotlight.webp')] bg-no-repeat  bg-none 
+		spotlight bg-[center_top_-4rem] lg:mt-0 md:grid grid-rows-3 items-center lg:py-20 box-border w-full mx-auto max-w-[95%] p-4">
 		
-		<div class="hidden lg:block dragme col-start-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden ">
-			<Three client:load />
-		</div>
-
-		<p class="bg-lblue w-fit text-xs sm:text-base px-2 rounded-sm hover:bg-brown hover:text-yellow py-1 text-center font-medium duration-400 z-[100]">
-			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY&nbsp;BELOW.
+	
+		<p class="bg-lblue w-fit text-xs sm:text-base px-2 mt-22 md:hidden rounded-sm hover:bg-brown hover:text-yellow py-1 text-center font-medium duration-400 z-[100]">
+			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY&nbsp;BELOW. 
 		</p>
 
-		<div class="lg:hidden w-full relative min-h-20 ">
-			<h1 class="text-left lg:hidden absolute top-0 left-0">Build a<br>Change</h1>
+		<div class="md:hidden w-full min-h-fit my-4">
+			<h1>Build a<br>Change</h1>
 		</div>
-
-		<div class="-mt-10 xl:px-10 w-screen h-screen space-y-4 grid grid-cols-1 lg:grid-cols-3 place-items-center">
+		<div></div>
+		<div class="px-2 h-fit grid grid-cols-1 md:grid-cols-3 items-center w-full">
+			<h1 class="z-[100] hidden md:inline-grid justify-self-start">Build</h1>
 			
-			<h1 class="hidden lg:block h-fit">Build a</h1>
-			
-			<div class="h-auto flex flex-col items-center justify-center w-screen lg:w-auto">
-				<img src="/images/claw.png" class="w-60 max-w-120 lg:hidden">
-				<p class="hidden lg:block opacity-0 text-dbrown max-w-130 z-[100] text-center">
-					Find a problem in a community, and then work with them to engineer a solution. </p> 
-
+			<div class="h-fit grid place-items-center lg:w-auto justify-self-center w-full">
+				<div class="col-start-1 row-start-1 dragme overflow-x-hidden overflow-y-hidden max-h-90 lg:max-h-180 flex justify-center items-center">
+					<Three client:load />
+				</div>
+				
 				<form action="" method="POST" name="email-form" 
-				class="bg-white flex justify-between font-medium rounded-full z-[100]
-
-				text-md text-dbrown pr-2 pl-4 py-2 min-h-12 w-120 max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
-			
+				class="col-start-1 row-start-1 bg-white hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
+				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-120 max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
 				text-center outline-3 outline-dbrown transition-all duration-200 ">
+					<input type="email" id="email" name="email" placeholder="e.g. email" 
+					class="pl-3 outline-none border-none min-w-4  text-green"> 
 
-				<input type="email" id="email" name="email" placeholder="e.g. email" 
-				class="pl-3 outline-none border-none min-w-4  text-green"> 
+					<button type="submit" value="submit" 
+					class="bg-red font-medium 
+					rounded-full text-md text-beige text-center">
+						
+						<span onclick="this.classList.toggle('text-blue')" 
+						class="bg-lred rounded-full block box-border 
+						w-12 md:w-10 aspect-[1/1] border-3 border-lgreen
+						flex items-center justify-center focus:border-black ">
+							<p class="text-beige font-bold">--&gt</p>
+						</span>
 
-				<button type="submit" value="submit" 
-				class="bg-red font-medium 
-				rounded-full text-md text-beige text-center">
-					
-					<span onclick="this.classList.toggle('text-blue')" 
-					class="bg-lred rounded-full block box-border 
-					w-12 md:w-10 aspect-[1/1] border-3 border-lgreen
-					flex items-center justify-center focus:border-black ">
-						<p class="text-beige font-bold">--&gt</p>
-					</span>
-
-				</button>
+					</button>
 
 				</form>
-					<p class="text-dbrown max-w-130 mx-8 pt-2 z-[100] text-center">
-			Find a problem in a community, and then work with them to engineer a solution. </p> 
 			</div>
-			<h1 class="hidden lg:block">Change.</h1>
+
+			<h1 class="z-[100]  hidden md:inline-grid justify-self-end">Change.</h1>
 
 		</div>
+		
+		<div>
+		<a class="lg:hidden block bg-red w-fit px-3 py-2 rounded-full whitespace-nowrap text-beige text-lg font-medium">SIGN UP --&gt</a>
+		<div class="w-full flex justify-between items-center self-end pt-4">		
+			<p class="mr-auto text-dbrown text-left max-w-80">Find a problem in a community, and then work with them to engineer a solution. </p>
+			<svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="black" stroke-width="3"/>
+			</svg>
+
+		</div>
+		</div>
+
+
 			
 	
-		</div>
-	</section>
-	<hr class="fixed-nav-trigger opacity-0">
+	</div>
+	<hr class="fixed-nav-trigger opacity-0 pt-20">
 
 
 	<section id="about" class="pb-8 h-auto lg:py-20 w-full">
@@ -148,7 +152,7 @@ const title = "Depot";
 	</section> -->
 	<hr class="trigger opacity-0">
 
-	<section class="relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen">
+	<section class="mt-20 relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green">
 		<div class="absolute inset-5 lg:inset-35 3xl:inset-50 grid place-items-center py-8 px-4 sm:px-10 lg:px-12">	
  
 				<div class="absolute top-0 left-0 border-lgreen border-t-6 border-l-6 w-20 aspect-[1/1]"></div>
@@ -157,20 +161,28 @@ const title = "Depot";
 				<div class="absolute bottom-0 right-0 border-lgreen border-b-6 border-r-6 w-20 aspect-[1/1]"></div>
 
 			<div class="max-w-380 w-fit z-[100]">
-				<span class="text-5xl font-semibold leading-14 xl:text-8xl xl:leading-24"> 
+				<span class="text-6xl xs:text-7xl font-semibold leading-14 xl:text-8xl xl:leading-24"> 
 					We help the next generation build a communal future.</span>
 				<p class="font-medium underline pt-10 px-2">We believe the youth can can change the world, prove us right.</p>
 			</div>
 		</div>
 		
 	</section>
+	<section>
 
-	<section class="w-full bg-dbrown pt-20 pb-60 rounded-t-[8vw]">
-		
+</section>
+	
+	<section class="w-full bg-dbrown pb-60 ">
+	<!-- <div class="bg-dbrown -mx-4 sm:-mx-6 md:-mx-10 lg:-mx-40 2xl:-mx-60 3xl:-mx-100">
+		<svg width="100%" height="auto" viewBox="0 0 1439 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1439 34C1439 45.0457 1430.05 54 1419 54H1293.82C1286.93 54.0001 1280.52 57.5493 1276.86 63.3926L1265.47 81.6074C1261.81 87.4507 1255.41 90.9999 1248.51 91H1055.47C1048.58 90.9999 1042.17 87.4507 1038.52 81.6074L1027.12 63.3926C1023.47 57.5493 1017.06 54.0001 1010.17 54H20C8.95432 54 0 45.0457 0 34V0H1439V34Z" fill="#008C50"/>
+		</svg>
+	</div>	 -->
+
 
 		<div class="grid lg:grid-cols-3 w-full px-8 place-items-center relative mt-4">
 			<div></div>
-			<h2 class="text-center text-lgreen"> Featured Projects</h2>
+			<h2 class="text-center text-lgreen md:whitespace-nowrap"> Featured Projects</h2>
 			<!-- <div class="lg:ml-auto">
 				<a href="projects" target="_self" class="flex items-center gap-2">
 					<p>View all projects</p>

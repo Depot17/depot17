@@ -73,21 +73,36 @@ gsap.to('.change', {
         }
 });
 
+//scrolling banner 
 
+    const spacer = document.getElementById('spacer')
 
+    gsap.to(spacer, {
+        display:"none",
+        duration:0.2,
+        ease:"power2.out",
 
-gsap.to('#spacer', {
-    display:"none",
-    duration:0.2,
-    ease:"power2.out",
+        scrollTrigger: {
+            trigger: '.fixed-nav-trigger',
+            start: 'top center',
+            toggleActions: 'play none reverse reverse',
+            markers:true
+            }
+    });
 
-    scrollTrigger: {
-        trigger: '.fixed-nav-trigger',
-        start: 'top center',
-        toggleActions: 'play none reverse reverse',
-        markers:true
-        }
-});
+    const text = document.getElementById('banner');
+
+    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML;
+
+    const scroll = gsap.to(text, {
+        xPercent:-50,
+        repeat:-1,
+        ease:'linear',
+        duration:24
+    })
+
+    spacer.addEventListener("mouseenter", () => scroll.pause());
+    spacer.addEventListener("mouseleave", () => scroll.resume());
 
 
 gsap.to('.nav-list', {
@@ -164,7 +179,7 @@ else {
 
 gsap.fromTo(".spotlight",
   { backgroundSize: "20% 100%" },
-  { backgroundSize: "85% 100%", duration: 1.5, ease: "power2.out" }
+  { backgroundSize: "55% 100%", duration: 1.5, ease: "power2.out" }
 );
 }
 

@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+import BannerText from '../components/banner.md';
 ---
 
 <header id="navbar" class={`z-[200] w-full top-0 ${
@@ -35,12 +36,16 @@ const currentPath = Astro.url.pathname;
              : 'text-black'}`}>
                 DEPOT17</span>
         </a>
-        <div id="spacer" class="grow min-w-0 border-b-2 min-w-0 border-t-2 h-full">
+        <div id="spacer" class="grow overflow-hidden min-w-0 border-b-2  border-t-2 h-full flex items-center justify-center">
+            <p id="banner" class="hidden md:block whitespace-nowrap font-medium bg-lblue">
+                <!-- <BannerText /> -->
+                 APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW.
 
+		    </p>
         </div>
         
         
-        <ul class="nav-list hidden md:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 pt-4 pb-3">
+        <ul class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3  pt-4 pb-3 w-fit">
             <!-- <li>
                 <a href="/" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Home</a>
             </li>
@@ -91,42 +96,42 @@ const currentPath = Astro.url.pathname;
             </svg>
         </button>
 
-        <div id="nav-bg" class=" fixed w-screen top-0 left-0 flex justify-end bg-dbrown/60 h-screen" >
+        <div id="nav-bg" class=" opacity-0 fixed w-screen top-0 left-0 flex justify-end bg-dbrown/60 h-screen" >
         <div  id="nav" class="w-full h-full max-w-140 outline-1 bg-beige rounded-xl lg:rounded-none p-2 ">
             <div class="border-2 border-dbrown rounded-lg w-full h-full flex flex-col box-border">
                 <div class="h-13.5 w-full border-b-2 box-border"></div>
                 
             
                 <ul class="text-3xl xs:text-4xl sm:text-[4.7vh] whitespace-nowrap uppercase font-semibold p-2 xs:p-4 mt-8 mb-4 space-y-1">
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
                     ${ currentPath === "/"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>
                         <a href="/" target="_self" class="">Home</a>
                     </li>
             
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
                     ${ currentPath === "/get_started"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>
                         <a href="/get_started" target="_self" class="">Get Started</a>
                     </li>
 
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
                     ${ currentPath === "/projects"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>
                         <a href="/projects" target="_self" class="">Projects</a>
                     </li>
 
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
                     ${ currentPath === "/resources"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>                        
                         <a href="/resources" target="_self" class="">Resources</a>
                     </li>
 
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
                     ${ currentPath === "/contact"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>                        
@@ -136,7 +141,14 @@ const currentPath = Astro.url.pathname;
 
                 <hr class="border-1">
                 
-                <div class="grow"></div>
+                <div class="grow overflow-hidden">
+                    <ul class="flex w-full h-full justify-center p-4 items-end gap-x-10">
+                        <li><a href="" target="_blank">LinkedIn</a></li>
+                        <li><a href="" target="_blank">Blog</a></li>
+                        <li><a href="https://github.com/Depot17" target="_blank">Github</a></li>
+
+                    </ul>
+                </div>
 
                 <hr class="border-1">
                 <div class="min-h-10 flex items-center justify-center">
