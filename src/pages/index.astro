@@ -8,30 +8,37 @@ const title = "Depot";
 
 <BaseLayout title={title}>
 	
-	<div id="landing" class="min-h-160 h-screen md:bg-[url('/images/spotlight.webp')] bg-no-repeat  bg-none 
-		spotlight bg-[center_top_-4rem] lg:mt-0 md:grid grid-rows-3 items-center lg:py-20 box-border w-full mx-auto max-w-[95%] p-4">
+	<div id="landing" class="h-screen w-screen min-h-160
+		flex flex-col gap-y-3 pb-6 pt-18 md:pt-0 md:grid grid-rows-3
+		px-4 lg:px-10 lg:mt-0 lg:py-20 bg-none md:bg-[url('/images/spotlight.webp')] 
+		bg-no-repeat bg-[center_top_-4rem] spotlight">
 		
-	
-		<p class="bg-lblue w-fit text-xs sm:text-base px-2 mt-22 md:hidden rounded-sm hover:bg-brown hover:text-yellow py-1 text-center font-medium duration-400 z-[100]">
+		<p class="w-fit mx-auto px-2 py-1 rounded-sm text-center font-medium bg-lblue text-xs sm:text-base md:hidden ">
 			APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY&nbsp;BELOW. 
 		</p>
 
-		<div class="md:hidden w-full min-h-fit my-4">
-			<h1>Build a<br>Change</h1>
+		<div class="w-full min-h-fit md:hidden">
+			<h1>Build<br>Change</h1>
 		</div>
-		<div></div>
-		<div class="px-2 h-fit grid grid-cols-1 md:grid-cols-3 items-center w-full">
+<div></div>
+		<div class="-mx-4 lg:-mx-10  w-screen bg-yellow box-border px-10 grow flex items-center justify-center md:grid md:grid-cols-3 items-center">
+
 			<h1 class="z-[100] hidden md:inline-grid justify-self-start">Build</h1>
 			
-			<div class="h-fit grid place-items-center lg:w-auto justify-self-center w-full">
-				<div class="col-start-1 row-start-1 dragme overflow-x-hidden overflow-y-hidden max-h-90 lg:max-h-180 flex justify-center items-center">
+			<div class="bg-green/30 w-screen lg:w-full max-w-120 h-30 flex items-center justify-center 
+			
+			 justify-self-center relative">
+				<div class="col-start-1 row-start-1 w-screen h-full bg-red/40 flex justify-center items-center">
 					<Three client:load />
 				</div>
-				
+				<!-- <div class="col-start-1 row-start-1 w-60 bg-lblue aspect-[1/1] "></div> -->
 				<form action="" method="POST" name="email-form" 
-				class="col-start-1 row-start-1 bg-white hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
-				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-120 max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
-				text-center outline-3 outline-dbrown transition-all duration-200 ">
+				class=" absolute  bg-white hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
+				
+				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-110  max-w-[90%] xl:w-120 2xl:w-160 3xl:w-190
+			
+				text-center outline-3 outline-dbrown transition-all duration-200">
+
 					<input type="email" id="email" name="email" placeholder="e.g. email" 
 					class="pl-3 outline-none border-none min-w-4  text-green"> 
 
@@ -49,28 +56,29 @@ const title = "Depot";
 					</button>
 
 				</form>
+
 			</div>
 
-			<h1 class="z-[100]  hidden md:inline-grid justify-self-end">Change.</h1>
+
+			<h1 class="z-[100] hidden md:inline-grid justify-self-end">Change</h1>
 
 		</div>
-		
-		<div>
-		<a class="lg:hidden block bg-red w-fit px-3 py-2 rounded-full whitespace-nowrap text-beige text-lg font-medium">SIGN UP --&gt</a>
-		<div class="w-full flex justify-between items-center self-end pt-4">		
-			<p class="mr-auto text-dbrown text-left max-w-80">Find a problem in a community, and then work with them to engineer a solution. </p>
-			<svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="black" stroke-width="3"/>
-			</svg>
+		<div class="h-fit mt-auto">
+			<a class="lg:hidden block bg-red w-fit px-3 py-2 rounded-full whitespace-nowrap text-beige text-lg font-medium">SIGN UP --&gt</a>
+			<div class="w-full flex justify-between items-center self-end pt-4">		
+				<p class="mr-auto text-dbrown text-left max-w-80">Find a problem in a community, and then work with them to engineer a solution. </p>
+				<svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="black" stroke-width="3"/>
+				</svg>
 
-		</div>
+			</div>
 		</div>
 
 
 			
 	
 	</div>
-	<hr class="fixed-nav-trigger opacity-0 pt-20">
+	<hr class="fixed-nav-trigger opacity-0 pt-100">
 
 
 	<section id="about" class="pb-8 h-auto lg:py-20 w-full">

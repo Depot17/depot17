@@ -11,6 +11,7 @@ import { DDSLoader } from "three-stdlib";
 // import { Suspense } from "react";
 import { Shader } from "./Shader";
 
+    //  const size = window.innerWidth 
 
     const Scene = () => {
         const materials = useLoader(MTLLoader, "/Claw.mtl")
@@ -46,7 +47,6 @@ import { Shader } from "./Shader";
             }
 
     };     
-     
 
     export default function App(){
         return (
@@ -63,3 +63,19 @@ import { Shader } from "./Shader";
             </Canvas>
     );
 }
+
+//     export default function App(){
+//         return (
+//             <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "700px"}}>
+        
+//                 <ambientLight intensity={0.7} />
+//                 <directionalLight color="white" position={[0, 0, 6]} intensity={2} />
+//                 <Suspense fallback={null}>
+//                 <Scene />
+
+//                 </Suspense>
+  
+//                 <OrbitControls enableZoom={false}></OrbitControls>
+//             </Canvas>
+//     );
+// }
