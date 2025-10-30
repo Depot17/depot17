@@ -61,17 +61,17 @@ gsap.from(".text-dgreen", {
     });
 
 
-gsap.to('.change', {
-    backgroundColor:"#008C50",
-    duration:0.8,
-    ease:"power2.out",
+// gsap.to('.change', {
+//     backgroundColor:"#008C50",
+//     duration:0.8,
+//     ease:"power2.out",
 
-    scrollTrigger: {
-        trigger: '.trigger',
-        start: 'top center',
-        toggleActions: 'play none reverse reverse'
-        }
-});
+//     scrollTrigger: {
+//         trigger: '.trigger',
+//         start: 'top center',
+//         toggleActions: 'play none reverse reverse'
+//         }
+// });
 
 //scrolling banner 
 
@@ -92,7 +92,7 @@ gsap.to('.change', {
 
     const text = document.getElementById('banner');
 
-    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML;
+    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML
 
     const scroll = gsap.to(text, {
         xPercent:-50,

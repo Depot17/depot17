@@ -36,55 +36,21 @@ import BannerText from '../components/banner.md';
              : 'text-black'}`}>
                 DEPOT17</span>
         </a>
-        <div id="spacer" class="grow overflow-hidden min-w-0 border-b-2  border-t-2 h-full flex items-center justify-center">
-            <p id="banner" class="hidden md:block whitespace-nowrap font-medium bg-lblue">
-                <!-- <BannerText /> -->
+        <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
+            <p id="banner" class="hidden md:block whitespace-nowrap font-medium">
+                <BannerText />
                  APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW.
 
 		    </p>
         </div>
         
         
-        <ul class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3  pt-4 pb-3 w-fit">
-            <!-- <li>
-                <a href="/" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Home</a>
-            </li>
-    
-            <li class="hidden md:inline">/</li> -->
-
-            <!-- <li>
-                <a href="/get_started" target="_self" class="font-medium block px-3 transition-all duration-400 ease-in-out">Get Started</a>
-                <div class="hidden group-hover:block absolute z-[100] bg-dbrown px-1 py-1  space-y-1 rounded-xl ">
-
-                    <a href="#" target="_self" class="block hover:bg-transp px-2 rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
-                        Track One
-                    </a>
-                    <a href="#" target="_self" class="block hover:bg-transp px-2  pr-8  rounded-lg transition-all duration-400 ease-in-out text-lred font-semibold">
-                        Track Two
-                    </a>
-                </div>
-                   
-            </li> -->
-            <!-- <li><p>/</p></li>
-            <li>
-                <a href="/resources" target="_self" class={`nav-item block px-3 text-black ${
-                    currentPath === "/resources" 
-                    ? "text-green font-semibold"   
-                    : currentPath === "/" 
-                
-                    }`}>Resources</a>
-            </li> -->
-            <!-- <li>
-                <a href="#" class="bg-dbrown text-lgreen rounded-full min-h-10 px-4 py-2 -mr-2 md:text-lblue">
-                    Shop 
-                </a>
-            </li> -->
-            <li>
-                <a href="#" class="bg-dbrown text-lgreen rounded-full min-h-10 px-4 py-2 md:text-lblue">
-                    Donate 
-                </a>
-            </li>
-        </ul>
+        <div class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 py-1">
+            <a href="#" class="nav-links h-full flex items-center justify-center rounded-full bg-lblue hover:text-lgreen hover:bg-dbrown w-fit box-border border-2 border-dbrown hover:border-brown font-medium px-4  ">
+            Donate 
+            </a>
+        </div>
+          
 
         <button id="nav-button" type="button" 
         class="z-[100] aspect-[1/1] flex items-center justify-center border-l-2 border-b-2 border-2 bg-beige rounded-tr-lg h-full box-border">
@@ -107,7 +73,7 @@ import BannerText from '../components/banner.md';
                     ${ currentPath === "/"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>
-                        <a href="/" target="_self" class="">Home</a>
+                        <a href="/" target="_self" >Home</a>
                     </li>
             
                     <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
@@ -142,7 +108,7 @@ import BannerText from '../components/banner.md';
                 <hr class="border-1">
                 
                 <div class="grow overflow-hidden">
-                    <ul class="flex w-full h-full justify-center p-4 items-end gap-x-10">
+                    <ul class="flex w-full h-full justify-center p-4 items-end gap-x-10 underline">
                         <li><a href="" target="_blank">LinkedIn</a></li>
                         <li><a href="" target="_blank">Blog</a></li>
                         <li><a href="https://github.com/Depot17" target="_blank">Github</a></li>

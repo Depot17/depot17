@@ -28,7 +28,7 @@ const { title } = Astro.props;
         <div class={`relative flex flex-col items-center justify-center max-w-screen min-h-screen  ${ currentPath === "/" ? 'bg-beige change' : ''}`}>
 
             <Header  />
-            <div  class="min-h-screen w-full ">
+            <div class={`min-h-screen w-full ${ currentPath === "/" ? '' : 'mt-16'}`}>
                 <slot />
             </div>
         </div>

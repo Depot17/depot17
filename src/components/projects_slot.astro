@@ -10,24 +10,26 @@ const homepage = Astro.url.pathname =="/";
             ${homepage 
             ? 'bg-brown  border-none  hover:shadow-xl duration-300' 
             : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
-                <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
+                <div class="rounded-2xl w-full h-80 2xl:h-100 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
 
-                    <!-- <a type="button" class="absolute 
+                    <a type="button" class="absolute 
                     border-2 border-dbrown text-dbrown bg-yellow 
-                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-green ">
-                <span>Support this</span>
-                </a> -->
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-lgreen ">
+                <span>Support this</span>1.5
+                </a>
 
                 </div>
                 
                 <div class="p-4">
-                    <div class="flex items-center justify-start">
+                    <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <h3>Coming Soon</h3>
 
                             <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
 
                         </div>
+                        <div class="ml-auto w-10 aspect-[1/1] bg-red rounded-full border-2 border-dbrown animate-pulse"></div>
+
                 
 
                         <!-- <div class="ml-auto hidden sm:block">
@@ -49,13 +51,13 @@ const homepage = Astro.url.pathname =="/";
             <div class=
             {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all blur-sm
             ${homepage 
-            ? 'bg-brown  border-none  hover:shadow-xl duration-300' 
+            ? 'bg-brown border-none hover:shadow-xl duration-300' 
             : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
-                <div class="rounded-2xl w-full h-80 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
+                <div class="rounded-2xl w-full h-80 2xl:h-100 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
 
                     <a type="button" class="absolute 
                     border-2 border-dbrown text-dbrown 
-                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 bg-green ">
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 bg-lgreen ">
                 <span>Support this</span>
                 </a>
 
@@ -87,5 +89,90 @@ const homepage = Astro.url.pathname =="/";
             </div>
         </a>
     </div>
-    
+    <div class="space-y-10">
+        <a href="/projects/pnp" target="_self" class="block">
+            <div class=
+            {`relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all blur-sm
+            ${homepage 
+            ? 'hidden' 
+            : 'block bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
+                <div class="rounded-2xl w-full h-80 2xl:h-100 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
+
+                    <a type="button" class="absolute 
+                    border-2 border-dbrown text-dbrown 
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 bg-lgreen ">
+                <span>Support this</span>
+                </a>
+
+                </div>
+                
+                <div class="p-4">
+                    <div class="flex items-center justify-start">
+                        <div class="flex items-center gap-2">
+                            <h3>Depot Pick n' Place</h3>
+
+                            <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
+
+                        </div>
+                
+
+                        <div class="ml-auto hidden sm:block">
+                            <a href="projects" target="_self" class="flex items-center gap-2">
+                                <p>View devlogs</p>
+                                <img src="/assets/open_link.svg" width="25px"> 
+				            </a>
+			            </div>
+                    </div>
+
+                    <p class="text-left">By: Sophia D.</p>
+                    <!-- <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
+                        And also a bit about the idea and or progress.</p> -->
+                </div>
+                
+            </div>
+        </a>
+    </div>
+    <div class="space-y-10">
+        <a href="/projects/pnp" target="_self" class="block">
+            <div class=
+            {`relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all blur-sm
+            ${homepage 
+            ? 'hidden' 
+            : 'block bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300'}`}>
+                <div class="rounded-2xl w-full h-80 2xl:h-100 p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
+
+                    <a type="button" class="absolute 
+                    border-2 border-dbrown text-dbrown 
+                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 bg-lgreen ">
+                <span>Support this</span>
+                </a>
+
+                </div>
+                
+                <div class="p-4">
+                    <div class="flex items-center">
+                        <div class="flex items-center gap-2">
+                            <h3>Depot Pick n' Place</h3>
+
+                            <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
+
+                        </div>
+                
+
+                        <div class="ml-auto hidden sm:block">
+                            <a href="projects" target="_self" class="flex items-center gap-2">
+                                <p>View devlogs</p>
+                                <img src="/assets/open_link.svg" width="25px"> 
+				            </a>
+			            </div>
+                    </div>
+
+                    <p class="text-left">By: Sophia D.</p>
+                    <!-- <p class="pt-2">This is the description of a super dope project. Here is a brief explanation for the viewer. 
+                        And also a bit about the idea and or progress.</p> -->
+                </div>
+                
+            </div>
+        </a>
+    </div>
 </div>
