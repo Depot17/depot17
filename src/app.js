@@ -2,8 +2,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
+
+
+
+
 
 let split = SplitText.create(".abc", {
     type: "chars, words, lines"
@@ -73,7 +78,7 @@ gsap.from(".text-dgreen", {
 //         }
 // });
 
-//scrolling banner 
+//scrolling banner, it take the contents of banner.md and displays it (so it's easy to change announcements)
 
     const spacer = document.getElementById('spacer')
 
@@ -84,7 +89,7 @@ gsap.from(".text-dgreen", {
 
         scrollTrigger: {
             trigger: '.fixed-nav-trigger',
-            start: 'top center',
+            start: 'top top ',
             toggleActions: 'play none reverse reverse',
             markers:true
             }
@@ -92,13 +97,15 @@ gsap.from(".text-dgreen", {
 
     const text = document.getElementById('banner');
 
-    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML
+    //i'm aware this is not efficient whatsoever oops
+    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML;
 
     const scroll = gsap.to(text, {
         xPercent:-50,
         repeat:-1,
         ease:'linear',
-        duration:24
+        duration:40,
+  
     })
 
     spacer.addEventListener("mouseenter", () => scroll.pause());

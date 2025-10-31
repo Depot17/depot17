@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import 'lenis/dist/lenis.css';
 
 @theme{
     --color-yellow: #F3F09E;
@@ -147,7 +147,7 @@ input:focus {
 
 
 
-
+/* 
 #output {
     min-height:200px;
     min-width:200px;
@@ -166,4 +166,24 @@ input:focus {
   text-rendering: optimizeSpeed;
   will-change: contents;
   white-space: pre;
+} */
+
+/* i'll bring back the scrollbar later, it was causing a weird space on chromium */
+::-webkit-scrollbar {
+  width: 0px;
+  border-radius:50%;
+
+}
+
+::-webkit-scrollbar-track {
+  background:#36251b00
+}
+ 
+::-webkit-scrollbar-thumb {
+    background:#36251b00
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brown
 }

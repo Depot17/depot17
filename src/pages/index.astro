@@ -5,7 +5,18 @@ import Three from '../components/Three';
 
 const title = "Depot";
 ---
+ <script>
+	import Lenis from "lenis";
+    import 'lenis/dist/lenis.css';
 
+	const lenis = new Lenis({
+	autoRaf: true,
+	});
+
+	lenis.on('scroll', (e) => {
+	console.log(e);
+	});
+</script>
 <BaseLayout title={title}>
 	
 	<div id="landing" class="h-screen w-screen min-h-160
@@ -77,10 +88,10 @@ const title = "Depot";
 			
 	
 	</div>
-	<hr class="fixed-nav-trigger opacity-0 pt-20">
+	<hr class=" opacity-0 pt-20">
 
 
-	<section id="about" class="pb-8 h-auto lg:py-20 w-full">
+	<section id="about" class="fixed-nav-trigger pb-8 h-auto lg:py-20 w-full">
 		<h2 class="nav-links xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
 			Build real sustainable solutions, and change the world. <i class="text-lgreen" >Today.</i>
 		</h2>

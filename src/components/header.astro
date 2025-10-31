@@ -37,7 +37,7 @@ import banner from '../components/banner.md?raw';
                 DEPOT17</span>
         </a>
         <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
-            <p id="banner" class="hidden md:block whitespace-nowrap font-medium">
+            <p id="banner" class={`whitespace-nowrap font-medium ${ currentPath === "/" ? 'md:block ' : 'hidden'}`}>
                 {banner}
 		    </p>
         </div>
