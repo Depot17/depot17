@@ -13,21 +13,21 @@ const homepage = Astro.url.pathname =="/";
 flex flex-col justify-between pb-6 md:-10">
   <div class="bg-yellow/40 w-60 h-10 mx-auto"></div>
 
-  <div class="grow mt-8 flex flex-col md:flex-row md:items-end justify-between">
+  <div class="grow mt-8 flex flex-col lg:flex-row lg:items-end justify-between">
     
-    <div class="text-lg xs:text-xl space-y-2 text-center md:text-left w-full flex flex-col justify-center items-start">
-      <ul class="flex w-full h-full items-center  justify-center md:justify-start gap-x-10 font-semibold">
-        <li class="nav-links px-3 py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="" target="_blank">LinkedIn</a></li>
-        <li class="nav-links px-3 py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="" target="_blank">Blog</a></li>
-        <li class="nav-links px-3 py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="https://github.com/Depot17" target="_blank">Github</a></li>
+    <div class="text-lg xs:text-xl space-y-2 text-center lg:text-left w-full flex flex-col justify-center items-start">
+      <ul class="flex w-full h-full items-center justify-center lg:justify-start gap-x-4 xs:gap-x-10 font-semibold whitespace-nowrap">
+        <li class="nav-links px-1.5 xs:px-3 xs:py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="" target="_blank">LinkedIn</a></li>
+        <li class="nav-links px-1.5 xs:px-3 xs:py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="" target="_blank">Blog</a></li>
+        <li class="nav-links px-1.5 xs:px-3 xs:py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="https://github.com/Depot17" target="_blank">Github</a></li>
       </ul>
-
-      <p>Inquiry? Email hello@bdepot17.com <br> 2025 Depot 17 | ALL RIGHTS RESERVED</p>
+ 
+      <p class="mx-auto lg:ml-0">Inquiry? Email hello@bdepot17.com <br> 2025 Depot 17 | ALL RIGHTS RESERVED</p>
 
     </div>
 
-    <div class="flex items-end ml-auto gap-4">
-      <svg width="8rem" height="auto" class="col-start-1 row-start-1 opacity-100" viewBox="0 0 1362 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="justify-end items-end flex w-full xs:w-[70%] ml-auto gap-4">
+      <svg class="grow max-w-50" height="auto" class="col-start-1 row-start-1 opacity-100" viewBox="0 0 1362 696" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity="1" >
         <path d="M5.09183 25.1815C6.57648 215.281 5.34315 565.648 5.00009 652.915C4.95653 663.995 13.9257 673 25.0056 673H360.305C366.942 673 373.147 669.708 376.867 664.211L455.48 548.079C457.721 544.769 458.918 540.864 458.918 536.867V143.72C458.918 139.36 457.493 135.119 454.86 131.643L364.92 12.9228C361.139 7.93213 355.239 5 348.978 5H25.1087C13.9888 5 5.00499 14.0619 5.09183 25.1815Z" fill="#352922"/>
         <path d="M608.918 389V333C608.918 321.954 617.872 313 628.918 313H738.918C749.964 313 758.918 321.954 758.918 333V389C758.918 400.046 749.964 409 738.918 409H628.918C617.872 409 608.918 400.046 608.918 389Z" fill="#352922"/>
@@ -46,8 +46,9 @@ flex flex-col justify-between pb-6 md:-10">
         </filter>
         </defs>
       </svg>
-      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="w-20 xs:w-30 md:max-w-45 grow ">
-          <img src="/images/up_arrow.webp" alt=""  class="hover:scale-104 transition ease-in-out">
+
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="">
+          <img src="/images/up_arrow.webp" alt=""  class="grow max-w-30 xs:max-w-40 lg:max-w-30 h-auto hover:scale-104 transition ease-in-out">
       </button>
     </div>
    

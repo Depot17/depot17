@@ -152,6 +152,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const openNav = document.getElementById('open-nav');
   openNav.classList.replace('opacity-0', 'opacity-100');
 });
+
 navButton.addEventListener("click", () => {
   console.log("clicked!");
     if(hi.reversed()){

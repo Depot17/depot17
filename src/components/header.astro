@@ -1,9 +1,9 @@
 ---
 const currentPath = Astro.url.pathname;
-import BannerText from '../components/banner.md';
+import banner from '../components/banner.md?raw';
 ---
 
-<header id="navbar" class={`z-[200] w-full top-0 ${
+<header id="navbar" class={`z-[200] w-full top-0 bg-beige ${
         currentPath === "/"
         ? ''
         : ''}`}>
@@ -38,8 +38,7 @@ import BannerText from '../components/banner.md';
         </a>
         <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
             <p id="banner" class="hidden md:block whitespace-nowrap font-medium">
-                <BannerText />
-
+                {banner}
 		    </p>
         </div>
         
@@ -63,10 +62,11 @@ import BannerText from '../components/banner.md';
         </span>
             
         <span id="close-nav" class="opacity-0 col-start-1 row-start-1">
-        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2.82812" width="25" height="4" transform="rotate(45 2.82812 0)" fill="#36251B"/>
-        <rect y="17.6777" width="25" height="4" transform="rotate(-45 0 17.6777)" fill="#36251B"/>
-        </svg>
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.83008" width="32" height="4" transform="rotate(45 2.83008 0)" fill="#36251B"/>
+<rect y="22.6274" width="32" height="4" transform="rotate(-45 0 22.6274)" fill="#36251B"/>
+</svg>
+
     </span>
             
         </button>
@@ -106,24 +106,25 @@ import BannerText from '../components/banner.md';
                         <a href="/resources" target="_self" class="">Resources *</a>
                     </li>
 
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown bg-dbrown/10 border-2 rounded-lg overflow-hidden 
                     ${ currentPath === "/contact"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>                        
-                        <a href="/contact" target="_self" class="">Contact</a>
+                        <a href="/contact" target="_self" class="">Contact *</a>
                     </li>
                 </ul>
 
                 <hr class="border-1">
-                
                 <div class="grow overflow-hidden">
-                    <ul class="flex w-full h-full justify-center p-4 items-end gap-x-10 underline">
+
+                    <ul class="flex w-full h-full justify-center items-end p-4 gap-x-10 underline">
                         <li class="nav-links"><a href="" target="_blank">LinkedIn</a></li>
                         <li class="nav-links"><a href="" target="_blank">Blog</a></li>
                         <li class="nav-links"><a href="https://github.com/Depot17" target="_blank">Github</a></li>
 
                     </ul>
                 </div>
+              
 
                 <hr class="border-1">
                 <div class="min-h-10 flex items-center justify-center">
