@@ -4,7 +4,7 @@ const homepage = Astro.url.pathname =="/";
 ---
 <div class="space-y-10">
     <div class="space-y-10">
-        <a href="/projects/pnp" target="_self" class="block">
+        <a href="/projects/pnp" target="_self" class="block w">
             <div class=
             {`block relative group w-full h-auto rounded-2xl xs:p-4 hover:scale-102 transition-all 
             ${homepage 
@@ -14,8 +14,8 @@ const homepage = Astro.url.pathname =="/";
 
                     <a type="button" class="absolute 
                     border-2 border-dbrown text-dbrown bg-yellow 
-                    font-medium rounded-full text-md px-5 py-2.5  transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-lgreen ">
-                <span>Support this</span>1.5
+                    font-medium rounded-full text-md px-5 py-2.5 transition-all duration-500 ease-in-out right-6 xs:right-10 group-hover:bg-lgreen ">
+                <span>Support this</span>
                 </a>
 
                 </div>
@@ -28,7 +28,7 @@ const homepage = Astro.url.pathname =="/";
                             <div class={`blink ml-2 w-8 h-8 bg-lred  rounded-full ${homepage ? 'hidden' : ''}`}></div>
 
                         </div>
-                        <div class="ml-auto w-10 aspect-[1/1] bg-red rounded-full border-2 border-dbrown animate-pulse"></div>
+                        <div class="ml-auto w-8 aspect-[1/1] bg-red rounded-full border-1 border-beige animate-pulse"></div>
 
                 
 

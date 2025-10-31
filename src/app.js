@@ -119,6 +119,11 @@ gsap.to('.nav-list', {
 });
 
 const navButton = document.getElementById('nav-button');
+const openNav = document.getElementById('open-nav');
+const closeNav = document.getElementById('close-nav');
+
+
+
 const nav = document.getElementById('nav');
 const navBg = document.getElementById('nav-bg');
 
@@ -143,13 +148,39 @@ hi.to(navBg, {
   },
   "<");
 
-
+window.addEventListener('DOMContentLoaded', () => {
+  const openNav = document.getElementById('open-nav');
+  openNav.classList.replace('opacity-0', 'opacity-100');
+});
 navButton.addEventListener("click", () => {
   console.log("clicked!");
-  hi.reversed() ? hi.play() : hi.reverse();
-});
+    if(hi.reversed()){
+        hi.play();
+        document.body.classList.add('overflow-hidden');    
+        document.body.classList.remove('overflow-visible');
+        closeNav.classList.replace('opacity-0', 'opacity-100')
+        openNav.classList.replace('opacity-100', 'opacity-0')  
+       
 
 
+    }
+    else {
+        hi.reverse();
+        document.body.classList.remove('overflow-hidden');    
+        document.body.classList.add('overflow-visible');
+         openNav.classList.replace('opacity-0', 'opacity-100')
+        closeNav.classList.replace('opacity-100', 'opacity-0')
+     
+
+    }
+    }
+);
+
+hi.eventCallback('onReverseComplete', () => {
+    gsap.set(nav, {pointerEvents: 'none'});
+    gsap.set(navBg, {opacity:0, pointerEvents:'none'})
+    document.body.classList.remove('overflow-hidden')
+})
 
 
 gsap.from('.abc', {

@@ -39,27 +39,36 @@ import BannerText from '../components/banner.md';
         <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
             <p id="banner" class="hidden md:block whitespace-nowrap font-medium">
                 <BannerText />
-                 APPLICATIONS FOR COHORT ONE ARE OPEN, APPLY BELOW.
 
 		    </p>
         </div>
         
         
-        <div class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 py-1">
-            <a href="#" class="nav-links h-full flex items-center justify-center rounded-full bg-lblue hover:text-lgreen hover:bg-dbrown w-fit box-border border-2 border-dbrown hover:border-brown font-medium px-4  ">
+        <div class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 py-1.25">
+            <a href="#" class="nav-links h-full flex items-center justify-center whitespace-nowrap rounded-full bg-lblue hover:text-lgreen hover:bg-dbrown w-fit box-border border-2 border-dbrown hover:border-brown font-medium px-4">
             Donate 
             </a>
         </div>
           
 
         <button id="nav-button" type="button" 
-        class="z-[100] aspect-[1/1] flex items-center justify-center border-l-2 border-b-2 border-2 bg-beige rounded-tr-lg h-full box-border">
+        class="z-[100] aspect-[1/1] grid grid-cols-1 place-items-center border-l-2 border-b-2 border-2 bg-beige rounded-tr-lg h-full box-border">
             <span class="sr-only">Open main menu</span>
-            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span id="open-nav" class="col-start-1 row-start-1 opacity-0">
+<svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="9" width="32" height="4" fill="#352922"/>
             <rect width="32" height="4" fill="#352922"/>
             <rect y="18" width="32" height="4" fill="#352922"/>
             </svg>
+        </span>
+            
+        <span id="close-nav" class="opacity-0 col-start-1 row-start-1">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2.82812" width="25" height="4" transform="rotate(45 2.82812 0)" fill="#36251B"/>
+        <rect y="17.6777" width="25" height="4" transform="rotate(-45 0 17.6777)" fill="#36251B"/>
+        </svg>
+    </span>
+            
         </button>
 
         <div id="nav-bg" class=" opacity-0 fixed w-screen top-0 left-0 flex justify-end bg-dbrown/60 h-screen" >
@@ -73,7 +82,7 @@ import BannerText from '../components/banner.md';
                     ${ currentPath === "/"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>
-                        <a href="/" target="_self" >Home</a>
+                        <a href="/" target="_self">Home</a>
                     </li>
             
                     <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
@@ -90,11 +99,11 @@ import BannerText from '../components/banner.md';
                         <a href="/projects" target="_self" class="">Projects</a>
                     </li>
 
-                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
+                    <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown bg-dbrown/10 border-2 rounded-lg overflow-hidden
                     ${ currentPath === "/resources"
                     ? 'bg-orange pointer-events-none'
                     : ''}`}>                        
-                        <a href="/resources" target="_self" class="">Resources</a>
+                        <a href="/resources" target="_self" class="">Resources *</a>
                     </li>
 
                     <li class={`w-full h-fit p-0.5 pl-4 pt-4 border-dbrown border-2 rounded-lg nav-links overflow-hidden hover:text-green
@@ -109,9 +118,9 @@ import BannerText from '../components/banner.md';
                 
                 <div class="grow overflow-hidden">
                     <ul class="flex w-full h-full justify-center p-4 items-end gap-x-10 underline">
-                        <li><a href="" target="_blank">LinkedIn</a></li>
-                        <li><a href="" target="_blank">Blog</a></li>
-                        <li><a href="https://github.com/Depot17" target="_blank">Github</a></li>
+                        <li class="nav-links"><a href="" target="_blank">LinkedIn</a></li>
+                        <li class="nav-links"><a href="" target="_blank">Blog</a></li>
+                        <li class="nav-links"><a href="https://github.com/Depot17" target="_blank">Github</a></li>
 
                     </ul>
                 </div>
