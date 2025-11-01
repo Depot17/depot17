@@ -1,10 +1,5 @@
-### Track Two
-This pathway is intended for those new to building projects or for a simplier project. 
+## Track two
 
-Track One is perfect if you are:
-- A class 
-- School club
-- Beginner
-- Have a quick (< 40h) project
+#### Placeholder text: info coming soon! 
 
-Before applying make sure you:
+ Vivamus imperdiet volutpat metus, a maximus nisl lobortis vel. Aliquam pellentesque elementum laoreet. Vivamus ornare aliquam purus, eget iaculis eros efficitur eget. Curabitur pretium hendrerit quam rhoncus vestibulum. Donec scelerisque, est bibendum dignissim bibendum, sapien nulla pretium nisi, eget tincidunt leo enim et ante. Maecenas non augue libero. Aliquam porttitor orci sed convallis pellentesque. 

@@ -8,7 +8,6 @@ const title = "Depot";
  <script>
 	import Lenis from "lenis";
     import 'lenis/dist/lenis.css';
-
 	const lenis = new Lenis({
 	autoRaf: true,
 	});
@@ -16,6 +15,14 @@ const title = "Depot";
 	lenis.on('scroll', (e) => {
 	console.log(e);
 	});
+	
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 </script>
 <BaseLayout title={title}>
 	
@@ -39,11 +46,11 @@ const title = "Depot";
 			<div class="w-screen lg:w-full max-w-120 h-30 flex items-center justify-center 
 			
 			 justify-self-center relative">
-				<div class="dragme col-start-1 row-start-1 w-screen h-full flex justify-center items-center">
+				<div class="dragme col-start-1 row-start-1 w-screen h-full -z-[10] md:z-[20] flex justify-center items-center">
 					<Three client:load />
 				</div>
-				<form id="landing-center" action="" method="POST" name="email-form" 
-				class="opacity-0 absolute bg-beige hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
+				<form action="" method="POST" name="email-form" 
+				class="absolute bg-beige hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
 				
 				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-110   xl:w-120 2xl:w-140 3xl:w-160
 			
@@ -76,9 +83,9 @@ const title = "Depot";
 			<a class="lg:hidden block bg-red w-fit px-3 py-2 rounded-full whitespace-nowrap text-beige text-lg font-medium">SIGN UP --&gt</a>
 			<div class="w-full flex justify-between items-center self-end pt-4">		
 				<h4 class="mr-auto text-dbrown text-left max-w-80">Find a problem in a local or community, then work with them to engineer a solution. </h4>
-				<svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<!-- <svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="black" stroke-width="3"/>
-				</svg>
+				</svg> -->
 
 			</div>
 		</div>

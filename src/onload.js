@@ -50,17 +50,6 @@ window.addEventListener('load', () => {
     }
     );
 
-    const landingCenter = document.getElementById('landing-center');
-
-    gsap.to(landingCenter, {
-        opacity:1,
-        duration:0.8,
-        ease:'power1.out',
-        delay:1
-    })
-
-
-
 
     const lg = window.matchMedia("(min-width:1024px)")
 

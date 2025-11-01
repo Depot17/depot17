@@ -91,7 +91,9 @@
   font-style: normal;
   font-display: swap;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .font8 {
     font-family: 'super';
 

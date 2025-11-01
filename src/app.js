@@ -76,6 +76,7 @@ gsap.from(".text-dgreen", {
 // });
 
 //scrolling banner, it take the contents of banner.md and displays it (so it's easy to change announcements)
+//it currently doesn't loop, oops will fix this
 
     const spacer = document.getElementById('spacer')
     const donate = document.getElementById('donate')

@@ -48,44 +48,65 @@ import TrackThree from "../components/tracks/trackthree.md";
     </section>
 
     -->
-	<section class="space-y-8 ">
-	<div class="flex  justify-between items-end" >
-			<div>
-				<p class="font-pixel text-green text-xl">Start today</p>
-				<h2>Choose Your Track</h2>
-			</div>
-			<p class="max-w-130 text-right">We believe you can do more good than just donating money, but rather your  <span class="underline">passion and drive.</span></p>
+	<section class="space-y-8">
+	<div class="flex justify-between items-end" >
+		<div>
+			<p class="font8 text-lgreen">Start today</p>
+			<h2>Choose Your Track</h2>
+		</div>
+		<p class="max-w-130 text-right">We believe you can do more good than just donating money, but rather your  <span class="underline">passion and drive.</span></p>
 	</div>
-		
 		<div class="space-y-2 grid grid-rows-3 justify-end">
-			<div class="clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-orange ease-in-out ">
+			<a href="#1" class="overflow-scroll lg:overflow-hidden clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-lblue ease-in-out ">
 				<h2>01</h2>
 				<p class="">Solve local issues. Recommended for: beginners, highschool students and below, school clubs, etc. </p>
-			</div>
-			<div class="clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-orange ease-in-out">
+			</a>
+			<a href="#2" class="overflow-scroll lg:overflow-hidden clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-orange ease-in-out">
 				<h2>02</h2>
 				<p class="">Solve global issues. Recommended for: experienced makers, highschool students and above. </p>
-			</div>
-			<div class="clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-orange ease-in-out">
+			</a>
+			<a href="#3" class="overflow-scroll lg:overflow-hidden clickme w-full max-w-240 h-30 pt-8 border-2 border-black rounded-lg flex items-center gap-8 pr-8 pl-4 pb-2 transition-all duration-400 hover:md:-translate-x-20 hover:bg-lgreen ease-in-out">
 				<h2>03</h2>
 				<p class="">Mentor Track 1 & 2 participants. Recommended for: adults with technical or publicity skills. </p>
-			</div>
+			</a>
 		<!-- <div class="w-full h-30 border-2 border-black rounded-lg"></div>
 		<div class="w-full h-30 border-2 border-black rounded-lg"></div> -->
 		</div>
 
 		
 		</section>
-        <section class="mt-20 ">
-			<div class="bg-lblue rounded-b-xl rounded-tr-xl p-10 min-h-screen">
-            	<TrackOne />
+        <section class="mt-20">
+			<div class="">
+				<div class="w-full">
+					<img src="/images/polygon4.svg" class="w-full h-auto">
+				</div>
+
+				<div class="bg-white p-4 md:p-10 min-h-screen space-y-10">
+					<div id="1">
+						<TrackOne />
+					</div>
+					<div id="2">
+						<TrackTwo />
+					</div>
+					<div id="3">
+					<TrackThree />
+
+					</div>
+					
+				</div>
+				<div class="w-full rotate-180">
+					<img src="/images/polygon4.svg" class="w-full h-auto">
+				</div>
 			</div>
-			<p class="text-center">Have another idea? Unique situation? Email us at hello@depot17.com</p>
+			
+
 
         </section>
-        <!-- <p class="font-pixel click fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-green text-white border-3 border-dbrown 
+		<p class="text-center">Have another idea? Unique situation? Email us at hello@depot17.com</p>
+
+        <p class="font-pixel click fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown text-lgreen border-3 border-brown 
 		rounded-xl rounded-bl-none font-semibold tracking-wide px-2 ">
         click
-		</p> -->
+		</p>
 	<script src="../follower.js"></script>
 </BaseLayout>
