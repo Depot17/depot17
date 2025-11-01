@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three-stdlib";
 import React, { useEffect, Suspense } from "react";
 
 const Model = () => {
