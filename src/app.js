@@ -90,7 +90,6 @@ gsap.from(".text-dgreen", {
             trigger: '.fixed-nav-trigger',
             start: 'top top ',
             toggleActions: 'play none reverse reverse',
-            markers:true
             }
     });
 
@@ -120,7 +119,6 @@ gsap.to('.nav-list', {
         trigger: '.fixed-nav-trigger',
         start: 'top center',
         toggleActions: 'play none reverse reverse',
-        markers:true
         }
 });
 

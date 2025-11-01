@@ -30,14 +30,13 @@ const { title } = Astro.props;
     </head>
    
     <body>
-        <div id="wrapper" class={`relative flex flex-col items-center justify-center max-w-screen overflow-hidden min-h-screen  ${ currentPath === "/" ? 'bg-beige change' : 'bg-beige'}`}>
+        <div class={`relative flex flex-col items-center justify-center max-w-screen overflow-hidden min-h-screen  ${ currentPath === "/" ? 'bg-beige change' : 'bg-beige'}`}>
 
             <Header  />
             <div id="lenis" class={` min-h-screen w-full ${ currentPath === "/" ? '' : 'mt-24'}`}>
                 <slot />
-                <Footer />
             </div>
-
+<Footer />
         </div>
 
     </body>

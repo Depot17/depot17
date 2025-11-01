@@ -1,6 +1,4 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 //animates on page load:
 window.addEventListener('load', () => {
     const navBar = document.getElementById('navbar');

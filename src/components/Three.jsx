@@ -53,9 +53,9 @@ import { MTLLoader } from "three-stdlib";
     export default function App(){
         return (
             <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "700px"}}>
-        
                 <ambientLight intensity={0.8} />
-                <directionalLight color="white" position={[0, 0, 6]} intensity={3} />
+                <directionalLight color="yellow" position={[0, 0, 6]} intensity={1.2} />
+                {/* <directionalLight color="white" position={[-5, -5, -2]} intensity={0.5} /> */}
                 <Suspense fallback={null}>
                 <Scene />
 
