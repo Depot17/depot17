@@ -4,12 +4,14 @@ import React, { useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
-import { EffectComposer, Outline } from '@react-three/postprocessing';
-import { DDSLoader } from "three-stdlib";
-// import { Suspense } from "react";
-import { Shader } from "./Shader";
+import { OBJLoader } from "three-stdlib";
+import { MTLLoader } from "three-stdlib";
+// import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+// import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
+// import { EffectComposer, Outline } from '@react-three/postprocessing';
+// import { DDSLoader } from "three-stdlib";
+// // import { Suspense } from "react";
+// import { Shader } from "./Shader";
 
     //  const size = window.innerWidth 
 
@@ -52,8 +54,8 @@ import { Shader } from "./Shader";
         return (
             <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "700px"}}>
         
-                <ambientLight intensity={0.7} />
-                <directionalLight color="white" position={[0, 0, 6]} intensity={2} />
+                <ambientLight intensity={0.8} />
+                <directionalLight color="white" position={[0, 0, 6]} intensity={3} />
                 <Suspense fallback={null}>
                 <Scene />
 
