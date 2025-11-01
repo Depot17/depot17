@@ -2,11 +2,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-
-
 
 
 
@@ -81,8 +78,9 @@ gsap.from(".text-dgreen", {
 //scrolling banner, it take the contents of banner.md and displays it (so it's easy to change announcements)
 
     const spacer = document.getElementById('spacer')
+    const donate = document.getElementById('donate')
 
-    gsap.to(spacer, {
+    gsap.to([spacer, donate], {
         display:"none",
         duration:0.2,
         ease:"power2.out",
@@ -204,28 +202,6 @@ gsap.from('.abc', {
     
 })
 
-const lg = window.matchMedia("(min-width:1024px)")
-
-function spotlightSize(e) {
-    if (e.matches) {
-gsap.fromTo(".spotlight",
-  { backgroundSize: "10% 100%" },
-  { backgroundSize: "35% 100%", duration: 1.5, ease: "power2.out" }
-);
-    }
-
-else {
-
-gsap.fromTo(".spotlight",
-  { backgroundSize: "20% 100%" },
-  { backgroundSize: "55% 100%", duration: 1.5, ease: "power2.out" }
-);
-}
-
-}
-
-spotlightSize(lg)
-lg.addEventListener("change", spotlightSize);
 
 const form = document.forms["email-form"];
 form.addEventListener("submit", (e) => {

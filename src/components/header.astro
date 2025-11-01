@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 import banner from '../components/banner.md?raw';
 ---
 
-<header id="navbar" class={`z-[200] w-full top-0 bg-beige ${
+<header id="navbar" class={`opacity-0 -translate-y-100 z-[200] w-full top-0 bg-beige ${
         currentPath === "/"
         ? ''
         : ''}`}>
@@ -43,7 +43,7 @@ import banner from '../components/banner.md?raw';
         </div>
         
         
-        <div class="nav-list hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 py-1.25">
+        <div id="donate" class="hidden lg:inline-flex flex items-center justify-center gap-y-10 h-full border-2 border-r-0 px-3 py-1.25">
             <a href="#" class="nav-links h-full flex items-center justify-center whitespace-nowrap rounded-full bg-lblue hover:text-lgreen hover:bg-dbrown w-fit box-border border-2 border-dbrown hover:border-brown font-medium px-4">
             Donate 
             </a>

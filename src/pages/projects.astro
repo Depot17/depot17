@@ -4,12 +4,26 @@ import ProjectsSlot from '../components/projects_slot.astro';
 
 const title = "Projects";
 ---
+ <script>
+	import Lenis from "lenis";
+    import 'lenis/dist/lenis.css';
+
+	const lenis = new Lenis({
+	autoRaf: true,
+	});
+
+	lenis.on('scroll', (e) => {
+	console.log(e);
+	});
+</script>
 <BaseLayout title ={title}>
 
     <section class="pt-6 text-center bg-beige">
 		<h2>Depot Projects</h2>
 		<p>Here are some of Depot's public projects! Click on them to learn more.</p>
-		<ProjectsSlot  />
+		<div class="fixed-nav-trigger">
+			<ProjectsSlot  />
+		</div>
 		<p class="pt-4">Your's could be displayed here, once you project <a href="" target="_self" class="underline">set up</a> shoot me an email sophia@bdept.org</p>
 	</section>
 </BaseLayout>
