@@ -9,10 +9,11 @@ export default defineConfig({
   vite: {
     optimizeDeps: {
       include: [
-        'three/examples/jsm/loaders/OBJLoader.js',
-        'three/examples/jsm/loaders/MTLLoader.js'
+        'three/examples/jsm/loaders/OBJLoader.jsx',
+        'three/examples/jsm/loaders/MTLLoader.jsx'
       ]
     },
     plugins: [tailwindcss()],
   },
 });
+
