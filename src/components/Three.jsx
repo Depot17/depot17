@@ -16,8 +16,8 @@ import { MTLLoader } from "three-stdlib";
     //  const size = window.innerWidth 
 
     const Scene = () => {
-        const materials = useLoader(MTLLoader, "/Claw.mtl")
-        const obj = useLoader(OBJLoader, '/Claw.obj', (loader) => {
+        const materials = useLoader(MTLLoader, "/3d/Claw.mtl")
+        const obj = useLoader(OBJLoader, '/3d/Claw.obj', (loader) => {
             materials.preload();
             loader.setMaterials(materials);
 
