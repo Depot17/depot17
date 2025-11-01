@@ -56,7 +56,7 @@ import { MTLLoader } from "three-stdlib";
                 <ambientLight intensity={0.8} />
                 <directionalLight color="yellow" position={[0, 0, 6]} intensity={1.2} />
                 {/* <directionalLight color="white" position={[-5, -5, -2]} intensity={0.5} /> */}
-                <Suspense fallback={null}>
+                <Suspense fallback={<span>wtf bro </span>}>
                 <Scene />
 
                 </Suspense>
