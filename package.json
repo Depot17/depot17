@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "build": "astro build",
+    "build": "npx astro build",
     "dev": "astro dev",
     "preview": "astro preview",
     "astro": "astro"
@@ -30,6 +30,9 @@
     "three-stdlib": "^2.36.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21"
+    "autoprefixer": "^10.4.21",
+    "astro": "5.15.3",
+    "@astrojs/react": "^3.2.0",
+    "@astrojs/tailwind": "^3.0.0"
   }
 }
