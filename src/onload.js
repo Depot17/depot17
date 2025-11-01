@@ -1,4 +1,7 @@
 import { gsap } from "gsap";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+
+gsap.registerPlugin(ScrambleTextPlugin);
 //animates on page load:
 window.addEventListener('load', () => {
     const navBar = document.getElementById('navbar');
@@ -29,6 +32,16 @@ window.addEventListener('load', () => {
 //         })
 // })
     
+    // const scram = document.getElementById('scramble')
+    gsap.to('#scramble', {
+        opacity:1,
+        ease:'power2.out',
+        duration:2,
+        scrambleText:{
+            text:'Find a problem in a local or community, then work with them to engineer a solution. ',
+            chars:'DEPOT#17'
+        }
+    })
     const left = document.getElementById('from-left');
 
     gsap.to(left, {

@@ -5,27 +5,52 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
+// const scrambled = document.querySelectorAll('.scramble')
 
-
-let split = SplitText.create(".abc", {
-    type: "chars, words, lines"
-});
-
-gsap.from(split.lines, {
-    y:30,
-    // rotateZ:20,
-    autoAlpha:0,
-    stagger:0.08,
-    duration:0.5,
-    ease:"power2.out",
-    opacity:0,
-
-    scrollTrigger: {
-        trigger:'.trig',
-        start:'top botttom',
-        toggleActions: 'play none none none'
+gsap.to('.scramble', {
+    ease:'power2.out',
+    duration:2,
+    scrambleText:{
+        text:'We help the next generation build a communal future.',
+        chars:'DEPOT#17'
+    },
+    scrollTrigger:{
+        trigger: '.quote',
+        start:'top top',
+         
     }
 })
+// let split = SplitText.create(".abc", {
+//     type: "chars, words, lines"
+// });
+
+
+// gsap.from('.abc', {
+//     y:50,
+//     duration:3,
+//     ease:"power2.out",
+
+//     text: {
+//         value: "Something new",
+//         newClass: "class2",
+//         delimiter: " ",
+//     }
+    
+// })
+
+// gsap.from(split.chars, {
+//     autoAlpha:0,
+//     stagger:0.08,
+//     duration:0.5,
+//     ease:"power2.out",
+//     opacity:0,
+
+//     scrollTrigger: {
+//         trigger:'.abc',
+//         start:'top 80%',
+//         toggleActions: 'play none none none'
+//     }
+// })
 
 const navLinks = document.querySelectorAll(".nav-links");
 
@@ -102,7 +127,7 @@ gsap.from(".text-dgreen", {
         xPercent:-50,
         repeat:-1,
         ease:'linear',
-        duration:40,
+        duration:100,
   
     })
 
@@ -188,18 +213,6 @@ hi.eventCallback('onReverseComplete', () => {
 })
 
 
-gsap.from('.abc', {
-    y:50,
-    duration:3,
-    ease:"power2.out",
-
-    text: {
-        value: "Something new",
-        newClass: "class2",
-        delimiter: " ",
-    }
-    
-})
 
 
 const form = document.forms["email-form"];
