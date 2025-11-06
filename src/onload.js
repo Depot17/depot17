@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
         opacity:1,
         duration: 0.7,
         ease: 'power2.out',
-        delay:0.6
+        delay:0.2
     }
     );
 //     const title = document.querySelectorAll(".title");

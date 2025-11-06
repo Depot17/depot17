@@ -18,14 +18,21 @@ const title = "Projects";
 </script> -->
 <BaseLayout title ={title}>
 
-    <section class="pt-6 text-center bg-beige">
-		<h2>Depot Projects</h2>
-		<p>Here are some of Depot's public projects! Click on them to learn more.</p>
-		<div class="fixed-nav-trigger">
-			<ProjectsSlot  />
+    <div class="px-4 md:px-10 xl:px-20 py-6 flex justify-between">
+		<div class="-mt-4">
+			<h2 >PROJECTS</h2>
+			<h4 class="font-medium max-w-80 leading-6 text-green">HERE ARE SOME OF DEPOT'S PUBLIC PROJECTS</h4>
+			<!-- <h4>TK STUDENTS ARE WORKING ON TECHNICAL PROJECTS</h4> -->
 		</div>
+		<p class="text-right max-w-70"><b>UNDER CONSTRUCTION</b><br>Projects tags are pulled from README.md metadata</p>
+		
 		<!-- <p class="pt-4">Your's could be displayed here, once you project <a href="" target="_self" class="underline">set up</a> shoot us an email at contact@depot17.com</p> -->
-	</section>
+	</div>
+
+	<div class="px-4 md:px-10 xl:px-20">
+		<ProjectsSlot  />
+	</div>
+	
 	<script src="../app.js"></script>
 	<script src="../follower.js"></script>
 	<script src="../onload.js"></script>

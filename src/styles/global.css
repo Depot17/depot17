@@ -6,11 +6,11 @@
     --color-lblue: #9CD3EA;
     --color-beige: #FFFAF8;
     --color-lgreen: #58C55F;
-    --color-green: #008C50;
+    --color-green: #00874D;
     --color-gray:#EAE5E3;
     --color-dbrown: #352922;
     --color-brown:#D4800B;
-    --color-red: #E00000;
+    --color-red: #E60004;
     --color-orange: #FF5100;
 
      --color-transp: #FCFCFC40;
@@ -93,6 +93,7 @@
 }
 html {
     scroll-behavior: smooth;
+    background-color:#FFFAF8;
 }
 .font8 {
     font-family: 'super';
