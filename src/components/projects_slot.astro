@@ -1,14 +1,14 @@
 ---
 const homepage = Astro.url.pathname =="/";
 const projects = [
-    {name: 'Placeholder1', tags:['FEATURED','PCB', 'CAD'], authors:['TBD', 'TBD'], finished:'no'},
+    {name: 'Placeholder1', tags:['PCB', 'CAD'], authors:['TBD', 'TBD'], finished:true, featured:true},
     {name: 'Placeholder2', tags:['PCB', 'SOFTWARE'], authors:['TBD', 'TBD', 'TBD'],finished:'yes' },
-    {name: 'Placeholder3', tags:['PCB', 'CAD'], authors:['TBD'], finished:'no'},
-    {name: 'Placeholder4', tags:['FEATURED','PCB', 'WEBDEV'], authors:['TBD, TBD, TBD'], finished:'no'},
-    {name: 'Placeholder5', tags:['SOFTWARE'], authors:['TBD','TBD','TBD'], finished:'no'},
-    {name: 'Placeholder6', tags:['PCB', 'CAD'], authors:['TBD', 'TBD'], finished:'yes'},
-    {name: 'Placeholder7', tags:['PCB', 'WEBDEV'], authors:['TBD', 'TBD', 'TBD'], finished:'no'},
-    {name: 'Placeholder8', tags:['FEATURED','SOFTWARE', 'WEBDEV'], authors:['TBD'], finished:'yes'},
+    {name: 'Placeholder3', tags:['PCB', 'CAD', 'HI'], authors:['TBD'], finished:true},
+    {name: 'Placeholder4', tags:['PCB', 'WEBDEV'], authors:['TBD, TBD, TBD']},
+    {name: 'Placeholder5', tags:['SOFTWARE'], authors:['TBD','TBD','TBD'],featured:true},
+    {name: 'Placeholder6', tags:['PCB', 'CAD'], authors:['TBD', 'TBD']},
+    {name: 'Placeholder7', tags:['PCB', 'WEBDEV'], authors:['TBD', 'TBD', 'TBD'],featured:true},
+    {name: 'Placeholder8', tags:['SOFTWARE', 'WEBDEV', 'PCB'], authors:['TBD'], finished:true},
 
 
 
@@ -17,14 +17,18 @@ const projects = [
 <div class={`space-y-10 ${homepage ? '' :'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4'}`}>
 {projects.map((proj) => (
     <div class=
-    {` relative group w-full rounded-2xl xs:p-4 hover:scale-102 transition-all flex flex-col
+    {` relative group w-full rounded-2xl xs:p-4 hover:scale-102 transition-all flex flex-col group
     ${homepage  
-    ? 'bg-brown border-none hover:shadow-xl duration-300 min-h-100 2xl:h-120' 
-    : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300 h-110 '}`}>
+    ? proj.featured === true 
+        ? 'bg-brown border-none hover:shadow-xl duration-300 min-h-100 2xl:h-130' 
+        : 'hidden'
+    :  proj.finished === true
+    ? 'bg-brown lg:border-3 border-solid border-dbrown transition-all duration-500'
+    : 'bg-beige lg:border-2 border-dashed hover:border-solid transition-all duration-500 border-gray-300 h-110'}`}>
 
         <a href="/projects/pnp" target="_self" class="block rounded-2xl w-full grow p-3 xs:p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
             <div class="w-full h-full flex justify-end ">
-                <button class=" block border-2 border-dbrown text-dbrown font-medium rounded-full text-md px-5 py-2.5 w-fit h-fit transition-all duration-500 ease-in-out bg-lgreen ">
+                <button class=" block border-2 border-dbrown text-dbrown font-medium rounded-full text-md px-5 py-2.5 w-fit h-fit transition-all duration-500 ease-in-out bg-transparent group-hover:bg-lgreen">
                     Support this 
                 </button>
             </div>
@@ -32,7 +36,7 @@ const projects = [
         
         <div class="p-4">
             <h3 class="whitespace-nowrap">{proj.name}</h3>
-            <p class="">{proj.authors}</p>
+            <p>{proj.authors.join(', ')}</p>
         </div>
         <ul class="flex gap-1 justify-end">
             {proj.tags.map((tag) =>(
