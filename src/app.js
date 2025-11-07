@@ -17,6 +17,7 @@ gsap.to('.scramble', {
     scrollTrigger:{
         trigger: '.quote',
         start:'top top',
+        // markers: true,
          
     }
 })
