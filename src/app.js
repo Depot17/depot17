@@ -7,7 +7,23 @@ gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-// const scrambled = document.querySelectorAll('.scramble')
+	import Lenis from "lenis";
+    import 'lenis/dist/lenis.css';
+	const lenis = new Lenis({
+	autoRaf: true,
+	});
+
+	lenis.on('scroll', (e) => {
+	console.log(e);
+	});
+	
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 gsap.to('.scramble', {
     ease:'power2.out',
@@ -188,7 +204,10 @@ window.addEventListener('DOMContentLoaded', () => {
 navButton.addEventListener("click", () => {
   console.log("clicked!");
     if(hi.reversed()){
+        lenis.stop();
         hi.play();
+        document.querySelector('.slot').style.pointerEvents = 'none';
+
         document.body.classList.add('overflow-hidden');    
         document.body.classList.remove('overflow-visible');
         closeNav.classList.replace('opacity-0', 'opacity-100')
@@ -198,10 +217,12 @@ navButton.addEventListener("click", () => {
 
     }
     else {
+        lenis.start()
         hi.reverse();
+        document.querySelector('.slot').style.pointerEvents = 'auto';
         document.body.classList.remove('overflow-hidden');    
         document.body.classList.add('overflow-visible');
-         openNav.classList.replace('opacity-0', 'opacity-100')
+        openNav.classList.replace('opacity-0', 'opacity-100')
         closeNav.classList.replace('opacity-100', 'opacity-0')
      
 

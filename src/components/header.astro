@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 import banner from '../components/banner.md?raw';
 ---
 
-<header id="navbar" class={`opacity-0 -translate-y-100 z-[200] w-full top-0 bg-beige ${
+<header id="navbar" class={`fixed opacity-0 -translate-y-100 z-[200] w-full top-0 bg-beige ${
         currentPath === "/"
         ? ''
         : ''}`}>
