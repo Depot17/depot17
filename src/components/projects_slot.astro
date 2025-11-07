@@ -20,11 +20,21 @@ const projects = [
     <div class=
     {` relative group w-full rounded-2xl p-2 hover:scale-102 transition-all flex flex-col group
     ${
-        i % 4 ===1
-        ? 'sm:translate-y-16'
-        : i % 4 === 3
-        ? 'sm:translate-y-16'
-        : ''
+        i % 3 === 1
+            ? 'lg:translate-y-16 xl:translate-y-0'
+            : i % 3 === 2 
+            ? ''
+            : i % 3 === 3
+            ? ''
+            : ''
+        } ${
+        i % 4 === 1
+            ? 'translate-y-16 lg:translate-y-0 xl:translate-y-16'
+            : i % 4 === 2 
+            ? ''
+            : i % 4 === 3
+            ? 'translate-y-16 lg:translate-y-0 xl:translate-y-16'
+            : ''
         }
         ${
     homepage  
@@ -34,9 +44,9 @@ const projects = [
 
     :  proj.finished === true
     ? 'bg-brown transition-all duration-500 h-90 xs:h-110'
-    : 'bg-beige border-2 border-dashed hover:border-solid transition-all duration-500 border-dbrown h-90 xs:h-110'}`}>
+    : 'bg-beige border-2 border-solid transition-all duration-500 border-dbrown h-90 xs:h-110'}`}>
 
-        <a href="/projects/pnp" target="_self" class="block rounded-2xl w-full grow p-3 xs:p-6 rounded-b-none xs:rounded-2xl bg-yellow border-dbrown border-3">
+        <a href="/projects/pnp" target="_self" class="block rounded-2xl w-full grow p-3 xs:p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
             <div class="w-full h-full flex justify-end ">
                 <button class={`block border-2 border-dbrown text-dbrown font-medium rounded-full text-md px-5 py-2.5 w-fit h-fit transition-all duration-500 ease-in-out bg-transparent group-hover:bg-lgreen ${homepage ? '' : 'hidden'}`}>
                     Support this 
