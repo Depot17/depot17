@@ -27,13 +27,8 @@
   font-style: normal;
 }
 
-.pixel {
-    font-family:"Bytesized", monospace;
 
-}
-
-
-
+/* 
 @font-face {
   font-family: 'Blau';
   src: url('/fonts/blau7pt.ttf') format('truetype');
@@ -78,7 +73,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 .font7 {
     font-family: 'so';
