@@ -16,7 +16,7 @@ const Model = () => {
   }, [gltf]);
 
     if(window.innerWidth < 1024){
-        return <primitive object={gltf.scene} scale={9} rotation={[-0.8, 0.5,0.2]} />
+        return <primitive object={gltf.scene} scale={8} rotation={[-0.8, 0.5,0.2]} />
         }
             
     else {
