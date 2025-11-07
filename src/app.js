@@ -1,7 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 
+gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
@@ -17,7 +19,7 @@ gsap.to('.scramble', {
     scrollTrigger:{
         trigger: '.quote',
         start:'top top',
-        markers: true,
+        // markers: true,
          
     }
 })
