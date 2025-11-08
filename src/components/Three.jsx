@@ -49,8 +49,15 @@ export default function App() {
   return (
     <div className="App">
       <Canvas orthographic camera={{zoom:100, position: [0,0,10],}} style={{ width: "1000px", height: "700px"}}>
-        <ambientLight intensity={1} />
-        <directionalLight color="white" position={[0, 0, 10]} intensity={0.8} />
+        <ambientLight intensity={0.7} />
+        <directionalLight color="green" position={[0, -10, 10]} intensity={1.2} />
+        <directionalLight color="orange" position={[0, 0, 0]} intensity={0.4} />
+        <directionalLight color="white" position={[0, 10, 0]} intensity={1.4} />
+
+        <directionalLight color="white" position={[-5, 0, 0]} intensity={0.8} />
+                <directionalLight color="white" position={[5, 0, 0]} intensity={0.8} />
+
+
         <Suspense fallback={null}>
           <Model />
             <OrbitControls enableZoom={false}></OrbitControls>        

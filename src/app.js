@@ -9,6 +9,7 @@ gsap.registerPlugin(SplitText);
 
 import Lenis from "lenis";
 import 'lenis/dist/lenis.css';
+import { Features } from "tailwindcss";
 const lenis = new Lenis({
 // autoRaf: true,
 duration:1.8,
@@ -270,4 +271,26 @@ form.addEventListener("submit", (e) => {
         console.log("boooo");
     });
 })
+
+
+const featured = gsap.utils.toArray('.featured');
+
+
+    featured.forEach((proj) => {
+
+        ScrollTrigger.create({
+            trigger: proj,
+            start:'top 80%',
+            end:'bottom 20%',
+            scrub:true,
+            markers:true,
+            onUpdate: (self) => {
+                gsap.to(proj, {
+                    scale:1,
+                    ease:'power3.out'
+                })
+            }
+        })
+    }
+    )
 
