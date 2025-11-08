@@ -39,12 +39,12 @@ const projects = [
         ${
     homepage  
     ? proj.featured === true 
-        ? 'scale-103 featured bg-brown border-none hover:shadow-xl xs:p-4 duration-300 min-h-120 2xl:h-130' 
+        ? 'scale-103 featured bg-white border-1 border-dbrown xs:p-4 duration-300 min-h-120 2xl:h-130' 
         : 'hidden'
 
     :  proj.finished === true
-    ? 'hover:scale-102 bg-brown transition-all duration-600 ease-out h-90 xs:h-110'
-    : 'hover:scale-102 bg-beige border-2 border-solid transition-all duration-600 ease-in-out border-dbrown h-90 xs:h-110'}`}>
+    ? 'hover:scale-102 p-3 bg-brown transition-all duration-600 ease-out h-90 xs:h-110'
+    : 'hover:scale-102 p-3 bg-dbrown border-2 border-solid transition-all duration-600 ease-in-out border-dbrown h-90 xs:h-110'}`}>
 
 
         <a href="/projects/pnp" target="_self" class="block rounded-2xl w-full grow p-3 xs:p-6 rounded-b-none xs:rounded-2xl bg-yellow border-green border-3">
