@@ -42,9 +42,7 @@ gsap.to('.imgs', {
     scrollTrigger:{
         trigger:'#imgslide',
         start: 'top-=300 top',
-        end: '+=500',
         scrub: true,
-        markers:true
 
     }
 
@@ -58,7 +56,6 @@ gsap.to('.quote', {
         start: 'top-=100 top',
         end: '+=500',
         scrub: true,
-        markers:true
     }
 })
 gsap.to('.scramble', {
@@ -71,8 +68,7 @@ gsap.to('.scramble', {
     },
     scrollTrigger:{
         trigger: '.quote',
-        start:'top top',
-        // markers: true,
+        start:'top-=200 top',
          
     }
 })
