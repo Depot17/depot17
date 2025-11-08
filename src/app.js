@@ -115,17 +115,44 @@ gsap.from(".text-dgreen", {
     const spacer = document.getElementById('spacer')
     const donate = document.getElementById('donate')
 
-    gsap.to([spacer, donate], {
-        display:"none",
-        duration:0.2,
-        ease:"power2.out",
+    // gsap.to([spacer, donate], {
+    //     display:"none",
+    //     duration:0.2,
+    //     ease:"power2.out",
+    //     markers:true,
 
-        scrollTrigger: {
-            trigger: '.fixed-nav-trigger',
-            start: 'top top ',
-            toggleActions: 'play none reverse reverse',
+    //     scrollTrigger: {
+    //         trigger: '.fixed-nav-trigger',
+    //         start: 'top top ',
+    //         toggleActions: 'play reverse play reverse',
+    //         }
+    // });
+    const lg = window.matchMedia("(min-width:1024px)")
+
+    ScrollTrigger.create({
+        trigger:'.fixed-nav-trigger',
+        start:'top top',
+        onEnter: () => gsap.to([spacer, donate], {
+            display:'none',
+            duration:0.2,
+            ease:'power2.out'
+        }),
+
+        onLeaveBack: () => {
+            if(lg.matches) {
+                gsap.to([spacer, donate], {
+    
+                display:'inline-flex',
+                duration:0.2,
+                ease:'power2.out'
+                });
+         
+            } else {
+                return
             }
-    });
+        }
+        })
+    
 
     const text = document.getElementById('banner');
 
