@@ -121,7 +121,7 @@ body{
 }
 
 section {
-    @apply px-3 sm:px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100
+    @apply px-3 sm:px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-90
 }
 input:focus {
   outline: none;

@@ -37,19 +37,18 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0)
 
 gsap.to('.imgs', {
-    ease: 'power3.out',
     x:0,
 
     scrollTrigger:{
         trigger:'#imgslide',
-        start: 'top-=300 top',
+        start: 'top-=200 top',
         scrub: true,
 
     }
 
 })
 gsap.to('.quote', {
-    ease:'power2.out',
+    ease:'expo.out',
     y:0,
 
     scrollTrigger:{
@@ -69,7 +68,7 @@ gsap.to('.scramble', {
     },
     scrollTrigger:{
         trigger: '.quote',
-        start:'top-=200 top',
+        start:'top-=400 top',
          
     }
 })
@@ -280,7 +279,7 @@ const featured = gsap.utils.toArray('.featured');
 
         ScrollTrigger.create({
             trigger: proj,
-            start:'top 80%',
+            start:'top 90%',
             end:'bottom 20%',
             scrub:true,
             markers:true,
