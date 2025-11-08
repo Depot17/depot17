@@ -7,15 +7,16 @@ gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-	import Lenis from "lenis";
-    import 'lenis/dist/lenis.css';
-	const lenis = new Lenis({
-	autoRaf: true,
-	});
+import Lenis from "lenis";
+import 'lenis/dist/lenis.css';
+const lenis = new Lenis({
+// autoRaf: true,
+duration:1.8,
+});
 
-	lenis.on('scroll', (e) => {
-	console.log(e);
-	});
+lenis.on('scroll', (e) => {
+console.log(e);
+});
 	
 
 function raf(time) {
@@ -25,12 +26,48 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time) => {
+    lenis.raf(time *1000)
+})
+
+
+gsap.ticker.lagSmoothing(0)
+
+gsap.to('.imgs', {
+    ease: 'power3.out',
+    x:0,
+
+    scrollTrigger:{
+        trigger:'#imgslide',
+        start: 'top-=300 top',
+        end: '+=500',
+        scrub: true,
+        markers:true
+
+    }
+
+})
+gsap.to('.quote', {
+    ease:'power2.out',
+    y:0,
+
+    scrollTrigger:{
+        trigger:'.imgs',
+        start: 'top-=100 top',
+        end: '+=500',
+        scrub: true,
+        markers:true
+    }
+})
 gsap.to('.scramble', {
     ease:'power2.out',
     duration:2,
     scrambleText:{
         text:'We help the next generation build a communal future.',
-        chars:'DEPOT#17'
+        chars:'DEPOT#17',
+        scrub:true,
     },
     scrollTrigger:{
         trigger: '.quote',
@@ -39,37 +76,6 @@ gsap.to('.scramble', {
          
     }
 })
-// let split = SplitText.create(".abc", {
-//     type: "chars, words, lines"
-// });
-
-
-// gsap.from('.abc', {
-//     y:50,
-//     duration:3,
-//     ease:"power2.out",
-
-//     text: {
-//         value: "Something new",
-//         newClass: "class2",
-//         delimiter: " ",
-//     }
-    
-// })
-
-// gsap.from(split.chars, {
-//     autoAlpha:0,
-//     stagger:0.08,
-//     duration:0.5,
-//     ease:"power2.out",
-//     opacity:0,
-
-//     scrollTrigger: {
-//         trigger:'.abc',
-//         start:'top 80%',
-//         toggleActions: 'play none none none'
-//     }
-// })
 
 const navLinks = document.querySelectorAll(".nav-links");
 
@@ -106,18 +112,6 @@ gsap.from(".text-dgreen", {
     y: 40, 
     });
 
-
-// gsap.to('.change', {
-//     backgroundColor:"#008C50",
-//     duration:0.8,
-//     ease:"power2.out",
-
-//     scrollTrigger: {
-//         trigger: '.trigger',
-//         start: 'top center',
-//         toggleActions: 'play none reverse reverse'
-//         }
-// });
 
 //scrolling banner, it take the contents of banner.md and displays it (so it's easy to change announcements)
 //it currently doesn't loop, oops will fix this
@@ -169,8 +163,6 @@ gsap.to('.nav-list', {
 const navButton = document.getElementById('nav-button');
 const openNav = document.getElementById('open-nav');
 const closeNav = document.getElementById('close-nav');
-
-
 
 const nav = document.getElementById('nav');
 const navBg = document.getElementById('nav-bg');
