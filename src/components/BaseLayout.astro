@@ -20,8 +20,7 @@ const { title } = Astro.props;
         <script type="module" src="/src/onload.js" defer></script>
 
 		<title>{ title }</title>
-        <link rel="preload" as="image" href="/images/daydream.webp">
-        <link rel="preload" as="image" href="/images/jpeg.webp">
+       
         <link rel="preload" as="fetch" href="/3d/claw.gltf" crossorigin>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,10 +32,10 @@ const { title } = Astro.props;
     </head>
    
     <body>
-        <div class={`relative flex flex-col items-center justify-center max-w-screen overflow-x-hidden min-h-screen  ${ currentPath === "/projects" ? 'bg-green' : 'bg-beige'}`}>
+        <div class={`relative flex flex-col items-center justify-center max-w-screen overflow-x-hidden min-h-screen  ${ currentPath === "/projects" ? 'bg-beige' : 'bg-beige'}`}>
 
             <Header  />
-            <div class={`slot min-h-screen w-full ${ currentPath === "/" ? '' : 'mt-24'}`}>
+            <div class={`slot min-h-screen w-full ${ currentPath === "/" ? '' : 'mt-30'}`}>
                 <slot />
             </div>
             <Footer />

@@ -38,6 +38,7 @@
 
 
 
+
 @font-face {
   font-family: 'gamma';
   src: url('/fonts/font/gamma1500.ttf') format('truetype');
@@ -69,7 +70,7 @@ h3 {
     @apply text-2xl lg:text-4xl font-semibold sm:leading-tight lg:leading-tight
 }
 h4 {
-    @apply text-lg lg:text-xl pb-2
+    @apply text-lg lg:text-xl 
 }
 body{
 

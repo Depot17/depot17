@@ -42,13 +42,13 @@ gsap.to('.imgs', {
     scrollTrigger:{
         trigger:'#imgslide',
         start: 'top top',
-        scrub: 0.5,
+        scrub: 0.25,
 
     }
 
 })
 gsap.to('.quote', {
-    // ease:'expo.out',
+    ease:'power1.out',
     y:0,
 
     scrollTrigger:{
@@ -75,7 +75,7 @@ gsap.to('.scramble', {
 
 gsap.to('.footer', {
     y:0,
-    ease:'power3.in',
+    ease:'power1.out',
     scrollTrigger:{
         trigger:'.trig',
         start:'top center',

@@ -9,14 +9,19 @@ const homepage = Astro.url.pathname =="/";
 
 <footer class={`footer translate-y-300 w-full h-fit pt-40 rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
   <div class="w-full flex justify-center">
-    <span class="bg-lgreen w-10 h-10 rounded-full"></span>
+    <span class="bg-lgreen w-10 h-10 rounded-full flex items-center justify-center text-2xl font4">17</span>
   </div>
-  <h1 class="text-beige text-center py-10 font12">DEPOT17</h1>
-  <div class="flex items-end">
-    <p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
+  <h1 class="text-beige text-center font12">DEPOT</h1>
+
+  <div class="flex items-end mt-8 w-auto">
+  <p class="grow text-beige text-center p-4 max-w-60">Privacy Policy</p>
     <div class="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
   flex flex-col justify-between pb-6 md:-10">
+  <div class="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 ">
+    <div></div>
     <div class="bg-yellow/40 w-60 h-10 mx-auto"></div>
+    <a href="https://github.com/Depot17/depot17" target="_self" class="bg-orange rounded-full border-3 border-dbrown px-5 py-3 w-fit lg:justify-self-end mt-10  nav-links hover:scale-102 transition-all duration-400 ease-in-out"><h4>We're open source</h4></a>
+  </div>
 
     <div class="grow mt-8 flex flex-col lg:flex-row lg:items-end justify-between">
       
@@ -60,7 +65,7 @@ const homepage = Astro.url.pathname =="/";
     </div>
 
     </div>
-  <p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
+  <p class="grow text-beige text-center p-4 max-w-60">Terms and Conditions</p>
 </div>
 </footer>
 

@@ -3,6 +3,8 @@ import BaseLayout from '../components/BaseLayout.astro';
 import ProjectsSlot from '../components/projects_slot.astro';
 
 const title = "Projects";
+
+const tags = ['ALL', 'PCB', 'HARDWARE', 'SOFTWARE', 'WEBDEV']
 ---
 
 <BaseLayout title ={title}>
@@ -21,22 +23,30 @@ const title = "Projects";
 
 	</div> -->
 	<section class="">
-		<div class="text-center space-y-4 py-10 text-lblue">
+		<div class="text-center space-y-4 py-10 text-dbrown flex flex-col items-center">
 			<p class="">CHECKOUT SOME</p>
-			<h1><span>Depot</span> Projects</h1>
+			<h1 class="font4">PROJECTS</h1>
 			<h4 class="font-medium ">HERE ARE ALL OF DEPOT'S SOON TO BE EXISTENT PROJECTS</h4>
-
+			<a href='#content' class="my-10 bg-orange h-16 w-16 rounded-full flex items-center justify-center group rotate-135">
+				<img src="/images/arrow.svg" class="w-full h-auto">
+			</a>
 		</div>
 		
 	</section>
-	<div class="px-10 3xl:px-90 flex flex-col items-center justify-center py-20 pb-40 ">
-		<div class="flex w-full justify-between">
-			<div>
-				<h4 class="text-green font2">FILTER BY:</h4>
+	<div id="content" class="px-10 3xl:px-90 flex flex-col items-center justify-center py-20 pb-40 ">
+		<div  class="flex w-full justify-between items-center mb-20">
+			<div  class="space-y-2">
+				<h4 class="font2 font-medium">FILTER BY:</h4>
+				<ul class="flex w-full gap-x-2">
+					{tags.map((tag) => ( 
+							<li class="bg-beige/40 px-1.5 py-0.5 w-fit rounded-lg border-dbrown border-1 font2 hover:bg-orange transition-all ease-in-out duration-400">{tag}</li>
+					))}
+				</ul>
 			</div>
 
-			<p>Last updated from TK @ TK</p>
+			<p><-- todo actually make the filter thing</p>
 		</div>
+
 		<ProjectsSlot  />
 
 	</div>

@@ -65,9 +65,9 @@ const title = "Depot";
 			<a class="lg:hidden block bg-red w-fit px-3 py-2 rounded-full whitespace-nowrap text-beige text-lg font-medium">SIGN UP --&gt</a>
 			<div class="w-full flex justify-between items-center self-end pt-4">		
 				<h4 id="scramble" class="opacity-0 mr-auto text-dbrown text-left max-w-80">Find a problem in a local or community, then work with them to engineer a solution. </h4>
-				<!-- <svg class="hidden lg:inline-flex" width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="black" stroke-width="3"/>
-				</svg> -->
+				<svg class="hidden lg:inline-flex " width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="white" stroke-width="3"/>
+				</svg>
 
 			</div>
 		</div>
@@ -89,9 +89,15 @@ const title = "Depot";
 				<div class="abd text-dbrown max-w-50">
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolore vitae exercitationem.</p>
 				</div>
-				<a href="/get_started" class="block hover:bg-dbrown border-3 border-dbrown hover:outline-lgreen hover:outline-3 rounded-full px-4 py-2 text-dbrown hover:text-orange font-semibold text-lg w-fit my-4 transition-all ease-in-out duration-400">
-					Get Started
+				<a href='/get_started' class="mt-4 -ml-2 flex justify-between rounded-full bg-white items-center py-2 px-2 w-fit gap-2 border-2 border-dbrown">
+					<h4 class="pl-2">Get Started</h4>
+						<div class="bg-orange h-10 w-10 rounded-full flex items-center justify-center group">
+					<img src="/images/arrow.svg" class="w-full h-auto">
+
+						</div>
+
 				</a>
+				
 			</div>
 			<div class="imgs -translate-x-400 ml-auto hidden grayscale xl:block 
 			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.webp')] bg-cover bg-center group/daydream">
@@ -159,12 +165,15 @@ const title = "Depot";
 		</div>
 	</section> -->
 	<!-- <hr class="trigger opacity-0"> -->
-	<div class="quote min-h-40 translate-y-140"> 
+	 <section class="w-full h-fit">
+		<a href="#" target="" class="p-4 border-1 border-green w-20 h-20 flex items-center justify-center rounded-full ml-auto rotate-90 text-3xl">-&gt;</a>
+	 </section>
+	<div class="quote min-h-40 translate-y-140 "> 
 	<svg class="-mb-2 mt-auto" width="100%" height="auto" viewBox="0 0 1437 91" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
 	</svg>
 
-	<div class=" relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green">
+	<div id="quote" class=" relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green pb-10">
 		<div class="grid grid-cols-1 place-items-center inset-5  h-full w-full grid place-items-center py-8 px-4 sm:px-10 lg:px-12">	
 			
 			<div class="col-start-1 row-start-1 w-full h-full flex items-center justify-between">
@@ -203,7 +212,7 @@ const title = "Depot";
 			<div class="col-start-1 row-start-1 max-w-380 w-[90%] z-[100]">
 				<span class="scramble text-4xl xs:text-7xl font-semibold leading-12 xs:leading-16 md:leading-20 xl:text-8xl xl:leading-24 3xl:text-9xl 3xl:leading-34 font4"> 
 					We help the next generation build a communal future.</span>
-				<p class="font-medium underline pt-10 px-2">We believe the youth can can change the world, prove us right.</p>
+				<h4 class="font-medium underline pt-10 px-2">We believe the youth can can change the world, prove us right.</h4>
 			</div>
 		</div>
 		
@@ -220,7 +229,7 @@ const title = "Depot";
 	</div>	 -->
 
 
-		<div class="w-full px-8 my-4 pb-4 space-y-4">
+		<div class="w-full px-8 my-4 pb-4 space-y-4 ">
 
 			<div class="flex items-end gap-x-10">
 				<div>
@@ -233,13 +242,13 @@ const title = "Depot";
 
 				</a>
 			</div>
-			<p class="max-w-100">Lorem some stuff woooasf sadf aeuortjf aslf adrfh asdfsjadfk asdfj asdkfj asdfjsd fkjasdf asdkf</p>
+			<p class="max-w-100 pb-10">Lorem some stuff woooasf sadf aeuortjf aslf adrfh asdfsjadfk asdfj asdkfj asdfjsd fkjasdf asdkf</p>
 
 		<!-- <p class="text-center my-2 relative z-10 text-beige pb-10 ">By joining Cohort 1, your project could be featured below!</p> -->
 
 
 		<ProjectsSlot />
-		<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quisquam minima animi suscipit iste, neque ratione fuga non officia quae asperiores sapiente esse omnis hic eum natus magni fugit excepturi.</p>
+		<p class=" max-w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quisquam minima animi suscipit iste, neque ratione fuga non officia quae asperiores sapiente esse omnis hic eum natus magni fugit excepturi.</p>
 
 	</section>
 
