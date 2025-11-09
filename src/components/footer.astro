@@ -7,14 +7,14 @@ const homepage = Astro.url.pathname =="/";
 
 ---
 
-<footer class={` w-full h-fit pt-40 rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
-  <div class="w-full  flex justify-center">
+<footer class={`footer translate-y-300 w-full h-fit pt-40 rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
+  <div class="w-full flex justify-center">
     <span class="bg-lgreen w-10 h-10 rounded-full"></span>
   </div>
-<h1 class="text-beige text-center py-10">DEPOT17</h1>
-<div class="flex items-end">
-<p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
-  <div class="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
+  <h1 class="text-beige text-center py-10">DEPOT17</h1>
+  <div class="flex items-end">
+    <p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
+    <div class="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
   flex flex-col justify-between pb-6 md:-10">
     <div class="bg-yellow/40 w-60 h-10 mx-auto"></div>
 
@@ -59,11 +59,10 @@ const homepage = Astro.url.pathname =="/";
     
     </div>
 
-  </div>
-<p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
-
+    </div>
+  <p class="w-80 text-beige bg-red w-fit h-fit">Look here</p>
 </div>
-
+</footer>
 
 
 
@@ -94,5 +93,4 @@ const homepage = Astro.url.pathname =="/";
   <div class="z-100 w-full bg-black h-8 overflow-hidden">
     <p class="text-black">you found me! </p>
   </div> -->
-</footer>
 

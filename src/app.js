@@ -38,17 +38,17 @@ gsap.ticker.lagSmoothing(0)
 
 gsap.to('.imgs', {
     x:0,
-
+    ease:'none',
     scrollTrigger:{
         trigger:'#imgslide',
-        start: 'top-=200 top',
-        scrub: true,
+        start: 'top top',
+        scrub: 0.5,
 
     }
 
 })
 gsap.to('.quote', {
-    ease:'expo.out',
+    // ease:'expo.out',
     y:0,
 
     scrollTrigger:{
@@ -68,11 +68,23 @@ gsap.to('.scramble', {
     },
     scrollTrigger:{
         trigger: '.quote',
-        start:'top-=400 top',
+        start:'top 80%',
          
     }
 })
 
+gsap.to('.footer', {
+    y:0,
+    ease:'power3.in',
+    scrollTrigger:{
+        trigger:'.trig',
+        start:'top center',
+        toggleActions: 'play reverse play reverse',
+
+        markers:true
+
+    }
+})
 const navLinks = document.querySelectorAll(".nav-links");
 
 navLinks.forEach(link => {
