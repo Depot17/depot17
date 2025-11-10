@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 import banner from '../components/banner.md?raw';
 ---
 
-<header id="navbar" class={`fixed opacity-0 -translate-y-100 z-[200] w-full top-0 bg-beige ${
+<header id="navbar" class={`fixed opacity-0 -translate-y-100 z-[1000] w-full top-0 bg-beige ${
         currentPath === "/"
         ? ''
         : ''}`}>
@@ -30,14 +30,14 @@ import banner from '../components/banner.md?raw';
     <nav class="fixed w-screen md:inline-flex flex bg-transparent justify-between 
     items-start md:items-center text-lg box-border h-16 px-2 pt-2">
         <a href="#" class="h-full px-4 border-2 rounded-tl-lg  flex items-center justify-center pt-1 bg-beige">
-            <span id="name" class={`font8 hover:opacity-50 transition-all duration-400 ease-in-out text-2xl font-bold whitespace-nowrap 
+            <span id="name" class={`font12 hover:opacity-50 transition-all duration-400 ease-in-out text-3xl font-bold whitespace-nowrap 
             ${ currentPath === "/"
              ? 'text-black' //settle on a color
              : 'text-black'}`}>
                 DEPOT17</span>
         </a>
         <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
-            <p id="banner" class={`whitespace-nowrap font-medium hidden ${ currentPath === "/" ? 'md:block ' : 'hidden'}`}>
+            <p id="banner" class={`w-auto whitespace-nowrap font-medium hidden bg-lblue ${ currentPath === "/" ? 'md:block ' : 'hidden'}`}>
                 {banner}
 		    </p>
         </div>
@@ -54,7 +54,7 @@ import banner from '../components/banner.md?raw';
         class="z-[100] aspect-[1/1] grid grid-cols-1 place-items-center border-l-2 border-b-2 border-2 bg-beige rounded-tr-lg h-full box-border">
             <span class="sr-only">Open main menu</span>
             <span id="open-nav" class="col-start-1 row-start-1 opacity-0 hover:cursor-pointer">
-<svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="9" width="32" height="4" fill="#352922"/>
             <rect width="32" height="4" fill="#352922"/>
             <rect y="18" width="32" height="4" fill="#352922"/>

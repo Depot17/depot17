@@ -3,37 +3,55 @@ import BaseLayout from '../components/BaseLayout.astro';
 import ProjectsSlot from '../components/projects_slot.astro';
 
 const title = "Projects";
+
+const tags = ['ALL', 'PCB', 'HARDWARE', 'SOFTWARE', 'WEBDEV']
 ---
- <!-- <script>
-	import Lenis from "lenis";
-    import 'lenis/dist/lenis.css';
 
-	const lenis = new Lenis({
-	autoRaf: true,
-	});
-
-	lenis.on('scroll', (e) => {
-	console.log(e);
-	});
-</script> -->
 <BaseLayout title ={title}>
 
-    <div class="px-4 md:px-10 xl:px-20 3xl:px-30 md:pt-6 pb-60 space-y-4">
+    <!-- <div class="px-4 md:px-10 xl:px-20 3xl:px-30 md:pt-6 pb-60 space-y-4">
 		<div class="flex justify-between flex-col xs:flex-row gap-y-3 gap-x-4">
 			<div class="sm:pb-14">
 			<h2>PROJECTS</h2>
 			<h4 class="font-medium max-w-80 leading-6">HERE ARE ALL OF DEPOT'S SOON TO BE EXISTENT PROJECTS</h4>
-			<!-- <h4>TK STUDENTS ARE WORKING ON TECHNICAL PROJECTS</h4> -->
 		</div>
 		<p class="xs:text-right max-w-70"><b>UNDER CONSTRUCTION</b><br>(hi reviewer the projects dont link anywhere atm, nor does the support this button</p>
 		
 		</div>
 		
 		<ProjectsSlot  />
-		<!-- <p class="pt-4">Your project could be displayed here, once you project <a href="" target="_self" class="underline">set up</a> shoot us an email at contact@depot17.com</p> -->
+
+	</div> -->
+	<section class="">
+		<div class="text-center space-y-4 py-10 text-dbrown flex flex-col items-center">
+			<p class="">CHECKOUT SOME</p>
+			<h1 class="font4">PROJECTS</h1>
+			<h4 class="font-medium ">HERE ARE ALL OF DEPOT'S SOON TO BE EXISTENT PROJECTS</h4>
+			<a href='#content' class="my-10 bg-orange h-16 w-16 rounded-full flex items-center justify-center group rotate-135">
+				<img src="/images/arrow.svg" class="w-full h-auto">
+			</a>
+		</div>
+		
+	</section>
+	<div id="content" class="px-2 md:px-10 3xl:px-90 flex flex-col items-center justify-center py-20 pb-40 ">
+		<div class="flex flex-wrap w-full justify-between items-center mb-10">
+			<div class="space-y-2">
+				<h4 class="font2 font-medium">FILTER BY:</h4>
+				<ul class="flex w-full gap-2 flex-wrap ">
+					{tags.map((tag) => ( 
+							<li class="bg-beige/40 px-1.5 py-0.5 w-fit rounded-lg border-dbrown border-1 font2 hover:bg-orange transition-all ease-in-out duration-400">{tag}</li>
+					))}
+				</ul>
+			</div>
+
+			<p>&lt;-- todo actually make the filter thing</p>
+		</div>
+
+		<ProjectsSlot  />
 
 	</div>
-	
+		<div class="trig"></div>
+
 	<script src="../app.js"></script>
 	<script src="../follower.js"></script>
 	<script src="../onload.js"></script>

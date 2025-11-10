@@ -2,31 +2,18 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-import Lenis from "lenis";
-import 'lenis/dist/lenis.css';
 const lenis = new Lenis({
-// autoRaf: true,
-duration:1.8,
+    duration:1.8,
 });
 
-lenis.on('scroll', (e) => {
-console.log(e);
-});
+lenis.on('scroll', ScrollTrigger.update);
 	
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time) => {
     lenis.raf(time *1000)
@@ -36,21 +23,18 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0)
 
 gsap.to('.imgs', {
-    ease: 'power3.out',
     x:0,
-
+    ease:'none',
     scrollTrigger:{
         trigger:'#imgslide',
-        start: 'top-=300 top',
-        end: '+=500',
-        scrub: true,
-        markers:true
+        start: 'top top',
+        scrub: 0.25,
 
     }
 
 })
 gsap.to('.quote', {
-    ease:'power2.out',
+    ease:'power1.out',
     y:0,
 
     scrollTrigger:{
@@ -58,7 +42,6 @@ gsap.to('.quote', {
         start: 'top-=100 top',
         end: '+=500',
         scrub: true,
-        markers:true
     }
 })
 gsap.to('.scramble', {
@@ -71,12 +54,34 @@ gsap.to('.scramble', {
     },
     scrollTrigger:{
         trigger: '.quote',
-        start:'top top',
-        // markers: true,
+        start:'top 80%',
+         toggleActions: 'play none play none',
+
+        marker:true,
          
     }
 })
 
+//  
+
+gsap.to('.footer', {
+    y:0,
+    ease:'power2.in',
+    scrollTrigger:{
+        trigger:'.trig',
+        start:'top center',
+        toggleActions: 'play reverse play reverse',
+
+        // scrub:1,
+        // markers:true
+    }
+})
+
+const scrollTop = document.getElementById('scrollTop');
+
+scrollTop.addEventListener('click', () => {
+    lenis.scrollTo(0);
+})
 const navLinks = document.querySelectorAll(".nav-links");
 
 navLinks.forEach(link => {
@@ -119,31 +124,70 @@ gsap.from(".text-dgreen", {
     const spacer = document.getElementById('spacer')
     const donate = document.getElementById('donate')
 
-    gsap.to([spacer, donate], {
-        display:"none",
-        duration:0.2,
-        ease:"power2.out",
+    // gsap.to([spacer, donate], {
+    //     display:"none",
+    //     duration:0.2,
+    //     ease:"power2.out",
+    //     markers:true,
 
-        scrollTrigger: {
-            trigger: '.fixed-nav-trigger',
-            start: 'top top ',
-            toggleActions: 'play none reverse reverse',
+    //     scrollTrigger: {
+    //         trigger: '.fixed-nav-trigger',
+    //         start: 'top top ',
+    //         toggleActions: 'play reverse play reverse',
+    //         }
+    // });
+    const lg = window.matchMedia("(min-width:1024px)")
+
+    ScrollTrigger.create({
+        trigger:'.fixed-nav-trigger',
+        start:'top top',
+        onEnter: () => gsap.to([spacer, donate], {
+            display:'none',
+            duration:0.2,
+            ease:'power2.out'
+        }),
+
+        onLeaveBack: () => {
+            if(lg.matches) {
+                gsap.to([spacer, donate], {
+    
+                display:'inline-flex',
+                duration:0.2,
+                ease:'power2.out'
+                });
+         
+            } else {
+                return
             }
-    });
+        }
+        })
+    
 
     const text = document.getElementById('banner');
 
-    //i'm aware this is not efficient whatsoever oops
-    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML;
+    text.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML + '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML + '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML;
 
-    const scroll = gsap.to(text, {
-        xPercent:-50,
-        repeat:-1,
-        ease:'linear',
-        duration:110,
+    const maxWidth = text.scrollWidth /2;
+
+    // gsap.to(text, {
+    //     x:maxWidth,
+    //     ease:'linear',
+    //     duration:10,
+        
+    //     repeat:-1,
+    //     // modifiers:{
+    //     //     x:gsap.utils.unitize(x => parseFloat(x) % maxWidth)
+    //     // }
   
-    })
+    // })
 
+    gsap.to(text, {
+    x:-1000,
+        duration:50,
+        ease:'none',
+        repeat:-1,
+        yoyo:true
+    })
     spacer.addEventListener("mouseenter", () => scroll.pause());
     spacer.addEventListener("mouseleave", () => scroll.resume());
 
@@ -247,4 +291,26 @@ form.addEventListener("submit", (e) => {
         console.log("boooo");
     });
 })
+
+
+const featured = gsap.utils.toArray('.featured');
+
+
+    featured.forEach((proj) => {
+
+        ScrollTrigger.create({
+            trigger: proj,
+            start:'top 90%',
+            end:'bottom 20%',
+            scrub:true,
+            // markers:true,
+            onUpdate: (self) => {
+                gsap.to(proj, {
+                    scale:1,
+                    ease:'power3.out'
+                })
+            }
+        })
+    }
+    )
 

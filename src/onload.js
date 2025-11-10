@@ -33,6 +33,13 @@ window.addEventListener('load', () => {
 // })
     
     // const scram = document.getElementById('scramble')
+
+    gsap.to('#email', {
+        opacity:1,
+        ease:'power2.out',
+        delay:1.7,
+    })
+    
     gsap.to('#scramble', {
         opacity:1,
         ease:'power2.out',

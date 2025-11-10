@@ -4,7 +4,7 @@
 @theme{
     --color-yellow: #F3F09E;
     --color-lblue: #9CD3EA;
-    --color-beige: #FFFAF8;
+    --color-beige: #FFF5F2;
     --color-lgreen: #58C55F;
     --color-green: #00874D;
     --color-gray:#EAE5E3;
@@ -21,84 +21,43 @@
     --font-pixel: "Bytesized", monospace;
 }
 
-.barcode {
-  font-family: "Libre Barcode 128", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.pixel {
-    font-family:"Bytesized", monospace;
-
-}
-
-
 
 @font-face {
-  font-family: 'Blau';
-  src: url('/fonts/blau7pt.ttf') format('truetype');
+  font-family: 'ten';
+  src: url('/fonts/font/mc-ten-lowercase-alt.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-.font2 {
-    font-family: 'Blau';
+.font4 {
+    font-family: 'ten';
+    padding-bottom:4px;
 
 }
 
 
+
+
 @font-face {
-  font-family: 's';
-  src: url('/fonts/Pixel Tactical.otf') format('truetype');
+  font-family: 'gamma';
+  src: url('/fonts/font/gamma1500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-.font5 {
-    font-family: 's';
+.font12 {
+    font-family: 'gamma';
+    padding-bottom:5px;
 
 }
-@font-face {
-  font-family: 'slap';
-  src: url('/fonts/SlapAndCrumbly.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-.font6 {
-    font-family: 'slap';
-
-}
-@font-face {
-  font-family: 'so';
-  src: url('/fonts/so_square.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.font7 {
-    font-family: 'so';
-
-}
-@font-face {
-  font-family: 'super';
-  src: url('/fonts/Superpix-DONATIONWARE.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 html {
     scroll-behavior: smooth;
     background-color:#FFFAF8;
 }
-.font8 {
-    font-family: 'super';
 
-}
 h1 {
     @apply text-6xl xs:text-7xl xl:text-[12vh] font-semibold
 }
@@ -111,7 +70,7 @@ h3 {
     @apply text-2xl lg:text-4xl font-semibold sm:leading-tight lg:leading-tight
 }
 h4 {
-    @apply text-lg lg:text-xl pb-2
+    @apply text-lg lg:text-xl 
 }
 body{
 
@@ -121,7 +80,7 @@ body{
 }
 
 section {
-    @apply px-3 sm:px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-100
+    @apply px-3 sm:px-8 md:px-10 lg:px-40 2xl:px-60 3xl:px-90
 }
 input:focus {
   outline: none;
