@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 import banner from '../components/banner.md?raw';
 ---
 
-<header id="navbar" class={`fixed opacity-0 -translate-y-100 z-[200] w-full top-0 bg-beige ${
+<header id="navbar" class={`fixed opacity-0 -translate-y-100 z-[1000] w-full top-0 bg-beige ${
         currentPath === "/"
         ? ''
         : ''}`}>
@@ -37,7 +37,7 @@ import banner from '../components/banner.md?raw';
                 DEPOT17</span>
         </a>
         <div id="spacer" class="grow overflow-hidden min-w-0 border-y-2 h-full flex items-center justify-center">
-            <p id="banner" class={`whitespace-nowrap font-medium hidden bg-lblue ${ currentPath === "/" ? 'md:block ' : 'hidden'}`}>
+            <p id="banner" class={`w-auto whitespace-nowrap font-medium hidden bg-lblue ${ currentPath === "/" ? 'md:block ' : 'hidden'}`}>
                 {banner}
 		    </p>
         </div>

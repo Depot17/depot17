@@ -85,6 +85,18 @@ gsap.to('.footer', {
 
     }
 })
+
+// gsap.to('.footer', {
+//     y:0,
+//     scrollTrigger:{
+//         trigger:'.trig',
+//         start:'top center',
+//         toggleActions: 'play reverse play reverse',
+//         scrub:1,
+//         markers:true
+
+//     }
+// })
 const navLinks = document.querySelectorAll(".nav-links");
 
 navLinks.forEach(link => {
@@ -168,17 +180,29 @@ gsap.from(".text-dgreen", {
 
     const text = document.getElementById('banner');
 
-    //i'm aware this is not efficient whatsoever oops
-    text.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + text.innerHTML;
+    text.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML + '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML + '&nbsp;&nbsp;&nbsp;&nbsp;' + text.innerHTML;
 
-    const scroll = gsap.to(text, {
-        xPercent:-50,
-        repeat:-1,
-        ease:'linear',
-        duration:110,
+    const maxWidth = text.scrollWidth /2;
+
+    // gsap.to(text, {
+    //     x:maxWidth,
+    //     ease:'linear',
+    //     duration:10,
+        
+    //     repeat:-1,
+    //     // modifiers:{
+    //     //     x:gsap.utils.unitize(x => parseFloat(x) % maxWidth)
+    //     // }
   
-    })
+    // })
 
+    gsap.to(text, {
+    x:-1000,
+        duration:50,
+        ease:'none',
+        repeat:-1,
+        yoyo:true
+    })
     spacer.addEventListener("mouseenter", () => scroll.pause());
     spacer.addEventListener("mouseleave", () => scroll.resume());
 

@@ -7,14 +7,14 @@ const homepage = Astro.url.pathname =="/";
 
 ---
 
-<footer class={`footer translate-y-300 w-full h-fit pt-40 rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
+<footer class={`md:footer md:translate-y-100 w-full h-fit pt-40 rounded-t-2xl lg:rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
   <div class="w-full flex justify-center">
     <span class="bg-lgreen w-10 h-10 rounded-full flex items-center justify-center text-2xl font4">17</span>
   </div>
   <h1 class="text-beige text-center font12">DEPOT</h1>
 
   <div class="flex items-end mt-8 w-auto">
-  <p class="grow text-beige text-center p-4 max-w-60">Privacy Policy</p>
+  <p class="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Privacy Policy</p>
     <div class="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
   flex flex-col justify-between pb-6 md:-10">
   <div class="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 ">
@@ -65,7 +65,7 @@ const homepage = Astro.url.pathname =="/";
     </div>
 
     </div>
-  <p class="grow text-beige text-center p-4 max-w-60">Terms and Conditions</p>
+  <p class="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Terms and Conditions</p>
 </div>
 </footer>
 
