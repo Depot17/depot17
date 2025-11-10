@@ -7,7 +7,7 @@ const homepage = Astro.url.pathname =="/";
 
 ---
 
-<footer class={`md:footer md:translate-y-100 w-full h-fit pt-40 rounded-t-2xl lg:rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
+<footer class={`footer translate-y-100 w-full h-fit pt-40 rounded-t-2xl lg:rounded-t-4xl ${homepage ? 'bg-dbrown': 'bg-dbrown' }`}>
   <div class="w-full flex justify-center">
     <span class="bg-lgreen w-10 h-10 rounded-full flex items-center justify-center text-2xl font4">17</span>
   </div>
@@ -57,7 +57,7 @@ const homepage = Astro.url.pathname =="/";
           </defs>
         </svg>
 
-        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="">
+        <button id="scrollTop" class="">
             <img src="/images/up_arrow.webp" alt=""  class="grow max-w-30 xs:max-w-40 lg:max-w-30 h-auto hover:scale-104 transition ease-in-out">
         </button>
       </div>

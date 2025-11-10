@@ -2,32 +2,18 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-import Lenis from "lenis";
-import 'lenis/dist/lenis.css';
-import { Features } from "tailwindcss";
 const lenis = new Lenis({
-// autoRaf: true,
-duration:1.8,
+    duration:1.8,
 });
 
-lenis.on('scroll', (e) => {
-console.log(e);
-});
+lenis.on('scroll', ScrollTrigger.update);
 	
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time) => {
     lenis.raf(time *1000)
@@ -69,34 +55,33 @@ gsap.to('.scramble', {
     scrollTrigger:{
         trigger: '.quote',
         start:'top 80%',
+         toggleActions: 'play none play none',
+
+        marker:true,
          
     }
 })
 
+//  
+
 gsap.to('.footer', {
     y:0,
-    ease:'power1.out',
+    ease:'power2.in',
     scrollTrigger:{
         trigger:'.trig',
         start:'top center',
         toggleActions: 'play reverse play reverse',
 
-        markers:true
-
+        // scrub:1,
+        // markers:true
     }
 })
 
-// gsap.to('.footer', {
-//     y:0,
-//     scrollTrigger:{
-//         trigger:'.trig',
-//         start:'top center',
-//         toggleActions: 'play reverse play reverse',
-//         scrub:1,
-//         markers:true
+const scrollTop = document.getElementById('scrollTop');
 
-//     }
-// })
+scrollTop.addEventListener('click', () => {
+    lenis.scrollTo(0);
+})
 const navLinks = document.querySelectorAll(".nav-links");
 
 navLinks.forEach(link => {
@@ -318,7 +303,7 @@ const featured = gsap.utils.toArray('.featured');
             start:'top 90%',
             end:'bottom 20%',
             scrub:true,
-            markers:true,
+            // markers:true,
             onUpdate: (self) => {
                 gsap.to(proj, {
                     scale:1,
