@@ -1,0 +1,232 @@
+'use client'
+
+import Image from "next/image";
+import { useState } from "react";
+
+export default function Home() {
+  const [isBlue, setIsBlue] = useState(false);
+
+  return (
+    <main>
+
+    <div id="landing" className="h-screen w-screen min-h-160
+		flex flex-col md:gap-y-3 pb-6 pt-18 md:pt-0 md:grid grid-rows-3
+		px-4 lg:px-10 2xl:px-20 lg:mt-0 lg:py-20 spotlight
+		bg-no-repeat bg-[center_top_-4rem] ">
+		
+		<p className="z-10 w-fit mx-auto px-2 py-1 rounded-sm text-center font-medium bg-lblue text-xs sm:text-base md:hidden ">
+			UNDER CONSTRUCTION, SIGN UPS OPEN SOON 
+		</p>
+
+		<div className="z-10 w-full min-h-fit md:hidden pt-2 sm:pt-6">
+			<h1 className="title">Build<br />Change</h1>
+		</div>
+<div></div>
+		<div className="-mx-4 lg:-mx-10 2xl:-mx-20 w-screen box-border px-10 2xl:px-20 grow flex items-center justify-center md:grid md:grid-cols-3 items-center">
+
+			<h1 id="from-left" className="title -translate-x-100 opacity-0 z-[100] hidden md:inline-grid justify-self-start">Build</h1>
+			
+			<div className="w-screen lg:w-full max-w-120 h-30 flex items-center justify-center 
+			
+			 justify-self-center relative">
+				<div className="dragme col-start-1 row-start-1 w-screen h-full  md:z-[20] flex justify-center items-center">
+					{/* <Three client:load /> */}
+				</div>
+				<form action="" method="POST" name="email-form" id="email"
+				className="opacity-0 absolute bg-beige hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
+				
+				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-110  xl:w-120 2xl:w-140 3xl:w-160
+			
+				text-center outline-3 outline-dbrown transition-all duration-200">
+
+					<input type="email" id="email" name="email" placeholder="RSVP: bobberson@gmail.com" 
+					className="pl-3 outline-none border-none min-w-4 text-green bg-transparent w-full" /> 
+
+					<button type="submit" value="submit" 
+					className="bg-red font-medium 
+					rounded-full text-md text-beige text-center">
+						
+						<span onClick={() => setIsBlue(!isBlue)}
+						className={`bg-lred rounded-full block box-border
+                  w-12 md:w-10 aspect-square border-3 border-lgreen
+                  flex items-center justify-center focus:border-black hover:border-green
+                  transition-all ease-in-out duration-400 hover:bg-orange
+                  ${isBlue ? "text-blue" : ""}`}>
+							<p className="text-beige font-bold">--&gt;</p>
+						</span>
+
+					</button>
+
+				</form>
+
+			</div>
+
+			<h1 id="from-right" className="title opacity-0 translate-x-100 z-[100] hidden md:inline-grid justify-self-end">Change</h1>
+
+		</div>
+		<div className="h-fit mt-auto z-10">
+			<a className="lg:hidden block bg-orange w-fit px-3 py-2 rounded-full whitespace-nowrap text-white text-lg font-medium">SIGN UP --&gt</a>
+			<div className="w-full flex justify-between items-center self-end pt-4">		
+				<h4 id="scramble" className="opacity-0 mr-auto text-dbrown text-left max-w-80">Find a problem in a local or community, then work with them to engineer a solution. </h4>
+				<svg className="hidden lg:inline-flex " width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="white" strokeWidth="3"/>
+				</svg>
+
+			</div>
+		</div>
+
+
+			
+	
+	</div>
+	<hr id="imgslide" className="opacity-0 pt-20" />
+
+
+	<section id="about" className="fixed-nav-trigger pb-8 h-auto lg:py-20 w-full">
+		<h2 className="abc xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
+			Build real sustainable solutions, and change the world. <i className="text-lgreen font4" >Today.</i>
+		</h2>
+
+		<div className=" w-full flex flex-wrap gap-x-12 xl:gap-x-4 2xl:justify-between">
+			<div className="">
+				<div className="abd text-dbrown max-w-50">
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolore vitae exercitationem.</p>
+				</div>
+				<a href='/get_started' className="mt-4 -ml-2 flex justify-between rounded-full bg-white items-center py-2 px-2 w-fit gap-2 border-2 border-dbrown">
+					<h4 className="pl-2">Get Started</h4>
+						<div className="bg-orange h-10 w-10 rounded-full flex items-center justify-center group">
+					  <Image src="/images/arrow.svg" alt="" width={64} height={64} className="w-full h-auto" />
+
+						</div>
+
+				</a>
+				
+			</div>
+			<div className="hidden imgs xl:-translate-x-400 ml-auto grayscale xl:block 
+			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.webp')] bg-cover bg-center group/daydream">
+				<p className="w-full h-full bg-yellow/20 hover:bg-yellow/70
+					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 group-hover/daydream:text-dbrown/100">
+					100+ Hackers at Daydream 
+				</p>
+
+			</div>
+    </div>
+
+		<div className="imgs xl:translate-x-400 mask-[url(/images/polygon2.svg)] md:mask-[url(/images/polygon.svg)] mt-10 grayscale 
+			grow-1 w-80 xl:max-w-180 md:max-w-full mask-no-repeat mask-cover 
+			h-100 lg:h-120 rounded-xl overflow-visible relative bg-[url('/images/jpeg.webp')] bg-cover bg-center">
+				<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
+					transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
+					80+ Girls and non-binary folk at JPEG
+				</p>
+
+
+				
+			</div>
+			<div className="z-[100] xl:hidden grayscale w-[60%]  max-w-70 h-50 md:h-70 
+				bg-[url('/images/daydream.webp')] bg-cover bg-center rounded-2xl group/daydream ml-auto mr-5 -translate-y-30 border-1 border-beige">
+					
+				<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
+					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
+					100+ Hackers at Daydream (Game Jam)
+				</p>
+				</div>	
+	  </section>
+
+		<section className="w-full h-fit">
+		  <a href="#" target="" className="p-4 border-1 border-green w-20 h-20 flex items-center justify-center rounded-full ml-auto rotate-90 text-3xl">-&gt;</a>
+	  </section>
+	<div className="quote min-h-40 translate-y-300 md:translate-y-140 "> 
+	<svg className="hidden md:block -mb-2 mt-auto  " width="100%" height="auto" viewBox="0 0 1400 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
+	</svg>
+	<svg className="-mb-2 mt-auto md:hidden " width="100%" height="auto" viewBox="0 0 500 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
+	</svg>
+	<div id="quote" className=" relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green pb-10">
+		<div className="grid grid-cols-1 place-items-center inset-5  h-full w-full grid place-items-center py-8 px-4 sm:px-10 lg:px-12">	
+			
+			<div className="col-start-1 row-start-1 w-full h-full flex items-center justify-between">
+				<div className="max-w-14 md:max-w-30 flex flex-col justify-between w-full h-full">
+					<div className="w-full aspect-[1/1] border-t-10 border-l-10"></div>
+					<div className="w-full aspect-[1/1] border-b-10 border-l-10"></div>
+				</div>
+
+				<div className="max-w-14 md:max-w-30 flex flex-col justify-between w-full h-full">
+					<div className="w-full aspect-[1/1] border-t-10 border-r-10"></div>
+					<div className="w-full aspect-[1/1] border-b-10 border-r-10"></div>
+				</div>
+			</div>
+
+			<svg width="75%" height="auto" className="col-start-1 row-start-1 opacity-90" viewBox="0 0 1362 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g opacity="0.2" filter="url(#filter0_g_319_45)">
+			<path d="M5.09183 25.1815C6.57648 215.281 5.34315 565.648 5.00009 652.915C4.95653 663.995 13.9257 673 25.0056 673H360.305C366.942 673 373.147 669.708 376.867 664.211L455.48 548.079C457.721 544.769 458.918 540.864 458.918 536.867V143.72C458.918 139.36 457.493 135.119 454.86 131.643L364.92 12.9228C361.139 7.93213 355.239 5 348.978 5H25.1087C13.9888 5 5.00499 14.0619 5.09183 25.1815Z" fill="#58C55F" fillOpacity="0.4"/>
+			<path d="M608.918 389V333C608.918 321.954 617.872 313 628.918 313H738.918C749.964 313 758.918 321.954 758.918 333V389C758.918 400.046 749.964 409 738.918 409H628.918C617.872 409 608.918 400.046 608.918 389Z" fill="#58C55F" fillOpacity="0.4"/>
+			<path d="M859.277 9.89563L773.08 84.7086C765.115 91.6212 763.887 103.531 770.273 111.923L816.415 172.567C823.255 181.557 836.177 183.102 844.943 175.979L860.306 163.497C873.376 152.878 892.918 162.179 892.918 179.019V671C892.918 682.046 901.872 691 912.918 691H996.918C1007.96 691 1016.92 682.046 1016.92 671V25C1016.92 13.9543 1007.96 5 996.918 5H872.387C867.57 5 862.915 6.73836 859.277 9.89563Z" fill="#58C55F" fillOpacity="0.4"/>
+			<path d="M1062.92 117V25C1062.92 13.9543 1071.87 5 1082.92 5H1336.92C1347.96 5 1356.92 13.9543 1356.92 25V134.685C1356.92 136.223 1356.74 137.756 1356.39 139.254L1230.54 675.569C1228.42 684.609 1220.35 691 1211.07 691H1120.24C1107.32 691 1097.79 678.933 1100.79 666.364L1221.05 161.636C1224.04 149.067 1214.51 137 1201.59 137H1082.92C1071.87 137 1062.92 128.046 1062.92 117Z" fill="#58C55F" fillOpacity="0.4"/>
+			</g>
+			<defs>
+			<filter id="filter0_g_319_45" x="0" y="0" width="1361.92" height="696" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+			<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feTurbulence type="fractalNoise" baseFrequency="0.20000000298023224 0.20000000298023224" numOctaves="3" seed="589" />
+			<feDisplacementMap in="shape" scale="10" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+			<feMerge result="effect1_texture_319_45">
+			<feMergeNode in="displacedImage"/>
+			</feMerge>
+			</filter>
+			</defs>
+			</svg>
+
+
+			<div className="col-start-1 row-start-1 max-w-380 w-[90%] z-[100]">
+				<span className="scramble text-5xl xs:text-7xl font-semibold leading-12 xs:leading-16 md:leading-20 xl:text-8xl xl:leading-24 3xl:text-9xl 3xl:leading-34 font4"> 
+					We help the next generation build a communal future.</span>
+				<h4 className="font-medium pt-10 px-2">We believe the youth can can change the world, prove us right.</h4>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+	
+	<section className="w-full pt-10 md:pt-20 pb-20">
+
+
+
+		<div className="w-full md:px-8 my-4 pb-4 space-y-4 ">
+
+			<div className="flex items-end justify-start gap-x-10">
+				<div>
+					<h4 className="font-medium">Our monthly picks</h4>
+					<h2 className="text-dbrown md:whitespace-nowrap"> Featured Projects</h2>
+
+				</div>
+				<a href='/projects' className="bg-orange h-16 w-16 aspect-[1/1] rounded-full flex items-center justify-center group ">
+					<Image src="/images/arrow.svg" alt="" width={64} height={64} className="w-full h-auto" />
+
+				</a>
+			</div>
+			<p className="max-w-100 pb-10">Lorem some stuff woooasf sadf aeuortjf aslf adrfh asdfsjadfk asdfj asdkfj asdfjsd fkjasdf asdkf</p>
+
+    </div>
+
+		{/* <ProjectsSlot /> */}
+		<p className=" md:max-w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quisquam minima animi suscipit iste, neque ratione fuga non officia quae asperiores sapiente esse omnis hic eum natus magni fugit excepturi.</p>
+
+	</section>
+
+	<div className="click fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown border-2 border-brown rounded-xl rounded-bl-none text-green font-semibold tracking-wide px-1 py-0.5">
+        <p>click</p>
+    </div>
+	<div className="drag fixed top-0 left-0 opacity-0 z-1000 pointer-events-none select-none bg-dbrown border-2 border-brown 
+		rounded-xl rounded-bl-none text-lgreen font-semibold tracking-wide px-2 py-0.25 font4">
+        <p>drag</p>
+    </div>
+    	
+      </main>
+
+
+  );
+}

@@ -1,0 +1,102 @@
+"use client"
+import Image from "next/image";
+import { useState } from "react";
+
+export default function Footer() {
+
+  return (
+    
+<footer className="footer translate-y-100 w-full h-fit pt-40 rounded-t-2xl lg:rounded-t-4xl">
+  <div className="w-full flex justify-center">
+    <span className="bg-lgreen w-10 h-10 rounded-full flex items-center justify-center text-2xl font4">17</span>
+  </div>
+  <h1 className="text-beige text-center font12">DEPOT</h1>
+
+  <div className="flex items-end mt-8 w-auto">
+  <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Privacy Policy</p>
+    <div className="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
+  flex flex-col justify-between pb-6 md:-10">
+  <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 ">
+    <div></div>
+    <div className="bg-yellow/40 w-60 h-10 mx-auto"></div>
+    <a href="https://github.com/Depot17/depot17" target="_self" className="bg-orange rounded-full border-3 border-dbrown px-5 py-3 w-fit lg:justify-self-end mt-10  nav-links hover:scale-102 transition-all duration-400 ease-in-out"><h4>We're open source</h4></a>
+  </div>
+
+    <div className="grow mt-8 flex flex-col lg:flex-row lg:items-end justify-between">
+      
+      <div className="text-lg xs:text-xl space-y-2 text-center lg:text-left w-full flex flex-col justify-center items-start">
+        <ul className="flex w-full h-full items-center justify-center lg:justify-start gap-x-4 xs:gap-x-10 font-semibold whitespace-nowrap">
+          <li className="nav-links px-2 xs:px-3 xs:py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="https://www.linkedin.com/company/depot17" target="_blank">LinkedIn</a></li>
+          <li className="nav-links px-2 xs:px-3 xs:py-1 outline-2 outline-dbrown rounded-full hover:bg-orange hover:outline-beige"><a href="https://github.com/Depot17" target="_blank">Github</a></li>
+        </ul>
+  
+        <p className="mx-auto lg:ml-0">Inquiry? Email hello@bdepot17.com <br /> &copy;2025 Depot17 | ALL RIGHTS RESERVED</p>
+
+      </div>
+
+      <div className="ml-auto items-end justify-between lg:justify-end flex w-full gap-x-4">
+        <svg className="grow max-w-50 col-start-1 row-start-1 opacity-100" height="auto"  viewBox="0 0 1362 696" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="1" >
+          <path d="M5.09183 25.1815C6.57648 215.281 5.34315 565.648 5.00009 652.915C4.95653 663.995 13.9257 673 25.0056 673H360.305C366.942 673 373.147 669.708 376.867 664.211L455.48 548.079C457.721 544.769 458.918 540.864 458.918 536.867V143.72C458.918 139.36 457.493 135.119 454.86 131.643L364.92 12.9228C361.139 7.93213 355.239 5 348.978 5H25.1087C13.9888 5 5.00499 14.0619 5.09183 25.1815Z" fill="#352922"/>
+          <path d="M608.918 389V333C608.918 321.954 617.872 313 628.918 313H738.918C749.964 313 758.918 321.954 758.918 333V389C758.918 400.046 749.964 409 738.918 409H628.918C617.872 409 608.918 400.046 608.918 389Z" fill="#352922"/>
+          <path d="M859.277 9.89563L773.08 84.7086C765.115 91.6212 763.887 103.531 770.273 111.923L816.415 172.567C823.255 181.557 836.177 183.102 844.943 175.979L860.306 163.497C873.376 152.878 892.918 162.179 892.918 179.019V671C892.918 682.046 901.872 691 912.918 691H996.918C1007.96 691 1016.92 682.046 1016.92 671V25C1016.92 13.9543 1007.96 5 996.918 5H872.387C867.57 5 862.915 6.73836 859.277 9.89563Z" fill="#352922"/>
+          <path d="M1062.92 117V25C1062.92 13.9543 1071.87 5 1082.92 5H1336.92C1347.96 5 1356.92 13.9543 1356.92 25V134.685C1356.92 136.223 1356.74 137.756 1356.39 139.254L1230.54 675.569C1228.42 684.609 1220.35 691 1211.07 691H1120.24C1107.32 691 1097.79 678.933 1100.79 666.364L1221.05 161.636C1224.04 149.067 1214.51 137 1201.59 137H1082.92C1071.87 137 1062.92 128.046 1062.92 117Z" fill="#352922"/>
+          </g>
+          <defs>
+          <filter id="filter0_g_319_45" x="0" y="0" width="1361.92" height="696" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.20000000298023224 0.20000000298023224" numOctaves="3" seed="589" />
+          <feDisplacementMap in="shape" scale="10" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+          <feMerge result="effect1_texture_319_45">
+          <feMergeNode in="displacedImage"/>
+          </feMerge>
+          </filter>
+          </defs>
+        </svg>
+
+        <button id="scrollTop" className="">
+            <Image src="/images/up_arrow.webp" alt=""  width={64} height={64} className="grow max-w-30 xs:max-w-40 lg:max-w-30 h-auto hover:scale-104 transition ease-in-out" />
+        </button>
+      </div>
+    
+    </div>
+
+    </div>
+  <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Terms and Conditions</p>
+</div>
+   {/* <div className="bg-brown p-2 w-70 lg:w-80 relative ml-10 lg:ml-18 border-2 border-black pt-5 h-fit">
+    <div className="absolute bg-yellow w-[50px] h-4 left-1/2 -translate-x-1/2 top-0"></div>
+      <p>This website was made by makers, <br> for makers.</p>
+      
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <img src="/images/black_up_arrow.png" alt="" width="40px" className="absolute left-2 bottom-0 hover:scale-110 transition ease-in-out">
+      </button>
+  </div>
+
+  <div className="bg-brown p-6 w-60 lg:w-fit relative border-2 border-black mr-6 lg:mr-16">
+    <div className="absolute bg-yellow w-[50px] h-6 left-1/2 -translate-x-1/2 top-0"></div>
+
+    <div>
+      <Social platform = "github" username = "builders-depot" />
+    </div>
+    <p>View our <a href="https://github.com/builders-depot/builders-depot" target="_blank">source code</a> and finances. <br> Contact us at hello@buildersdepot.org</p>
+
+  </div>
+  <div className="bg-brown   p-6 w-[90%] max-w-120 h-20 lg:h-10 relative border-2 border-black flex items-center justify-center">
+    <div className="absolute bg-yellow w-[70px] h-3 left-1/2 -translate-x-1/2 top-0"></div>
+    <p>© 2025 [Builder's Depot]. All rights reserved</p>
+  </div>
+  
+  <div className="z-100 w-full bg-black h-8 overflow-hidden">
+    <p className="text-black">you found me! </p>
+  </div>  */}
+
+</footer>
+
+
+
+
+
+  )
+}
