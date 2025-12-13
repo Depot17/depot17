@@ -1,151 +1,139 @@
 'use client'
 
 import Image from "next/image";
-import { useState } from "react";
+import HeroClaw from "../components/Three";
+import { useState, useEffect } from "react";
+import { App } from "../scripts/app";
+
 
 export default function Home() {
-  const [isBlue, setIsBlue] = useState(false);
-
+  	const [isBlue, setIsBlue] = useState(false);
+	useEffect(() => {
+		App();
+	}, []);
   return (
     <main>
-
-    <div id="landing" className="h-screen w-screen min-h-160
-		flex flex-col md:gap-y-3 pb-6 pt-18 md:pt-0 md:grid grid-rows-3
-		px-4 lg:px-10 2xl:px-20 lg:mt-0 lg:py-20 spotlight
-		bg-no-repeat bg-[center_top_-4rem] ">
-		
-		<p className="z-10 w-fit mx-auto px-2 py-1 rounded-sm text-center font-medium bg-lblue text-xs sm:text-base md:hidden ">
-			UNDER CONSTRUCTION, SIGN UPS OPEN SOON 
-		</p>
-
-		<div className="z-10 w-full min-h-fit md:hidden pt-2 sm:pt-6">
-			<h1 className="title">Build<br />Change</h1>
-		</div>
-<div></div>
-		<div className="-mx-4 lg:-mx-10 2xl:-mx-20 w-screen box-border px-10 2xl:px-20 grow flex items-center justify-center md:grid md:grid-cols-3 items-center">
-
-			<h1 id="from-left" className="title -translate-x-100 opacity-0 z-[100] hidden md:inline-grid justify-self-start">Build</h1>
+		<div id="landing" className="h-screen w-screen min-h-160
+			flex flex-col md:gap-y-3 pb-6 pt-18 md:pt-0 md:grid grid-rows-3
+			px-4 lg:px-10 2xl:px-20 lg:mt-0 lg:py-20 
+			bg-no-repeat bg-[center_top_-4rem] ">
 			
-			<div className="w-screen lg:w-full max-w-120 h-30 flex items-center justify-center 
-			
-			 justify-self-center relative">
-				<div className="dragme col-start-1 row-start-1 w-screen h-full  md:z-[20] flex justify-center items-center">
-					{/* <Three client:load /> */}
-				</div>
-				<form action="" method="POST" name="email-form" id="email"
-				className="opacity-0 absolute bg-beige hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
+			<p className="z-10 w-fit mx-auto px-2 py-1 rounded-sm text-center font-medium bg-lblue text-xs sm:text-base md:hidden ">
+				UNDER CONSTRUCTION, SIGN UPS OPEN SOON 
+			</p>
+
+			<div className="z-10 w-full min-h-fit md:hidden pt-2 sm:pt-6">
+				<h1 className="title">Build<br />Change</h1>
+			</div>
+			<div></div>
+			<div className="-mx-4 lg:-mx-10 2xl:-mx-20 w-screen box-border px-10 2xl:px-20 grow flex items-center justify-center md:grid md:grid-cols-3 items-center">
+
+				<h1 id="from-left" className="title -translate-x-100 opacity-0 z-[100] hidden md:inline-grid justify-self-start">Build</h1>
 				
-				text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-110  xl:w-120 2xl:w-140 3xl:w-160
-			
-				text-center outline-3 outline-dbrown transition-all duration-200">
-
-					<input type="email" id="email" name="email" placeholder="RSVP: bobberson@gmail.com" 
-					className="pl-3 outline-none border-none min-w-4 text-green bg-transparent w-full" /> 
-
-					<button type="submit" value="submit" 
-					className="bg-red font-medium 
-					rounded-full text-md text-beige text-center">
-						
-						<span onClick={() => setIsBlue(!isBlue)}
-						className={`bg-lred rounded-full block box-border
-                  w-12 md:w-10 aspect-square border-3 border-lgreen
-                  flex items-center justify-center focus:border-black hover:border-green
-                  transition-all ease-in-out duration-400 hover:bg-orange
-                  ${isBlue ? "text-blue" : ""}`}>
-							<p className="text-beige font-bold">--&gt;</p>
-						</span>
-
-					</button>
-
-				</form>
-
-			</div>
-
-			<h1 id="from-right" className="title opacity-0 translate-x-100 z-[100] hidden md:inline-grid justify-self-end">Change</h1>
-
-		</div>
-		<div className="h-fit mt-auto z-10">
-			<a className="lg:hidden block bg-orange w-fit px-3 py-2 rounded-full whitespace-nowrap text-white text-lg font-medium">SIGN UP --&gt</a>
-			<div className="w-full flex justify-between items-center self-end pt-4">		
-				<h4 id="scramble" className="opacity-0 mr-auto text-dbrown text-left max-w-80">Find a problem in a local or community, then work with them to engineer a solution. </h4>
-				<svg className="hidden lg:inline-flex " width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="white" strokeWidth="3"/>
-				</svg>
-
-			</div>
-		</div>
-
-
-			
-	
-	</div>
-	<hr id="imgslide" className="opacity-0 pt-20" />
-
-
-	<section id="about" className="fixed-nav-trigger pb-8 h-auto lg:py-20 w-full">
-		<h2 className="abc xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
-			Build real sustainable solutions, and change the world. <i className="text-lgreen font4" >Today.</i>
-		</h2>
-
-		<div className=" w-full flex flex-wrap gap-x-12 xl:gap-x-4 2xl:justify-between">
-			<div className="">
-				<div className="abd text-dbrown max-w-50">
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolore vitae exercitationem.</p>
-				</div>
-				<a href='/get_started' className="mt-4 -ml-2 flex justify-between rounded-full bg-white items-center py-2 px-2 w-fit gap-2 border-2 border-dbrown">
-					<h4 className="pl-2">Get Started</h4>
-						<div className="bg-orange h-10 w-10 rounded-full flex items-center justify-center group">
-					  <Image src="/images/arrow.svg" alt="" width={64} height={64} className="w-full h-auto" />
-
-						</div>
-
-				</a>
+				<div className="w-screen lg:w-full max-w-120 h-30 flex items-center justify-center 
 				
-			</div>
-			<div className="hidden imgs xl:-translate-x-400 ml-auto grayscale xl:block 
-			w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.webp')] bg-cover bg-center group/daydream">
-				<p className="w-full h-full bg-yellow/20 hover:bg-yellow/70
-					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 group-hover/daydream:text-dbrown/100">
-					100+ Hackers at Daydream 
-				</p>
-
-			</div>
-    </div>
-
-		<div className="imgs xl:translate-x-400 mask-[url(/images/polygon2.svg)] md:mask-[url(/images/polygon.svg)] mt-10 grayscale 
-			grow-1 w-80 xl:max-w-180 md:max-w-full mask-no-repeat mask-cover 
-			h-100 lg:h-120 rounded-xl overflow-visible relative bg-[url('/images/jpeg.webp')] bg-cover bg-center">
-				<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
-					transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
-					80+ Girls and non-binary folk at JPEG
-				</p>
-
-
-				
-			</div>
-			<div className="z-[100] xl:hidden grayscale w-[60%]  max-w-70 h-50 md:h-70 
-				bg-[url('/images/daydream.webp')] bg-cover bg-center rounded-2xl group/daydream ml-auto mr-5 -translate-y-30 border-1 border-beige">
+				justify-self-center relative">
+					<div className="dragme col-start-1 row-start-1 w-screen h-full  md:z-[20] flex justify-center items-center">
+						<HeroClaw />
+					</div>
+					<form action="" method="POST" name="email-form" id="email"
+					className="opacity-0 absolute bg-beige hidden lg:inline-flex flex justify-between font-medium rounded-full z-[100]
 					
-				<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
-					rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
-					100+ Hackers at Daydream (Game Jam)
-				</p>
-				</div>	
-	  </section>
+					text-md text-dbrown pr-2 pl-4 py-2 min-h-10 max-h-18 w-110  xl:w-120 2xl:w-140 3xl:w-160
+				
+					text-center outline-3 outline-dbrown transition-all duration-200">
 
-		<section className="w-full h-fit">
-		  <a href="#" target="" className="p-4 border-1 border-green w-20 h-20 flex items-center justify-center rounded-full ml-auto rotate-90 text-3xl">-&gt;</a>
-	  </section>
-	<div className="quote min-h-40 translate-y-300 md:translate-y-140 "> 
-	<svg className="hidden md:block -mb-2 mt-auto  " width="100%" height="auto" viewBox="0 0 1400 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
-	</svg>
-	<svg className="-mb-2 mt-auto md:hidden " width="100%" height="auto" viewBox="0 0 500 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
-	</svg>
-	<div id="quote" className=" relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green pb-10">
-		<div className="grid grid-cols-1 place-items-center inset-5  h-full w-full grid place-items-center py-8 px-4 sm:px-10 lg:px-12">	
-			
+						<input type="email" id="email" name="email" placeholder="RSVP: bobberson@gmail.com" 
+						className="pl-3 outline-none border-none min-w-40 text-green bg-transparent w-full" /> 
+
+						<button type="submit" value="submit" 
+						className="bg-red font-medium 
+						rounded-full text-md text-beige text-center">
+							
+							<span onClick={() => setIsBlue(!isBlue)}
+							className={`bg-lred rounded-full block box-border
+							w-12 md:w-10 aspect-square border-3 bg-orange
+							${isBlue ? "text-blue" : ""}`}>
+							</span>
+
+						</button>
+
+					</form>
+
+				</div>
+
+				<h1 id="from-right" className="title opacity-0 translate-x-100 z-[100] hidden md:inline-grid justify-self-end">Change</h1>
+
+			</div>
+			<div className="h-fit mt-auto z-10">
+				<a className="lg:hidden block bg-orange w-fit px-3 py-2 rounded-full whitespace-nowrap text-white text-lg font-medium">SIGN UP --&gt</a>
+				<div className="w-full flex justify-between items-center self-end pt-4">		
+					<h4 id="scramble" className="opacity-0 mr-auto text-dbrown text-left max-w-80">Find a problem in a local or community, then work with them to engineer a solution. </h4>
+					<svg className="hidden lg:inline-flex " width="332" height="187" viewBox="0 0 332 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M206.173 1.5H312C322.217 1.5 330.5 9.78273 330.5 20V167C330.5 177.217 322.217 185.5 312 185.5H20C9.78274 185.5 1.5 177.217 1.5 167V42.6689C1.50022 32.4519 9.78287 24.1689 20 24.1689H166.295C171.793 24.1688 177.082 22.0634 181.074 18.2842L193.456 6.56445C196.892 3.31259 201.442 1.50009 206.173 1.5Z" stroke="white" strokeWidth="3"/>
+					</svg>
+
+				</div>
+			</div>
+		</div>
+		<hr id="imgslide" className="opacity-0 pt-20" />			
+		<section id="about" className="fixed-nav-trigger pb-8 h-auto lg:py-20 w-full">
+			<div className="flex items-center">
+				<h2 className="abc xl:max-w-190 lg:max-w-160 max-w-140 font-medium">
+					Build real sustainable solutions, and change the world. <i className="text-lgreen font4" >Today.</i>
+				</h2>
+				<p className="text-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolore vitae exercitationem.</p>
+			</div>
+			<div className=" w-full flex flex-wrap gap-x-12 xl:gap-x-4 2xl:justify-between">
+				<div className="">
+					<a href='/get_started' className="mt-4 -ml-2 flex justify-between rounded-full bg-white items-center py-2 px-2 w-fit gap-2 border-2 border-dbrown">
+						<h4 className="pl-2">Get Started</h4>
+						<div className="bg-orange h-10 w-10 rounded-full flex items-center justify-center group">
+							<Image src="/images/arrow.svg" alt="" width={64} height={64} className="w-full h-auto" />
+						</div>
+					</a>
+				</div>
+
+				<div className="hidden imgs xl:-translate-x-40 ml-auto grayscale xl:block 
+				w-full max-w-60  xl:max-w-70 2xl:max-w-90 lg:h-70 rounded-xl mt-auto  bg-[url('/images/daydream.webp')] bg-cover bg-center group/daydream">
+					<p className="w-full h-full bg-yellow/20 hover:bg-yellow/70
+						rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 group-hover/daydream:text-dbrown/100">
+						100+ Hackers at Daydream 
+					</p>
+				</div>
+
+				<div className="imgs xl:translate-x-40 mask-[url(/images/polygon2.svg)] md:mask-[url(/images/polygon.svg)] mt-10 grayscale 
+				grow-1 w-80 xl:max-w-180 md:max-w-full mask-no-repeat mask-cover 
+				h-100 lg:h-120 rounded-xl overflow-visible relative bg-[url('/images/jpeg.webp')] bg-cover bg-center">
+					<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
+						transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
+						80+ Girls and non-binary folk at JPEG
+					</p>
+				</div>
+				<div className="z-[100] xl:hidden grayscale w-[60%]  max-w-70 h-50 md:h-70 
+					bg-[url('/images/daydream.webp')] bg-cover bg-center rounded-2xl group/daydream ml-auto mr-5 -translate-y-30 border-1 border-beige">
+						
+					<p className="w-full h-full bg-yellow/25 hover:bg-yellow/70
+						rounded-xl transition-all duration-500 ease-in-out flex justify-center items-center text-center p-6 text-dbrown/0 hover:text-dbrown/100">
+						100+ Hackers at Daydream (Game Jam)
+					</p>
+				</div>	
+				</div>
+	 		</section>
+
+			<section className="w-full h-fit">
+		  		<a href="#" target="" className="p-4 border-1 border-green w-20 h-20 flex items-center justify-center rounded-full ml-auto rotate-90 text-3xl">-&gt;</a>
+	  		</section>
+			<div className="quote min-h-40 translate-y-300 md:translate-y-140 "> 
+			<svg className="hidden md:block -mb-2 mt-auto  " width="100%" height="auto" viewBox="0 0 1400 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
+			</svg>
+			<svg className="-mb-2 mt-auto md:hidden " width="100%" height="auto" viewBox="0 0 500 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M-1 71.0742C-1.00009 71.0495 -1.00098 71.0248 -1.00098 71V45.1387C-1.00098 43.9577 -1.95775 43.0002 -3.13867 43C-4.81869 43 -5.84293 41.1519 -4.95215 39.7275L14.0244 9.39258C17.6801 3.54906 24.0877 0 30.9805 0L224.021 0C230.914 5.03181e-05 237.322 3.54983 240.978 9.39355L252.37 27.6064C256.026 33.4502 262.433 36.9999 269.326 37L1418 37C1429.05 37.0003 1438 45.9545 1438 57V67H1438V91L-1 91V71.0742Z" fill="#00874D"/>
+			</svg>
+			<div id="quote" className=" relative space-y-8 flex justify-center items-center text-lblue text-center w-screen h-screen bg-green pb-10">
+				<div className="grid grid-cols-1 place-items-center inset-5  h-full w-full grid place-items-center py-8 px-4 sm:px-10 lg:px-12">	
+					
 			<div className="col-start-1 row-start-1 w-full h-full flex items-center justify-between">
 				<div className="max-w-14 md:max-w-30 flex flex-col justify-between w-full h-full">
 					<div className="w-full aspect-[1/1] border-t-10 border-l-10"></div>

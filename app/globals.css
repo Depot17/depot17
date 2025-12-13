@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: 'ten';
-  src: url('/fonts/font/mc-ten-lowercase-alt.ttf') format('truetype');
+  src: url('/fonts/mc-ten-lowercase-alt.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -62,7 +62,7 @@
 
 @font-face {
   font-family: 'gamma';
-  src: url('/fonts/font/gamma1500.ttf') format('truetype');
+  src: url('/fonts/gamma1500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

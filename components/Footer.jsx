@@ -6,17 +6,17 @@ export default function Footer() {
 
   return (
     
-<footer className="footer translate-y-100 w-full h-fit pt-40 rounded-t-2xl lg:rounded-t-4xl">
-  <div className="w-full flex justify-center">
+<footer className="footer w-full pt-40">
+  {/* <div className="w-full flex justify-center">
     <span className="bg-lgreen w-10 h-10 rounded-full flex items-center justify-center text-2xl font4">17</span>
   </div>
   <h1 className="text-beige text-center font12">DEPOT</h1>
 
   <div className="flex items-end mt-8 w-auto">
-  <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Privacy Policy</p>
-    <div className="relative mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
-  flex flex-col justify-between pb-6 md:-10">
-  <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 ">
+  <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Privacy Policy</p> */}
+    <div className="mx-auto md:w-[70%] bg-brown min-h-100 px-4 md:px-10 
+  flex flex-col justify-between pb-6 ">
+    <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-3 ">
     <div></div>
     <div className="bg-yellow/40 w-60 h-10 mx-auto"></div>
     <a href="https://github.com/Depot17/depot17" target="_self" className="bg-orange rounded-full border-3 border-dbrown px-5 py-3 w-fit lg:justify-self-end mt-10  nav-links hover:scale-102 transition-all duration-400 ease-in-out"><h4>We're open source</h4></a>
@@ -63,34 +63,7 @@ export default function Footer() {
     </div>
 
     </div>
-  <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Terms and Conditions</p>
-</div>
-   {/* <div className="bg-brown p-2 w-70 lg:w-80 relative ml-10 lg:ml-18 border-2 border-black pt-5 h-fit">
-    <div className="absolute bg-yellow w-[50px] h-4 left-1/2 -translate-x-1/2 top-0"></div>
-      <p>This website was made by makers, <br> for makers.</p>
-      
-      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-        <img src="/images/black_up_arrow.png" alt="" width="40px" className="absolute left-2 bottom-0 hover:scale-110 transition ease-in-out">
-      </button>
-  </div>
-
-  <div className="bg-brown p-6 w-60 lg:w-fit relative border-2 border-black mr-6 lg:mr-16">
-    <div className="absolute bg-yellow w-[50px] h-6 left-1/2 -translate-x-1/2 top-0"></div>
-
-    <div>
-      <Social platform = "github" username = "builders-depot" />
-    </div>
-    <p>View our <a href="https://github.com/builders-depot/builders-depot" target="_blank">source code</a> and finances. <br> Contact us at hello@buildersdepot.org</p>
-
-  </div>
-  <div className="bg-brown   p-6 w-[90%] max-w-120 h-20 lg:h-10 relative border-2 border-black flex items-center justify-center">
-    <div className="absolute bg-yellow w-[70px] h-3 left-1/2 -translate-x-1/2 top-0"></div>
-    <p>© 2025 [Builder's Depot]. All rights reserved</p>
-  </div>
-  
-  <div className="z-100 w-full bg-black h-8 overflow-hidden">
-    <p className="text-black">you found me! </p>
-  </div>  */}
+  {/* <p className="hidden lg:inline-flex grow text-beige text-center p-4 max-w-60">Terms and Conditions</p> */}
 
 </footer>
 

@@ -4,6 +4,7 @@ import { SplitText } from "gsap/SplitText";
 import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 import Lenis from "lenis";
 
+export function App() {
 gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
@@ -314,3 +315,4 @@ const featured = gsap.utils.toArray('.featured');
     }
     )
 
+}

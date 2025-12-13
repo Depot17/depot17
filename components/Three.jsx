@@ -11,9 +11,6 @@ function Model() {
   const modelClaw = useRef();
 
 
-
-
-
   useEffect(() => {
     const box = new THREE.Box3().setFromObject(gltf.scene);
     const center = box.getCenter(new THREE.Vector3());
@@ -26,7 +23,6 @@ function Model() {
     }
     
   })
-
 
     if(window.innerWidth < 1024){
         return (
@@ -55,13 +51,14 @@ export default function App() {
         <directionalLight color="white" position={[0, 10, 0]} intensity={1.4} />
 
         <directionalLight color="white" position={[-5, 0, 0]} intensity={0.8} />
-                <directionalLight color="white" position={[5, 0, 0]} intensity={0.8} />
+        <directionalLight color="white" position={[5, 0, 0]} intensity={0.8} />
 
 
         <Suspense fallback={null}>
           <Model />
-            <OrbitControls enableZoom={false}></OrbitControls>        
-            </Suspense>
+        </Suspense>
+        <OrbitControls enableZoom={false} enableRotate={true} enablePan={false}  target={[0, 0, 0]}></OrbitControls>        
+
       </Canvas>
     </div>
   );
