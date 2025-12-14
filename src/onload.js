@@ -45,7 +45,7 @@ window.addEventListener('load', () => {
         ease:'power2.out',
         duration:2,
         scrambleText:{
-            text:'Find a problem in a local or community, then work with them to engineer a solution. ',
+            text:'Find a problem in a local or global community, and work with them to engineer a solution.  ',
             chars:'DEPOT#17'
         }
     })
